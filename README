@@ -2,6 +2,9 @@ Install:
     $ make
     $ sudo make install
 
+Then using GUI:
+    System -> Gnome Manual Duplex
+
 Works with:
     HP LaserJet 1000
     HP LaserJet 1005
