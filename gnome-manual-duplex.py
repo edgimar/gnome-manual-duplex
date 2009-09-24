@@ -15,8 +15,8 @@ Debug = 0
 class App(object):       
     def __init__(self):
 	builder = gtk.Builder()
-	ui_file = "manfeed.xml"
-	ui_folders = [ '.', '/usr/share/mandup']
+	ui_file = "gnome-manual-duplex.xml"
+	ui_folders = [ '.', '/usr/share/gnome-manual-duplex']
 	for ui_folder in ui_folders:
             filename = os.path.join(ui_folder, ui_file)
             if os.path.exists(filename):
