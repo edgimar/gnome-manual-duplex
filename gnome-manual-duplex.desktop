@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Gnome Manual Duplex
+Comment=Prints manual duplex
+Exec=/usr/bin/gnome-manual-duplex
+Terminal=false
+Type=Application
+Icon=/usr/share/pixmaps/gnome-manual-duplex.png
+StartupNotify=true
+Categories=System;
+X-Desktop-File-Install-Version=0.10

@@ -1,4 +1,10 @@
 
+INSTALL=install
+BIN=$(DESTDIR)/usr/bin
+SHARE=$(DESTDIR)/usr/share
+APPL=$(DESTDIR)/usr/share/applications
+PIXMAPS=$(DESTDIR)/usr/share/pixmaps
+
 .SUFFIXES: .glade .xml
 
 .glade.xml:
@@ -12,10 +18,16 @@ PROG=gnome-manual-duplex
 all: $(PROG) $(PROG).xml
 
 install: all
-	install $(PROG) /usr/bin
-	install -d /usr/share/gnome-manual-duplex
-	install *.xml /usr/share/gnome-manual-duplex
-	install *.xpm /usr/share/gnome-manual-duplex
+	$(INSTALL) $(PROG) $(BIN)
+	$(INSTALL) -d $(SHARE)/$(PROG)
+	$(INSTALL) *.xml $(SHARE)/$(PROG)
+	$(INSTALL) *.xpm $(SHARE)/$(PROG)
+	if [ -d $(APPL) ]; then \
+	    $(INSTALL) -c -m 644 *.desktop $(APPL); \
+	fi
+	if [ -d $(PIXMAPS) ]; then \
+	    $(INSTALL) -c -m 644 $(PROG).png $(PIXMAPS); \
+	fi
 
 clean:
 	rm -f $(PROG) $(PROG).xml
