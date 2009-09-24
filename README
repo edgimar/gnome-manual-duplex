@@ -1,0 +1,12 @@
+Install:
+    $ make
+    $ sudo make install
+
+Works with:
+    HP LaserJet 1000
+    HP LaserJet 1005
+    HP LaserJet 1018
+    HP LaserJet 1020
+    HP LaserJet P1005
+    HP LaserJet P1006
+    HP LaserJet P1015
