@@ -27,13 +27,19 @@ class App(object):
 	self.window = builder.get_object("window1")
 	self.JobName = builder.get_object("filechooserbutton1")
 	if len(sys.argv) == 2:
+	    self.filename = sys.argv[1]
 	    self.JobName.set_filename(sys.argv[1])
+	else:
+	    self.filename = ''
 
 	self.printdialog = builder.get_object("printdialog1")
 	self.evenok = builder.get_object("even-pages-ok")
 	self.LongEdge = 1;
 	builder.connect_signals(self)
 	self.window.show()
+
+    def filechooserbutton1_file_set_cb(self, widget, data=None):
+	self.filename = widget.get_filename()
 
     def gtk_main_quit(self, widget, data=None):
 	gtk.main_quit()
@@ -70,8 +76,9 @@ class App(object):
 	if data == gtk.RESPONSE_OK:
 	    # Print out odd pages
 	    self.tempfile = tempfile.NamedTemporaryFile()
+	    # print self.filename
 	    os.system("pstops 2:0 "
-		+ sys.argv[1] + " " + self.tempfile.name)
+		+ self.filename + " " + self.tempfile.name)
 	    self.printdialog.PrintJob = gtkunixprint.PrintJob(
 		"title",
 		self.printdialog.get_selected_printer(),
@@ -92,7 +99,7 @@ class App(object):
 	if self.LongEdge == 1:
 	    # Print out even pages in reverse order and flipped
 	    os.system("pstops '2:-1U(1w,1h)' "
-		+ sys.argv[1] + " " + self.tempfile.name)
+		+ self.filename + " " + self.tempfile.name)
 	else:
 	    # Print out even pages in reverse order
 	    os.system("pstops '2:-1' "
