@@ -55,10 +55,7 @@ class App(object):
 	print "clicked"
 
     def radiobutton1_toggled_cb(self, widget, data=None):
-	if self.LongEdge == 1:
-	    self.LongEdge = 0
-	else:
-	    self.LongEdge = 1
+	self.LongEdge = not self.LongEdge
 
     def print_cb(self, widget, data=None):
 	self.window.hide()
@@ -103,7 +100,7 @@ class App(object):
 	else:
 	    # Print out even pages in reverse order
 	    os.system("pstops '2:-1' "
-		+ sys.argv[1] + " " + self.tempfile.name)
+		+ self.filename + " " + self.tempfile.name)
 	self.printdialog.PrintJob = gtkunixprint.PrintJob(
 	    "title",
 	    self.printdialog.get_selected_printer(),

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE glade-interface SYSTEM "glade-2.0.dtd">
-<!--Generated with glade3 3.4.5 on Fri Sep 25 06:12:59 2009 -->
+<!--Generated with glade3 3.4.5 on Fri Sep 25 08:43:26 2009 -->
 <glade-interface>
   <requires lib="unixprint"/>
   <widget class="GtkWindow" id="window1">
@@ -53,14 +53,26 @@
                     <property name="n_rows">2</property>
                     <property name="n_columns">2</property>
                     <child>
-                      <widget class="GtkRadioButton" id="radiobutton1">
+                      <widget class="GtkImage" id="image2">
                         <property name="visible">True</property>
-                        <property name="can_focus">True</property>
-                        <property name="label" translatable="yes">Manual Long Edge</property>
-                        <property name="response_id">0</property>
-                        <property name="active">True</property>
-                        <property name="draw_indicator">True</property>
+                        <property name="pixbuf">short_edge.xpm</property>
                       </widget>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="right_attach">2</property>
+                        <property name="top_attach">1</property>
+                        <property name="bottom_attach">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="image1">
+                        <property name="visible">True</property>
+                        <property name="pixbuf">long_edge.xpm</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="right_attach">2</property>
+                      </packing>
                     </child>
                     <child>
                       <widget class="GtkRadioButton" id="radiobutton2">
@@ -78,26 +90,15 @@
                       </packing>
                     </child>
                     <child>
-                      <widget class="GtkImage" id="image1">
+                      <widget class="GtkRadioButton" id="radiobutton1">
                         <property name="visible">True</property>
-                        <property name="pixbuf">long_edge.xpm</property>
+                        <property name="can_focus">True</property>
+                        <property name="label" translatable="yes">Manual Long Edge</property>
+                        <property name="response_id">0</property>
+                        <property name="active">True</property>
+                        <property name="draw_indicator">True</property>
+                        <signal name="toggled" handler="radiobutton1_toggled_cb"/>
                       </widget>
-                      <packing>
-                        <property name="left_attach">1</property>
-                        <property name="right_attach">2</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <widget class="GtkImage" id="image2">
-                        <property name="visible">True</property>
-                        <property name="pixbuf">short_edge.xpm</property>
-                      </widget>
-                      <packing>
-                        <property name="left_attach">1</property>
-                        <property name="right_attach">2</property>
-                        <property name="top_attach">1</property>
-                        <property name="bottom_attach">2</property>
-                      </packing>
                     </child>
                   </widget>
                 </child>
