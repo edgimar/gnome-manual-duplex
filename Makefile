@@ -32,10 +32,8 @@ install: all
 	lpadmin -p GnomeManualDuplex -E -v gmd:/ -L "Virtual Printer"
 	install -d /usr/lib/bonobo/servers
 	install gmd.server /usr/lib/bonobo/servers/
-	install -m644 gmd.svg /usr/share/pixmaps/
-
-x:	install
-	install -m755 psproc_applet.py /usr/bin/psproc_applet
+	install -m644 gmd.svg $(SHARE)/pixmaps/
+	install -m755 gmd-applet.py $(SHARE)/$(PROG)
 
 clean:
 	rm -f $(PROG) $(PROG).xml

@@ -1,6 +1,6 @@
 <oaf_info>
     <oaf_server iid="OAFIID:GNOME_GtkPSproc_applet_Factory"
-	    type="exe" location="/usr/bin/psproc_applet">
+	    type="exe" location="/usr/share/gnome-manual-duplex/gmd-applet.py">
 
 	<oaf_attribute name="repo_ids" type="stringv">
 	    <item value="IDL:Bonobo/GenericFactory:1.0"/>
