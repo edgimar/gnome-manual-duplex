@@ -32,7 +32,7 @@
 
 	<oaf_attribute name="panel:category" type="string" value="Utility"/>
 
-	<oaf_attribute name="panel:icon" type="string" value="gtkpsproc.svg"/>
+	<oaf_attribute name="panel:icon" type="string" value="gmd.svg"/>
 
     </oaf_server>
 </oaf_info>
