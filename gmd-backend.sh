@@ -66,8 +66,7 @@ copies="$4"
 options="$5"
 
 DIR=/var/tmp
-#DIR="$DIR/gmd/$username"
-DIR="$DIR/gtkpsproc/$username"
+DIR="$DIR/gmd/$username"
 [ -d $DIR ] || mkdir -p $DIR
 [ -d $DIR/list ] || mkdir -p $DIR/list
 

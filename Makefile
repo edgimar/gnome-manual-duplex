@@ -33,12 +33,12 @@ install: all
 
 x:
 	install -m755 psproc_applet.py /usr/bin/psproc_applet
-	install -m755 psproc_backend.py /usr/lib/cups/backend/psproc
+	#install -m755 psproc_backend.py /usr/lib/cups/backend/psproc
 	install -d /usr/lib/bonobo/servers
 	install gtkpsproc.server /usr/lib/bonobo/servers/
 	install -m644 gtkpsproc.svg /usr/share/pixmaps/
 	install -m644 gtkpsproc.png /usr/share/pixmaps/
-	lpadmin -p GnomeManualDuplex -E -v psproc:/ -L "Virtual Printer"
+	#lpadmin -p GnomeManualDuplex -E -v psproc:/ -L "Virtual Printer"
 
 clean:
 	rm -f $(PROG) $(PROG).xml
