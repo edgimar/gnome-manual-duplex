@@ -1,5 +1,5 @@
 <oaf_info>
-    <oaf_server iid="OAFIID:GNOME_GtkPSproc_applet_Factory"
+    <oaf_server iid="OAFIID:GNOME_GMD_applet_Factory"
 	    type="exe" location="/usr/share/gnome-manual-duplex/gmd-applet.py">
 
 	<oaf_attribute name="repo_ids" type="stringv">
@@ -15,8 +15,8 @@
 
     </oaf_server>
 
-    <oaf_server iid="OAFIID:GNOME_GtkPSproc_applet"
-	    type="factory" location="OAFIID:GNOME_GtkPSproc_applet_Factory">
+    <oaf_server iid="OAFIID:GNOME_GMD_applet"
+	    type="factory" location="OAFIID:GNOME_GMD_applet_Factory">
 
 	<oaf_attribute name="repo_ids" type="stringv">
 	    <item value="IDL:GNOME/Vertigo/PanelAppletShell:1.0"/>

@@ -195,7 +195,7 @@ def factory(applet, iid):
 	global needed
 	global window
 
-	label = gtk.Label("GtkPSproc")
+	label = gtk.Label("GMD")
 	frame = gtk.Frame()
 	frame.add(label)
 	applet.add(frame)
@@ -218,7 +218,7 @@ def check_needed():
 		window.set_border_width(10)
 		button = gtk.Button("Ok")
 		button.connect("clicked", wdestroy, None)
-		label = gtk.Label("You need to install the followin python modules in order to use GtkPSproc:\n\n"+needed)
+		label = gtk.Label("You need to install the followin python modules in order to use GMD:\n\n"+needed)
 		box=gtk.VBox()
 		window.add(box)
 		box.add(label)
@@ -241,4 +241,4 @@ if (len(sys.argv) == 2) and (sys.argv[1] == "standalone"):
 	check_needed()
 	gtk.main()
 else:
-	gnomeapplet.bonobo_factory("OAFIID:GNOME_GtkPSproc_applet_Factory",gnomeapplet.Applet.__gtype__,"GtkPSproc","3",factory)
+	gnomeapplet.bonobo_factory("OAFIID:GNOME_GMD_applet_Factory",gnomeapplet.Applet.__gtype__,"GMD","3",factory)
