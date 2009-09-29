@@ -1,9 +1,13 @@
 Install:
     $ make
-    $ sudo make install
+    $ su
+    # make install	-OR-	$ sudo make install
 
-Then using GUI:
-    System -> Gnome Manual Duplex
+Then using the GUI:
+    1)	System -> Gnome Manual Duplex
+	OR
+    2)	Add to Panel -> Gnome Manual Duplex applet -> Add
+	Print -> GnomeManualDuplex (Virtual Printer) -> Print
     
     Works with *.ps and *.pdf files.
 
