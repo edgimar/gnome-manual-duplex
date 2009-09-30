@@ -40,23 +40,31 @@ PROG=gnome-manual-duplex
 all: $(PROG) $(PROG).xml
 
 install: all
+	# /usr/bin...
 	$(INSTALL) -d $(BIN)
 	$(INSTALL) $(PROG) $(BIN)
+	# /usr/share/gnome-manual-duplex
 	$(INSTALL) -d $(SHARE)/$(PROG)
 	$(INSTALL) *.xml $(SHARE)/$(PROG)
 	$(INSTALL) *.xpm $(SHARE)/$(PROG)
-	if [ -d $(APPL) ]; then \
-	    $(INSTALL) -c -m 644 *.desktop $(APPL); \
-	fi
-	if [ -d $(PIXMAPS) ]; then \
-	    $(INSTALL) -c -m 644 $(PROG).png $(PIXMAPS); \
-	fi
-	install -m755 gmd-backend.sh $(LIBCUPS)/backend/gmd
+	$(INSTALL) -m755 gmd-applet.py $(SHARE)/$(PROG)
+	#
+	$(INSTALL) -d $(APPL)
+	$(INSTALL) -c -m 644 *.desktop $(APPL)
+	#
+	$(INSTALL) -d $(PIXMAPS)
+	$(INSTALL) -c -m 644 $(PROG).png $(PIXMAPS)
+	$(INSTALL) -m644 gmd.svg $(PIXMAPS)
+	#
+	$(INSTALL) -d $(LIBCUPS)
+	$(INSTALL) -d $(LIBCUPS)/backend
+	$(INSTALL) -m755 gmd-backend.sh $(LIBCUPS)/backend/gmd
 	lpadmin -p GnomeManualDuplex -E -v gmd:/ -L "Virtual Printer"
-	install -d $(LIBBONOBO)/servers
-	install gmd.server $(LIBBONOBO)/servers/
-	install -m644 gmd.svg $(SHARE)/pixmaps/
-	install -m755 gmd-applet.py $(SHARE)/$(PROG)
+	#
+	$(INSTALL) -d $(LIBBONOBO)
+	$(INSTALL) -d $(LIBBONOBO)/servers
+	$(INSTALL) -d $(LIBBONOBO)/servers
+	$(INSTALL) gmd.server $(LIBBONOBO)/servers/
 
 clean:
 	rm -f $(PROG) $(PROG).xml *.tar.gz
