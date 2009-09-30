@@ -1,4 +1,5 @@
 
+VERSION=0.0
 INSTALL=install
 BIN=$(DESTDIR)/usr/bin
 SHARE=$(DESTDIR)/usr/share
@@ -55,10 +56,19 @@ install: all
 	install -m755 gmd-applet.py $(SHARE)/$(PROG)
 
 clean:
-	rm -f $(PROG) $(PROG).xml
+	rm -f $(PROG) $(PROG).xml *.tar.gz
 
 tar:
 	HERE=`basename $$PWD`; \
         /bin/ls $(FILES) | \
         sed -e "s?^?$$HERE/?" | \
         (cd ..; tar -c -z -f $$HERE/$$HERE.tar.gz -T-)
+
+tarver: 
+	HERENO=`basename $$PWD`; \
+        HERE=`basename $$PWD-$(VERSION)`; \
+        ln -sf $$HERENO ../$$HERE; \
+        /bin/ls $(FILES) | \
+        sed -e "s?^?$$HERE/?" | \
+        (cd ..; tar -c -z -f $$HERE/$$HERE.tar.gz -T-); \
+        rm -f ../$$HERE

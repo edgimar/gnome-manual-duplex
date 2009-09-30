@@ -3,8 +3,7 @@ Name:           gnome-manual-duplex
 Version:        0.0
 Release:        1
 License:        GPL v2 or later
-#Source:         g-manual-duplex-%{version}.tar.gz
-Source:         g-manual-duplex.tar.gz
+Source:         gnome-manual-duplex-%{version}.tar.gz
 Group:          Productivity/Other
 Summary:        test
 
