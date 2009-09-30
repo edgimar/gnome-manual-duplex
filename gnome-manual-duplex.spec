@@ -8,6 +8,7 @@ Source:         gnome-manual-duplex-%{version}.tar.gz
 Group:          Productivity/Other
 Summary:        test
 
+BuildArch:	noarch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
 %description
