@@ -32,3 +32,15 @@ make
 %install
 
 make DESTDIR=$RPM_BUILD_ROOT install
+
+%files
+/usr/bin/gnome-manual-duplex
+/usr/lib/bonobo/servers/gmd.server
+/usr/lib/cups/backend/gmd
+/usr/share/applications/gnome-manual-duplex.desktop
+/usr/share/gnome-manual-duplex/gmd-applet.py
+/usr/share/gnome-manual-duplex/gnome-manual-duplex.xml
+/usr/share/gnome-manual-duplex/long_edge.xpm
+/usr/share/gnome-manual-duplex/short_edge.xpm
+/usr/share/pixmaps/gmd.svg
+/usr/share/pixmaps/gnome-manual-duplex.png
