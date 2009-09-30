@@ -31,4 +31,4 @@ make
 
 %install
 
-make DESTDIR=%buildroot install
+make DESTDIR=$RPM_BUILD_ROOT install
