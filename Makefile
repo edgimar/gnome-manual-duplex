@@ -5,6 +5,25 @@ SHARE=$(DESTDIR)/usr/share
 APPL=$(DESTDIR)/usr/share/applications
 PIXMAPS=$(DESTDIR)/usr/share/pixmaps
 
+NULL=
+FILES=\
+	2pages.ps \
+	COPYING \
+	gmd-applet.py \
+	gmd-backend.sh \
+	gmd.server \
+	gmd.svg \
+	gnome-manual-duplex.desktop \
+	gnome-manual-duplex.glade \
+	gnome-manual-duplex.png \
+	gnome-manual-duplex.py \
+	gnome-manual-duplex.spec \
+	long_edge.xpm \
+	Makefile \
+	README \
+	short_edge.xpm \
+	$(NULL)
+
 .SUFFIXES: .glade .xml
 
 .glade.xml:
@@ -37,3 +56,9 @@ install: all
 
 clean:
 	rm -f $(PROG) $(PROG).xml
+
+tar:
+	HERE=`basename $$PWD`; \
+        /bin/ls $(FILES) | \
+        sed -e "s?^?$$HERE/?" | \
+        (cd ..; tar -c -z -f $$HERE/$$HERE.tar.gz -T-)
