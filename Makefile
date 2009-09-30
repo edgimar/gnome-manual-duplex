@@ -63,7 +63,8 @@ install: all
 	$(INSTALL) -d $(LIBCUPS)/backend
 	$(INSTALL) -m755 gmd-backend.sh $(LIBCUPS)/backend/gmd
 	#
-	$(LPADMIN) -p GnomeManualDuplex -E -v gmd:/ -L "Virtual Printer"
+	# Done in gmd-applet.py now...
+	#$(LPADMIN) -p GnomeManualDuplex -E -v gmd:/ -L "Virtual Printer"
 	#
 	$(INSTALL) -d $(LIBBONOBO)
 	$(INSTALL) -d $(LIBBONOBO)/servers

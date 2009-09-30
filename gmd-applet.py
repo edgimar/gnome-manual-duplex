@@ -208,6 +208,9 @@ def check_needed():
 
 	global needed
 
+	os.system(
+	    'lpadmin -p GnomeManualDuplex -E -v gmd:/ -L "Virtual Printer"')
+
 	if needed=="":
 		init_scan()
 	else:
