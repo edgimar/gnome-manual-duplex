@@ -40,6 +40,7 @@ PROG=gnome-manual-duplex
 all: $(PROG) $(PROG).xml
 
 install: all
+	$(INSTALL) -d $(BIN)
 	$(INSTALL) $(PROG) $(BIN)
 	$(INSTALL) -d $(SHARE)/$(PROG)
 	$(INSTALL) *.xml $(SHARE)/$(PROG)
