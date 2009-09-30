@@ -1,6 +1,9 @@
 
 VERSION=0.0
+
 INSTALL=install
+LPADMIN=/usr/sbin/lpadmin
+
 BIN=$(DESTDIR)/usr/bin
 SHARE=$(DESTDIR)/usr/share
 APPL=$(DESTDIR)/usr/share/applications
@@ -59,7 +62,8 @@ install: all
 	$(INSTALL) -d $(LIBCUPS)
 	$(INSTALL) -d $(LIBCUPS)/backend
 	$(INSTALL) -m755 gmd-backend.sh $(LIBCUPS)/backend/gmd
-	lpadmin -p GnomeManualDuplex -E -v gmd:/ -L "Virtual Printer"
+	#
+	$(LPADMIN) -p GnomeManualDuplex -E -v gmd:/ -L "Virtual Printer"
 	#
 	$(INSTALL) -d $(LIBBONOBO)
 	$(INSTALL) -d $(LIBBONOBO)/servers
