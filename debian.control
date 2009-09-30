@@ -1,0 +1,11 @@
+Source: gnome-manual-duplex
+Section: unknown
+Priority: optional
+Maintainer: rick 
+Build-Depends: debhelper (>= 4.1.16), g++, libgtk2.0-dev
+
+Package: gnome-manual-duplex
+Architecture: any
+Depends: ${shlibs:Depends}
+Description: gnome-manual-duplex
+ gnome-manual-duplex
