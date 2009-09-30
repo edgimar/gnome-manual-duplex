@@ -1,5 +1,6 @@
 Name:           gnome-manual-duplex
 # List of additional build dependencies
+BuildRequires: gtk2-devel
 Version:        0.0
 Release:        1
 License:        GPL v2 or later
