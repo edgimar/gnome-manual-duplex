@@ -5,6 +5,8 @@ BIN=$(DESTDIR)/usr/bin
 SHARE=$(DESTDIR)/usr/share
 APPL=$(DESTDIR)/usr/share/applications
 PIXMAPS=$(DESTDIR)/usr/share/pixmaps
+LIBCUPS=$(DESTDIR)/usr/lib/cups
+LIBBONOBO=$(DESTDIR)/usr/lib/bonobo
 
 NULL=
 FILES=\
@@ -48,10 +50,10 @@ install: all
 	if [ -d $(PIXMAPS) ]; then \
 	    $(INSTALL) -c -m 644 $(PROG).png $(PIXMAPS); \
 	fi
-	install -m755 gmd-backend.sh /usr/lib/cups/backend/gmd
+	install -m755 gmd-backend.sh $(LIBCUPS)/backend/gmd
 	lpadmin -p GnomeManualDuplex -E -v gmd:/ -L "Virtual Printer"
-	install -d /usr/lib/bonobo/servers
-	install gmd.server /usr/lib/bonobo/servers/
+	install -d $(LIBBONOBO)/servers
+	install gmd.server $(LIBBONOBO)/servers/
 	install -m644 gmd.svg $(SHARE)/pixmaps/
 	install -m755 gmd-applet.py $(SHARE)/$(PROG)
 
