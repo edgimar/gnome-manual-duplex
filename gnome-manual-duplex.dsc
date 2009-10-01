@@ -1,7 +1,7 @@
 Format: 1.0
 Source: gnome-manual-duplex
 Binary: gnome-manual-duplex
-Architecture: any
+Architecture: all
 Version: 0.0
 Maintainer: rick
 Standards-Version: 3.7.2
