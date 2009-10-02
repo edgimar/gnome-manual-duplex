@@ -40,7 +40,17 @@ FILES=\
 
 PROG=gnome-manual-duplex
 
-all: $(PROG) $(PROG).xml
+all: $(PROG) $(PROG).xml $(PROG).spec $(PROG).dsc
+
+$(PROG).spec: $(PROG).spec.in Makefile
+	sed < $@.in > $@ \
+            -e "s@\$${VERSION}@$(VERSION)@" \
+            || (rm -f $@ && exit 1)
+
+$(PROG).dsc: $(PROG).dsc.in Makefile
+	sed < $@.in > $@ \
+            -e "s@\$${VERSION}@$(VERSION)@" \
+            || (rm -f $@ && exit 1)
 
 install: all
 	# /usr/bin...
@@ -72,7 +82,7 @@ install: all
 	$(INSTALL) gmd.server $(LIBBONOBO)/servers/
 
 clean:
-	rm -f $(PROG) $(PROG).xml *.tar.gz
+	rm -f $(PROG) $(PROG).xml *.tar.gz *.spec *.dsc
 
 tar:
 	HERE=`basename $$PWD`; \
