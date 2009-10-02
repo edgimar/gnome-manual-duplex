@@ -1,5 +1,5 @@
 
-VERSION=0.0
+VERSION=0.10
 
 INSTALL=install
 LPADMIN=/usr/sbin/lpadmin
@@ -15,15 +15,19 @@ NULL=
 FILES=\
 	2pages.ps \
 	COPYING \
+	debian.changelog \
+	debian.control \
+	debian.rules \
 	gmd-applet.py \
 	gmd-backend.sh \
 	gmd.server \
 	gmd.svg \
 	gnome-manual-duplex.desktop \
+	gnome-manual-duplex.dsc.in \
 	gnome-manual-duplex.glade \
 	gnome-manual-duplex.png \
 	gnome-manual-duplex.py \
-	gnome-manual-duplex.spec \
+	gnome-manual-duplex.spec.in \
 	long_edge.xpm \
 	Makefile \
 	README \
