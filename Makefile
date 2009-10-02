@@ -88,7 +88,7 @@ install: all
 clean:
 	rm -f $(PROG) $(PROG).xml *.tar.gz *.spec *.dsc
 
-tar:
+tar:	tarver
 	HERE=`basename $$PWD`; \
         /bin/ls $(FILES) | \
         sed -e "s?^?$$HERE/?" | \
