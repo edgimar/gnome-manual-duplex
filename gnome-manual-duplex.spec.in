@@ -45,3 +45,4 @@ make DESTDIR=$RPM_BUILD_ROOT install
 /usr/share/gnome-manual-duplex/short_edge.xpm
 /usr/share/pixmaps/gmd.svg
 /usr/share/pixmaps/gnome-manual-duplex.png
+%doc COPYING README 2pages.ps
