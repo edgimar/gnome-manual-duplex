@@ -35,6 +35,7 @@ class App(object):
 	self.printdialog = builder.get_object("printdialog1")
 	self.evenok = builder.get_object("even-pages-ok")
 	self.LongEdge = 1;
+	self.SkipOddPages = 0;
 	builder.connect_signals(self)
 	self.window.show()
 
@@ -57,6 +58,9 @@ class App(object):
     def radiobutton1_toggled_cb(self, widget, data=None):
 	self.LongEdge = not self.LongEdge
 
+    def checkbutton1_toggled_cb(self, widget, data=None):
+	self.SkipOddPages = not self.SkipOddPages
+
     def print_cb(self, widget, data=None):
 	self.window.hide()
         self.printdialog.show()
@@ -71,20 +75,21 @@ class App(object):
 	if data == gtk.RESPONSE_CANCEL:
 	    gtk.main_quit()
 	if data == gtk.RESPONSE_OK:
-	    # Print out odd pages
 	    self.tempfile = tempfile.NamedTemporaryFile()
-	    # print self.filename
-	    os.system("pstops 2:0 "
-		+ self.filename + " " + self.tempfile.name)
-	    self.printdialog.PrintJob = gtkunixprint.PrintJob(
-		"title",
-		self.printdialog.get_selected_printer(),
-		self.printdialog.get_settings(),
-		self.printdialog.get_page_setup())
-	    self.printdialog.PrintJob.set_source_file(self.tempfile.name)
-	    if Debug == 0:
-		self.printdialog.PrintJob.send(self.odd_pages_send_cb)
-	    # print "print"
+	    if not self.SkipOddPages:
+		# Print out odd pages
+		# print self.filename
+		os.system("pstops 2:0 "
+		    + self.filename + " " + self.tempfile.name)
+		self.printdialog.PrintJob = gtkunixprint.PrintJob(
+		    "title",
+		    self.printdialog.get_selected_printer(),
+		    self.printdialog.get_settings(),
+		    self.printdialog.get_page_setup())
+		self.printdialog.PrintJob.set_source_file(self.tempfile.name)
+		if Debug == 0:
+		    self.printdialog.PrintJob.send(self.odd_pages_send_cb)
+		# print "print"
         self.evenok.show()
 	self.printdialog.hide()
 	self.evenok_clicked = -1;
