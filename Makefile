@@ -94,7 +94,7 @@ tar:	tarver
         sed -e "s?^?$$HERE/?" | \
         (cd ..; tar -c -z -f $$HERE/$$HERE.tar.gz -T-)
 
-tarver: 
+tarver: all
 	HERENO=`basename $$PWD`; \
         HERE=`basename $$PWD-$(VERSION)`; \
         ln -sf $$HERENO ../$$HERE; \
