@@ -62,15 +62,15 @@ install: all
 	$(INSTALL) $(PROG) $(BIN)
 	# /usr/share/gnome-manual-duplex
 	$(INSTALL) -d $(SHARE)/$(PROG)
-	$(INSTALL) *.xml $(SHARE)/$(PROG)
-	$(INSTALL) *.xpm $(SHARE)/$(PROG)
+	$(INSTALL) -m644 *.xml $(SHARE)/$(PROG)
+	$(INSTALL) -m644 *.xpm $(SHARE)/$(PROG)
 	$(INSTALL) -m755 gmd-applet.py $(SHARE)/$(PROG)
 	#
 	$(INSTALL) -d $(APPL)
 	$(INSTALL) -c -m 644 *.desktop $(APPL)
 	#
 	$(INSTALL) -d $(PIXMAPS)
-	$(INSTALL) -c -m 644 $(PROG).png $(PIXMAPS)
+	$(INSTALL) -c -m644 $(PROG).png $(PIXMAPS)
 	$(INSTALL) -m644 gmd.svg $(PIXMAPS)
 	#
 	$(INSTALL) -d $(LIBCUPS)
@@ -83,7 +83,11 @@ install: all
 	$(INSTALL) -d $(LIBBONOBO)
 	$(INSTALL) -d $(LIBBONOBO)/servers
 	$(INSTALL) -d $(LIBBONOBO)/servers
-	$(INSTALL) gmd.server $(LIBBONOBO)/servers/
+	$(INSTALL) -m644 gmd.server $(LIBBONOBO)/servers/
+	#
+	$(INSTALL) -d $(SHARE)/doc/$(PROG)
+	$(INSTALL) -m644 README $(SHARE)/doc/$(PROG)
+	$(INSTALL) -m644 COPYING $(SHARE)/doc/$(PROG)
 
 clean:
 	rm -f $(PROG) $(PROG).xml *.tar.gz *.spec *.dsc
