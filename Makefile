@@ -47,14 +47,18 @@ PROG=gnome-manual-duplex
 all: $(PROG) $(PROG).xml $(PROG).spec $(PROG).dsc
 
 $(PROG).spec: $(PROG).spec.in Makefile
+	rm -f $@
 	sed < $@.in > $@ \
             -e "s@\$${VERSION}@$(VERSION)@" \
             || (rm -f $@ && exit 1)
+	chmod 444 $@
 
 $(PROG).dsc: $(PROG).dsc.in Makefile
+	rm -f $@
 	sed < $@.in > $@ \
             -e "s@\$${VERSION}@$(VERSION)@" \
             || (rm -f $@ && exit 1)
+	chmod 444 $@
 
 install: all
 	# /usr/bin...
