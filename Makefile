@@ -36,7 +36,7 @@ FILES=\
 	short_edge.xpm \
 	$(NULL)
 
-.SUFFIXES: .glade .xml
+.SUFFIXES: .glade .xml .fig .xpm
 
 .glade.xml:
 	gtk-builder-convert $*.glade $*.xml
@@ -44,9 +44,12 @@ FILES=\
 % : %.py
 	rm -f $@; cp -a $*.py $@; chmod +x-w $@
 
+.fig.xpm:
+	fig2dev -m 0.50 -L xpm $*.fig | sed 's/White/None/' > $*.xpm
+
 PROG=gnome-manual-duplex
 
-all: $(PROG) $(PROG).xml $(PROG).spec $(PROG).dsc
+all: $(PROG) $(PROG).xml $(PROG).spec $(PROG).dsc long_edge.xpm short_edge.xpm
 
 $(PROG).spec: $(PROG).spec.in Makefile
 	rm -f $@
@@ -97,6 +100,7 @@ install: all
 
 clean:
 	rm -f $(PROG) $(PROG).xml *.tar.gz *.spec *.dsc
+	rm -f long_edge.xpm short_edge.xpm
 
 tar:	tarver
 	HERE=`basename $$PWD`; \
