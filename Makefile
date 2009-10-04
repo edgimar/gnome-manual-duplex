@@ -43,7 +43,9 @@ FILES=\
 	rm -f $@; cp -a $*.py $@; chmod +x-w $@
 
 .fig.xpm:
-	fig2dev -m 0.50 -L xpm $*.fig | sed 's/White/None/' > $*.xpm
+	fig2dev -m 0.50 -L xpm $*.fig \
+	    | sed -e 's/White/None/' -e 's/#FFFFFF/None/' \
+	    > $*.xpm
 
 PROG=gnome-manual-duplex
 
