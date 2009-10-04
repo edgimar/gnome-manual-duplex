@@ -29,11 +29,9 @@ FILES=\
 	gnome-manual-duplex.py \
 	gnome-manual-duplex.spec.in \
 	long_edge.fig \
-	long_edge.xpm \
 	Makefile \
 	README \
 	short_edge.fig \
-	short_edge.xpm \
 	$(NULL)
 
 .SUFFIXES: .glade .xml .fig .xpm

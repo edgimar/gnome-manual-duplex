@@ -1,6 +1,6 @@
 Name:           gnome-manual-duplex
 # List of additional build dependencies
-BuildRequires: gtk2-devel cups
+BuildRequires: gtk2-devel cups transfig
 Version:        ${VERSION}
 Release:        1
 License:        GPL v2 or later
