@@ -32,6 +32,7 @@ class App(object):
 	else:
 	    self.filename = ''
 
+	self.pref = builder.get_object("pref")
 	self.printdialog = builder.get_object("printdialog1")
 	self.evenok = builder.get_object("even-pages-ok")
 	self.LongEdge = 1;
@@ -61,9 +62,19 @@ class App(object):
     def checkbutton1_toggled_cb(self, widget, data=None):
 	self.SkipOddPages = not self.SkipOddPages
 
+    def pref_cb(self, widget, data=None):
+	# self.window.hide()
+        self.pref.show()
+
     def print_cb(self, widget, data=None):
 	self.window.hide()
         self.printdialog.show()
+
+    def pref_cancel_clicked_cb(self, widget, data=None):
+	self.pref.hide()
+
+    def pref_save_clicked_cb(self, widget, data=None):
+	self.pref.hide()
 
     def odd_pages_send_cb(self, widget, data, errormsg):
 	return

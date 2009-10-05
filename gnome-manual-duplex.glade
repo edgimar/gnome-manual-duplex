@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE glade-interface SYSTEM "glade-2.0.dtd">
-<!--Generated with glade3 3.4.5 on Fri Oct  2 11:16:00 2009 -->
+<!--Generated with glade3 3.4.5 on Mon Oct  5 08:00:51 2009 -->
 <glade-interface>
   <requires lib="unixprint"/>
   <widget class="GtkWindow" id="window1">
@@ -53,15 +53,26 @@
                     <property name="n_rows">2</property>
                     <property name="n_columns">2</property>
                     <child>
-                      <widget class="GtkRadioButton" id="radiobutton1">
+                      <widget class="GtkImage" id="image2">
                         <property name="visible">True</property>
-                        <property name="can_focus">True</property>
-                        <property name="label" translatable="yes">Manual Long Edge</property>
-                        <property name="response_id">0</property>
-                        <property name="active">True</property>
-                        <property name="draw_indicator">True</property>
-                        <signal name="toggled" handler="radiobutton1_toggled_cb"/>
+                        <property name="pixbuf">short_edge.xpm</property>
                       </widget>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="right_attach">2</property>
+                        <property name="top_attach">1</property>
+                        <property name="bottom_attach">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="image1">
+                        <property name="visible">True</property>
+                        <property name="pixbuf">long_edge.xpm</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="right_attach">2</property>
+                      </packing>
                     </child>
                     <child>
                       <widget class="GtkRadioButton" id="radiobutton2">
@@ -79,26 +90,15 @@
                       </packing>
                     </child>
                     <child>
-                      <widget class="GtkImage" id="image1">
+                      <widget class="GtkRadioButton" id="radiobutton1">
                         <property name="visible">True</property>
-                        <property name="pixbuf">long_edge.xpm</property>
+                        <property name="can_focus">True</property>
+                        <property name="label" translatable="yes">Manual Long Edge</property>
+                        <property name="response_id">0</property>
+                        <property name="active">True</property>
+                        <property name="draw_indicator">True</property>
+                        <signal name="toggled" handler="radiobutton1_toggled_cb"/>
                       </widget>
-                      <packing>
-                        <property name="left_attach">1</property>
-                        <property name="right_attach">2</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <widget class="GtkImage" id="image2">
-                        <property name="visible">True</property>
-                        <property name="pixbuf">short_edge.xpm</property>
-                      </widget>
-                      <packing>
-                        <property name="left_attach">1</property>
-                        <property name="right_attach">2</property>
-                        <property name="top_attach">1</property>
-                        <property name="bottom_attach">2</property>
-                      </packing>
                     </child>
                   </widget>
                 </child>
@@ -166,6 +166,7 @@
                 <property name="label" translatable="yes">gtk-preferences</property>
                 <property name="use_stock">True</property>
                 <property name="response_id">0</property>
+                <signal name="clicked" handler="pref_cb"/>
               </widget>
             </child>
             <child>
@@ -303,6 +304,77 @@ printed side down.</property>
           <packing>
             <property name="expand">False</property>
             <property name="pack_type">GTK_PACK_END</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+  <widget class="GtkWindow" id="pref">
+    <child>
+      <widget class="GtkVBox" id="vbox2">
+        <property name="visible">True</property>
+        <child>
+          <widget class="GtkFrame" id="frame4">
+            <property name="visible">True</property>
+            <property name="label_xalign">0</property>
+            <property name="shadow_type">GTK_SHADOW_NONE</property>
+            <child>
+              <widget class="GtkAlignment" id="alignment4">
+                <property name="visible">True</property>
+                <property name="left_padding">12</property>
+                <child>
+                  <widget class="GtkComboBox" id="combobox1">
+                    <property name="visible">True</property>
+                  </widget>
+                </child>
+              </widget>
+            </child>
+            <child>
+              <widget class="GtkLabel" id="label6">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">&lt;b&gt;Printer&lt;/b&gt;</property>
+                <property name="use_markup">True</property>
+              </widget>
+              <packing>
+                <property name="type">label_item</property>
+              </packing>
+            </child>
+          </widget>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <widget class="GtkHButtonBox" id="hbuttonbox2">
+            <property name="visible">True</property>
+            <child>
+              <widget class="GtkButton" id="pref_cancel">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="label" translatable="yes">gtk-cancel</property>
+                <property name="use_stock">True</property>
+                <property name="response_id">0</property>
+                <signal name="clicked" handler="pref_cancel_clicked_cb"/>
+              </widget>
+            </child>
+            <child>
+              <widget class="GtkButton" id="pref_save">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="label" translatable="yes">gtk-save</property>
+                <property name="use_stock">True</property>
+                <property name="response_id">0</property>
+                <signal name="clicked" handler="pref_save_clicked_cb"/>
+              </widget>
+              <packing>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </widget>
+          <packing>
+            <property name="position">2</property>
           </packing>
         </child>
       </widget>
