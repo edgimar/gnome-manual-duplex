@@ -38,10 +38,11 @@ class App(object):
 	self.pref = builder.get_object("pref")
 	self.combo_printers = builder.get_object("combobox1")
 
-	# populate combobox1
+	# populate combo_printers
         self.combo_printers = builder.get_object("combobox1")
 	connection = cups.Connection ()
 	dests = connection.getDests ()
+
         liststore = gtk.ListStore(gobject.TYPE_STRING)
 	for (printer, instance) in dests.keys ():
 	    if printer == None:
@@ -53,6 +54,7 @@ class App(object):
         cell = gtk.CellRendererText()
         self.combo_printers.pack_start(cell, True)
         self.combo_printers.add_attribute(cell, 'text', 0)
+        self.combo_printers.set_active(0)
 
 	self.printdialog = builder.get_object("printdialog1")
 	self.evenok = builder.get_object("even-pages-ok")
