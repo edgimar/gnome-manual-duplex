@@ -6,14 +6,17 @@ import tempfile
 
 import pygtk
 pygtk.require("2.0")
+import gobject
 import gtk
 import gtkunixprint
+import cups
 
 global Debug
 Debug = 0
  
 class App(object):       
     def __init__(self):
+
 	builder = gtk.Builder()
 	ui_file = "gnome-manual-duplex.xml"
 	ui_folders = [ '.', '/usr/share/gnome-manual-duplex']
@@ -33,6 +36,24 @@ class App(object):
 	    self.filename = ''
 
 	self.pref = builder.get_object("pref")
+	self.combo_printers = builder.get_object("combobox1")
+
+	# populate combobox1
+        self.combo_printers = builder.get_object("combobox1")
+	connection = cups.Connection ()
+	dests = connection.getDests ()
+        liststore = gtk.ListStore(gobject.TYPE_STRING)
+	for (printer, instance) in dests.keys ():
+	    if printer == None:
+		continue
+	    if instance != None:
+		continue
+	    liststore.append([printer])
+        self.combo_printers.set_model(liststore)
+        cell = gtk.CellRendererText()
+        self.combo_printers.pack_start(cell, True)
+        self.combo_printers.add_attribute(cell, 'text', 0)
+
 	self.printdialog = builder.get_object("printdialog1")
 	self.evenok = builder.get_object("even-pages-ok")
 	self.LongEdge = 1;
