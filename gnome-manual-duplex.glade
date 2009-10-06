@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE glade-interface SYSTEM "glade-2.0.dtd">
-<!--Generated with glade3 3.4.5 on Mon Oct  5 14:03:46 2009 -->
+<!--Generated with glade3 3.4.5 on Mon Oct  5 14:06:17 2009 -->
 <glade-interface>
   <requires lib="unixprint"/>
   <widget class="GtkWindow" id="window1">
@@ -418,7 +418,7 @@ printed side down.</property>
                       <widget class="GtkCheckButton" id="checkbutton5">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
-                        <property name="label" translatable="yes">Invert (rotate 180 degress) Pages</property>
+                        <property name="label" translatable="yes">Invert (rotate 180 degrees) Pages</property>
                         <property name="response_id">0</property>
                         <property name="draw_indicator">True</property>
                       </widget>
