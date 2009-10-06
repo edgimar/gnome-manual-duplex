@@ -80,7 +80,9 @@ else
 fi
 chmod 666 $DIR/${outfile}.ps
 
-echo -e "${outfile}.ps\n$title\n$copies" > $DIR/${outfile}.txt
+echo "${outfile}.ps" > $DIR/${outfile}.txt
+echo "$title" >> $DIR/${outfile}.txt
+echo "$copies" >> $DIR/${outfile}.txt
 chmod 666 $DIR/${outfile}.txt
 
 mv $DIR/${outfile}.txt $DIR/list/
