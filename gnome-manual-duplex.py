@@ -13,6 +13,9 @@ import cups
 
 global Debug
 Debug = 0
+
+REVERSE = 2
+INVERT = 1
  
 class App(object):       
     def __init__(self):
@@ -48,7 +51,6 @@ class App(object):
 	default_index = i = 0
 	for (printer, instance) in dests.keys ():
 	    if default_printer == printer:
-		print i
 		default_index = i
 	    if printer == None:
 		continue
@@ -68,6 +70,9 @@ class App(object):
 	self.SkipOddPages = 0;
 	builder.connect_signals(self)
 	self.window.show()
+
+	self.long_edge_config = REVERSE | INVERT
+	self.short_edge_config = REVERSE
 
     def filechooserbutton1_file_set_cb(self, widget, data=None):
 	self.filename = widget.get_filename()
@@ -140,12 +145,15 @@ class App(object):
     def even_ok_clicked_cb(self, widget, data=None):
 	if self.LongEdge == 1:
 	    # Print out even pages in reverse order and flipped
-	    os.system("pstops '2:-1U(1w,1h)' "
-		+ self.filename + " " + self.tempfile.name)
+	    config = self.long_edge_config
 	else:
+	    config = self.short_edge_config
 	    # Print out even pages in reverse order
-	    os.system("pstops '2:-1' "
-		+ self.filename + " " + self.tempfile.name)
+	reverse = [ '1', '-1' ]
+	invert = [ '', 'U(1w,1h)' ]
+	os.system("pstops '2:" 
+	    + reverse[(config>>1) & 1] + invert[config&1] + "' "
+	    + self.filename + " " + self.tempfile.name)
 	self.printdialog.PrintJob = gtkunixprint.PrintJob(
 	    "title",
 	    self.printdialog.get_selected_printer(),
