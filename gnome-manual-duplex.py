@@ -1,4 +1,7 @@
 #!/usr/bin/env python
+
+global Debug
+Debug = 0
  
 import sys
 import os
@@ -10,12 +13,20 @@ import gobject
 import gtk
 import gtkunixprint
 import cups
-
-global Debug
-Debug = 0
+import ConfigParser
 
 REVERSE = 2
 INVERT = 1
+
+def load_config(self):
+    global cp
+
+    cp = ConfigParser.ConfigParser()
+    try:
+	cp.read([os.path.expanduser('~/.config/gnome-manual-duplex.cfg')])
+	#print cp.get('hp1020', 'long_edge_config', 0)
+    except:
+	return
  
 class App(object):       
     def __init__(self):
@@ -71,6 +82,7 @@ class App(object):
 	builder.connect_signals(self)
 	self.window.show()
 
+	load_config(self)
 	self.long_edge_config = REVERSE | INVERT
 	self.short_edge_config = REVERSE
 
@@ -143,12 +155,18 @@ class App(object):
 	gtk.main_quit()
 
     def even_ok_clicked_cb(self, widget, data=None):
+	printer = self.printdialog.get_selected_printer()
 	if self.LongEdge == 1:
-	    # Print out even pages in reverse order and flipped
-	    config = self.long_edge_config
+	    try:
+		config = int(cp.get(printer.get_name(), 'long_edge_config', 0))
+		#print printer.get_name(), config
+	    except:
+		config = self.long_edge_config
 	else:
-	    config = self.short_edge_config
-	    # Print out even pages in reverse order
+	    try:
+		config = int(cp.get(printer.get_name(), 'short_edge_config', 0))
+	    except:
+		config = self.short_edge_config
 	reverse = [ '1', '-1' ]
 	invert = [ '', 'U(1w,1h)' ]
 	os.system("pstops '2:" 
