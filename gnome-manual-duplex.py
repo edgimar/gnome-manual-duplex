@@ -19,12 +19,12 @@ REVERSE = 2
 INVERT = 1
 
 def load_config(self):
-    global cp
+    global Config
 
-    cp = ConfigParser.ConfigParser()
+    Config = ConfigParser.ConfigParser()
     try:
-	cp.read([os.path.expanduser('~/.config/gnome-manual-duplex.cfg')])
-	#print cp.get('hp1020', 'long_edge_config', 0)
+	Config.read([os.path.expanduser('~/.config/gnome-manual-duplex.cfg')])
+	#print Config.get('hp1020', 'long_edge_config', 0)
     except:
 	return
  
@@ -158,13 +158,15 @@ class App(object):
 	printer = self.printdialog.get_selected_printer()
 	if self.LongEdge == 1:
 	    try:
-		config = int(cp.get(printer.get_name(), 'long_edge_config', 0))
+		config = int( Config.get(printer.get_name(),
+					    'long_edge_config', 0) )
 		#print printer.get_name(), config
 	    except:
 		config = self.long_edge_config
 	else:
 	    try:
-		config = int(cp.get(printer.get_name(), 'short_edge_config', 0))
+		config = int( Config.get(printer.get_name(),
+					    'short_edge_config', 0) )
 	    except:
 		config = self.short_edge_config
 	reverse = [ '1', '-1' ]
