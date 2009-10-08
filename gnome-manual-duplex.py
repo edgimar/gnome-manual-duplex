@@ -92,7 +92,8 @@ class App(object):
 	self.short_edge_config = REVERSE
 
     def about_button_clicked_cb(self, widget, data=None):
-	self.about.show()
+	response = self.about.run()
+	self.about.hide()
 
     def filechooserbutton1_file_set_cb(self, widget, data=None):
 	self.filename = widget.get_filename()
