@@ -43,6 +43,7 @@ class App(object):
 
 	#builder.add_from_file("manfeed.xml")
 	self.window = builder.get_object("window1")
+	self.about = builder.get_object("aboutdialog1")
 	self.JobName = builder.get_object("filechooserbutton1")
 	if len(sys.argv) == 2:
 	    self.filename = sys.argv[1]
@@ -89,6 +90,9 @@ class App(object):
 	load_config(self)
 	self.long_edge_config = REVERSE | INVERT
 	self.short_edge_config = REVERSE
+
+    def about_button_clicked_cb(self, widget, data=None):
+	self.about.show()
 
     def filechooserbutton1_file_set_cb(self, widget, data=None):
 	self.filename = widget.get_filename()
