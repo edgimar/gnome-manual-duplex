@@ -22,8 +22,9 @@ def load_config(self):
     global Config
 
     Config = ConfigParser.ConfigParser()
+    self.config_path = os.path.expanduser('~/.config/gnome-manual-duplex.cfg')
     try:
-	Config.read([os.path.expanduser('~/.config/gnome-manual-duplex.cfg')])
+	Config.read([self.config_path])
 	#print Config.get('hp1020', 'long_edge_config', 0)
     except:
 	return
@@ -50,10 +51,9 @@ class App(object):
 	    self.filename = ''
 
 	self.pref = builder.get_object("pref")
-	self.combo_printers = builder.get_object("combobox1")
 
 	# populate combo_printers
-        self.combo_printers = builder.get_object("combobox1")
+        self.combo_printers = builder.get_object("combo_printers")
 	connection = cups.Connection()
 	dests = connection.getDests()
 	default_printer = connection.getDefault()
@@ -74,6 +74,10 @@ class App(object):
         self.combo_printers.pack_start(cell, True)
         self.combo_printers.add_attribute(cell, 'text', 0)
         self.combo_printers.set_active(default_index)
+        self.long_edge_reverse = builder.get_object("long_edge_reverse")
+        self.long_edge_invert = builder.get_object("long_edge_invert")
+        self.short_edge_reverse = builder.get_object("short_edge_reverse")
+        self.short_edge_invert = builder.get_object("short_edge_invert")
 
 	self.printdialog = builder.get_object("printdialog1")
 	self.evenok = builder.get_object("even-pages-ok")
@@ -99,6 +103,42 @@ class App(object):
     def destroy_event(self, widget, data=None):
         gtk.main_quit()
 
+    def pref_cancel_clicked_cb(self, widget, data=None):
+	self.pref.hide()
+
+    def pref_cb(self, widget, data=None):
+        self.pref.show()
+	printer = self.combo_printers.get_active_text()
+	#print printer
+	try:
+	    #print Config.get(printer, 'long_edge_config')
+	    long_edge_config = Config.get(printer, 'long_edge_config')
+	    short_edge_config = Config.get(printer, 'short_edge_config')
+	except:
+	    long_edge_config = self.long_edge_config
+	    short_edge_config = self.short_edge_config
+	    #print 'asd'
+	self.long_edge_reverse.set_active( (int(long_edge_config) >> 1) & 1)
+	self.long_edge_invert.set_active( (int(long_edge_config) >> 0) & 1)
+	self.short_edge_reverse.set_active( (int(short_edge_config) >> 1) & 1)
+	self.short_edge_invert.set_active( (int(short_edge_config) >> 0) & 1)
+
+    def pref_save_clicked_cb(self, widget, data=None):
+	#print self.combo_printers.get_active()		#18
+	printer = self.combo_printers.get_active_text()	#hp1020
+	Config.remove_section(printer)
+	Config.add_section(printer)
+	long_edge_config = (int(self.long_edge_reverse.get_active() ) << 1) \
+			    + int(self.long_edge_invert.get_active() )
+	short_edge_config = (int(self.short_edge_reverse.get_active() ) << 1) \
+			    + int(self.short_edge_invert.get_active() )
+	Config.set(printer, 'long_edge_config', str(long_edge_config))
+	Config.set(printer, 'short_edge_config', str(short_edge_config))
+	configfp = open(self.config_path, 'w')
+	Config.write(configfp)
+	#print self.config_path, self.long_edge_reverse.get_active()
+	self.pref.hide()
+
     def button1_clicked_cb(self, widget, data=None):
 	print "clicked"
 
@@ -108,19 +148,9 @@ class App(object):
     def checkbutton1_toggled_cb(self, widget, data=None):
 	self.SkipOddPages = not self.SkipOddPages
 
-    def pref_cb(self, widget, data=None):
-	# self.window.hide()
-        self.pref.show()
-
     def print_cb(self, widget, data=None):
 	self.window.hide()
         self.printdialog.show()
-
-    def pref_cancel_clicked_cb(self, widget, data=None):
-	self.pref.hide()
-
-    def pref_save_clicked_cb(self, widget, data=None):
-	self.pref.hide()
 
     def odd_pages_send_cb(self, widget, data, errormsg):
 	return
