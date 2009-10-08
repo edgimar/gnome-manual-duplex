@@ -123,6 +123,10 @@ class App(object):
 	self.short_edge_reverse.set_active( (int(short_edge_config) >> 1) & 1)
 	self.short_edge_invert.set_active( (int(short_edge_config) >> 0) & 1)
 
+    def combo_printers_changed_cb(self, widget, data=None):
+	#print 'changed'
+	self.pref_cb(self, widget)
+
     def pref_save_clicked_cb(self, widget, data=None):
 	#print self.combo_printers.get_active()		#18
 	printer = self.combo_printers.get_active_text()	#hp1020

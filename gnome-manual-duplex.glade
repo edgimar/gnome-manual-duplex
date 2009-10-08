@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE glade-interface SYSTEM "glade-2.0.dtd">
-<!--Generated with glade3 3.4.5 on Wed Oct  7 16:41:39 2009 -->
+<!--Generated with glade3 3.4.5 on Thu Oct  8 04:35:11 2009 -->
 <glade-interface>
   <requires lib="unixprint"/>
   <widget class="GtkWindow" id="window1">
@@ -325,6 +325,7 @@ printed side down.</property>
                 <child>
                   <widget class="GtkComboBox" id="combo_printers">
                     <property name="visible">True</property>
+                    <signal name="changed" handler="combo_printers_changed_cb"/>
                   </widget>
                 </child>
               </widget>
