@@ -91,7 +91,6 @@ install: all
 	#
 	$(INSTALL) -d $(LIBBONOBO)
 	$(INSTALL) -d $(LIBBONOBO)/servers
-	$(INSTALL) -d $(LIBBONOBO)/servers
 	$(INSTALL) -m644 gmd.server $(LIBBONOBO)/servers/
 	#
 	$(INSTALL) -d $(SHARE)/doc/$(PROG)

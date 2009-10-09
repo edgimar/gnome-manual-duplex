@@ -28,39 +28,44 @@ import sys
 import select
 import subprocess
 import pwd
+import gnome.ui
+import gnomeapplet
 
 needed=""
 
 try:
-	import gamin
+    import gamin
 except :
-	needed+="python-gamin\n"
+    needed+="python-gamin\n"
 
 try:
-	import gtk
+    import gtk
 except:
-	needed+="python-gtk2\n"
+    needed+="python-gtk2\n"
 
 try:
-	import gnomeapplet
+    import gnome.ui
 except:
-	needed+="python-gnome2-desktop\n"
+    needed+="gnome.ui\n"
+
+try:
+    import gnomeapplet
+except:
+    needed+="python-gnome2-desktop\n"
 	
 try:
-	import gobject
+    import gobject
 except:
-	needed+="python-gobject\n"
-
+    needed+="python-gobject\n"
 
 def send_error(message):
-
 	try:
-		fichero=open("/var/tmp/gmd/error.log","a")
+		fp = open("/var/tmp/gmd/error.log","a")
 	except:
 		return
 		
-	fichero.write(str(pwd.getpwuid(os.getuid())[0])+": "+message+"\n")
-	fichero.close()
+	fp.write(str(pwd.getpwuid(os.getuid())[0])+": "+message+"\n")
+	fp.close()
 
 
 def read_line(fichero):
@@ -181,58 +186,81 @@ def init_scan():
 
 
 def wdelete_event(widget, event, data=None):
-	
-	return False
-
+    return False
 	
 def wdestroy(widget, data=None):
-	
-	sys.exit(0)
-
+    sys.exit(0)
 
 def factory(applet, iid):
+    event_box = gtk.EventBox()
+    applet.add(event_box)
+    event_box.show()
 
-	global needed
-	global window
+    image = gtk.Image()
+    pixbuf = gtk.gdk.pixbuf_new_from_file("/usr/share/pixmaps/gmd.svg")
+    w,h = gtk.icon_size_lookup(gtk.ICON_SIZE_BUTTON)
+    scaled = pixbuf.scale_simple(w, h, gtk.gdk.INTERP_BILINEAR)
+    image.set_from_pixbuf(scaled)
+    event_box.add(image)
+    image.show()
+    event_box.connect("button-press-event", show_menu, applet)
+    applet.show_all()
+    check_needed()
 
-	label = gtk.Label("GMD")
-	frame = gtk.Frame()
-	frame.add(label)
-	applet.add(frame)
-	frame.set_shadow_type(gtk.SHADOW_ETCHED_IN)
-	applet.show_all()
-	check_needed()
+def create_menu (applet):
+    propxml="""
+	    <popup name="button3">
+	    <menuitem name="Item 3" verb="About" \
+		label="_About Gnome Manual Duplex" \
+		pixtype="stock" pixname="gtk-about"/>
+	    </popup>
+	    """
+    verbs = [("About", showAboutDialog)]
+    applet.setup_menu(propxml, verbs, None)
 
+def showAboutDialog(self, *arguments, **keywords):
+    about = gnome.ui.About(
+	    "GMD",
+	    "v0.13",
+	    "Copyright 2009 Rick Richardson.",
+	    "GNOME Manual Duplex Applet",
+	    ["Developers:",
+		"jngerl <quikee@gmail.com>"],
+		[])
+    about.show()
+
+def show_menu(widget, event, applet):
+    if event.type == gtk.gdk.BUTTON_PRESS and event.button == 3:
+	widget.emit_stop_by_name("button_press_event")
+	create_menu(applet)
 
 def check_needed():
+    global needed
 
-	global needed
+    os.system(
+	'lpadmin -p GnomeManualDuplex -E -v gmd:/ -L "Virtual Printer"')
 
-	os.system(
-	    'lpadmin -p GnomeManualDuplex -E -v gmd:/ -L "Virtual Printer"')
-
-	if needed=="":
-		init_scan()
-	else:
-		window=gtk.Window(gtk.WINDOW_TOPLEVEL)
-		window.set_title("Error, module not found")
-		window.connect("delete_event", wdelete_event)
-		window.connect("destroy", wdestroy)
-		window.set_border_width(10)
-		button = gtk.Button("Ok")
-		button.connect("clicked", wdestroy, None)
-		label = gtk.Label("You need to install the followin python modules in order to use GMD:\n\n"+needed)
-		box=gtk.VBox()
-		window.add(box)
-		box.add(label)
-		box.add(button)
-		button.show()
-		label.show()
-		box.show()
-		window.show()
-	
-	return gtk.TRUE
-
+    if needed=="":
+	init_scan()
+    else:
+	window=gtk.Window(gtk.WINDOW_TOPLEVEL)
+	window.set_title("Error, module not found")
+	window.connect("delete_event", wdelete_event)
+	window.connect("destroy", wdestroy)
+	window.set_border_width(10)
+	button = gtk.Button("Ok")
+	button.connect("clicked", wdestroy, None)
+	label = gtk.Label("You need to install the following python modules in order to use GMD:\n\n"+needed)
+	box=gtk.VBox()
+	window.add(box)
+	box.add(label)
+	box.add(button)
+	button.show()
+	label.show()
+	box.show()
+	window.show()
+    
+    return gtk.TRUE
 
 fc=None
 request=None
@@ -241,7 +269,18 @@ directory=""
 window=None
 
 if (len(sys.argv) == 2) and (sys.argv[1] == "standalone"):
-	check_needed()
-	gtk.main()
+    check_needed()
+    gtk.main()
+elif (len(sys.argv) == 2) and (sys.argv[1] == "run-in-window"):
+    main_window = gtk.Window(gtk.WINDOW_TOPLEVEL)
+    main_window.set_title("Python Applet")
+    main_window.connect("destroy", gtk.main_quit)
+    app = gnomeapplet.Applet()
+    factory(app, None)
+    app.reparent(main_window)
+    main_window.show_all()
+    gtk.main()
+    sys.exit()
 else:
-	gnomeapplet.bonobo_factory("OAFIID:GNOME_GMD_applet_Factory",gnomeapplet.Applet.__gtype__,"GMD","3",factory)
+    gnomeapplet.bonobo_factory("OAFIID:GNOME_GMD_applet_Factory",
+	gnomeapplet.Applet.__gtype__, "GMD", "3", factory)
