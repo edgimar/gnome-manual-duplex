@@ -1,5 +1,5 @@
 
-VERSION=0.13
+VERSION=0.14
 
 INSTALL=install
 LPADMIN=/usr/sbin/lpadmin
@@ -18,7 +18,7 @@ FILES=\
 	debian.changelog \
 	debian.control \
 	debian.rules \
-	gmd-applet.py \
+	gmd-applet.py.in \
 	gmd-backend.sh \
 	gmd.server \
 	gmd.svg \
@@ -34,10 +34,20 @@ FILES=\
 	short_edge.fig \
 	$(NULL)
 
-.SUFFIXES: .glade .xml .fig .xpm
+.SUFFIXES: .glade .xml .fig .xpm .py.in .py
 
 .glade.xml:
 	gtk-builder-convert $*.glade $*.xml
+
+%.py : %.py.in
+	rm -f $@; sed < $*.py.in > $@ \
+            -e "s@\$${VERSION}@$(VERSION)@"; chmod +x-w $@ \
+            || (rm -f $@ && exit 1)
+
+% : %.py.in
+	rm -f $@; sed < $*.py.in > $@ \
+            -e "s@\$${VERSION}@$(VERSION)@"; chmod +x-w $@ \
+            || (rm -f $@ && exit 1)
 
 % : %.py
 	rm -f $@; cp -a $*.py $@; chmod +x-w $@
@@ -49,7 +59,8 @@ FILES=\
 
 PROG=gnome-manual-duplex
 
-all: $(PROG) $(PROG).xml $(PROG).spec $(PROG).dsc long_edge.xpm short_edge.xpm
+all: $(PROG) $(PROG).xml $(PROG).spec $(PROG).dsc \
+	long_edge.xpm short_edge.xpm gmd-applet.py
 
 $(PROG).spec: $(PROG).spec.in Makefile
 	rm -f $@
@@ -64,6 +75,8 @@ $(PROG).dsc: $(PROG).dsc.in Makefile
             -e "s@\$${VERSION}@$(VERSION)@" \
             || (rm -f $@ && exit 1)
 	chmod 444 $@
+
+gmd-applet.py: Makefile gmd-applet.py.in
 
 install: all
 	# /usr/bin...
@@ -100,6 +113,7 @@ install: all
 clean:
 	rm -f $(PROG) $(PROG).xml *.tar.gz *.spec *.dsc
 	rm -f long_edge.xpm short_edge.xpm
+	rm -f gmd-applet.py
 
 tar:	tarver
 	HERE=`basename $$PWD`; \

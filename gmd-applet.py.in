@@ -221,11 +221,11 @@ def create_menu (applet):
 def showAboutDialog(self, *arguments, **keywords):
     about = gnome.ui.About(
 	    "GMD",
-	    "v0.13",
+	    "v${VERSION}",
 	    "Copyright 2009 Rick Richardson.",
 	    "GNOME Manual Duplex Applet",
 	    ["Developers:",
-		"jngerl <quikee@gmail.com>"],
+		"Rick Richardson"],
 		[])
     about.show()
 
