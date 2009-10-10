@@ -191,6 +191,8 @@ def factory(applet, iid):
     event_box.add(image)
     image.show()
     event_box.connect("button-press-event", show_menu, applet)
+    tooltips = gtk.Tooltips()
+    tooltips.set_tip(image, "Gnome Manual Duplex Applet")
     applet.show_all()
     check_needed()
 
