@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE glade-interface SYSTEM "glade-2.0.dtd">
-<!--Generated with glade3 3.4.5 on Thu Oct  8 10:46:28 2009 -->
+<!--Generated with glade3 3.4.5 on Fri Oct  9 20:03:05 2009 -->
 <glade-interface>
   <requires lib="unixprint"/>
   <widget class="GtkWindow" id="window1">
@@ -504,6 +504,7 @@ printed side down.</property>
     <property name="type_hint">GDK_WINDOW_TYPE_HINT_DIALOG</property>
     <property name="has_separator">False</property>
     <property name="program_name">Gnome Manual Duplex</property>
+    <property name="version">v${VERSION}</property>
     <property name="copyright" translatable="yes">Copyright 2009 Rick Richardson.  All Rights Reserved.</property>
     <property name="website">https://sourceforge.net/projects/g-manual-duplex/</property>
     <property name="website_label" translatable="yes">Home Page</property>

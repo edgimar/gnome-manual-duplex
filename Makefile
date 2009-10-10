@@ -37,7 +37,8 @@ FILES=\
 .SUFFIXES: .glade .xml .fig .xpm .py.in .py
 
 .glade.xml:
-	gtk-builder-convert $*.glade $*.xml
+	gtk-builder-convert $*.glade - \
+	    | sed -e "s@\$${VERSION}@$(VERSION)@" > $*.xml
 
 %.py : %.py.in
 	rm -f $@; sed < $*.py.in > $@ \
@@ -77,6 +78,8 @@ $(PROG).dsc: $(PROG).dsc.in Makefile
 	chmod 444 $@
 
 gmd-applet.py: Makefile gmd-applet.py.in
+
+gnome-manual-duplex.xml: Makefile
 
 install: all
 	# /usr/bin...
