@@ -1,3 +1,9 @@
+gnome-manual-duplex (0.15) stable; urgency=low
+
+  * Even pages vertical
+
+ -- Rick Richardson <rickrich@gmail.com>  Sun, 11 Oct 2009 08:21:03 -0500
+
 gnome-manual-duplex (0.14) stable; urgency=low
 
   * About in applet done
