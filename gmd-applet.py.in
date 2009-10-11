@@ -225,6 +225,8 @@ def show_menu(widget, event, applet):
     if event.type == gtk.gdk.BUTTON_PRESS and event.button == 3:
 	widget.emit_stop_by_name("button_press_event")
 	create_menu(applet)
+    if event.type == gtk.gdk.BUTTON_PRESS and event.button == 1:
+	os.system("gnome-manual-duplex")
 
 def check_needed():
     global needed
