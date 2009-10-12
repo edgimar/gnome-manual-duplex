@@ -51,6 +51,20 @@ class App(object):
 	else:
 	    self.filename = ''
 
+	filter = gtk.FileFilter()
+	filter.set_name('PS/PDF files')
+	filter.add_pattern('*.ps')
+	filter.add_pattern('*.pdf')
+	filter.add_pattern('application/postscript')
+	filter.add_pattern('application/pdf')
+	self.JobName.add_filter(filter)
+	self.JobName.set_filter(filter)
+
+	filter = gtk.FileFilter()
+	filter.set_name('All files')
+	filter.add_pattern('*')
+	self.JobName.add_filter(filter)
+
 	self.pref = builder.get_object("pref")
 
 	# populate combo_printers

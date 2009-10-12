@@ -1,6 +1,6 @@
 gnome-manual-duplex (0.15) stable; urgency=low
 
-  * Even pages vertical
+  * Even pages vertical size. PS/PDF files.
 
  -- Rick Richardson <rickrich@gmail.com>  Sun, 11 Oct 2009 08:21:03 -0500
 
