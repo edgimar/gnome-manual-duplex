@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE glade-interface SYSTEM "glade-2.0.dtd">
-<!--Generated with glade3 3.4.5 on Sun Oct 11 12:11:07 2009 -->
+<!--Generated with glade3 3.4.5 on Tue Oct 13 16:11:13 2009 -->
 <glade-interface>
   <requires lib="unixprint"/>
   <widget class="GtkWindow" id="window1">
@@ -53,26 +53,15 @@
                     <property name="n_rows">2</property>
                     <property name="n_columns">2</property>
                     <child>
-                      <widget class="GtkImage" id="image2">
+                      <widget class="GtkRadioButton" id="radiobutton1">
                         <property name="visible">True</property>
-                        <property name="pixbuf">short_edge.xpm</property>
+                        <property name="can_focus">True</property>
+                        <property name="label" translatable="yes">Manual Long Edge</property>
+                        <property name="response_id">0</property>
+                        <property name="active">True</property>
+                        <property name="draw_indicator">True</property>
+                        <signal name="toggled" handler="radiobutton1_toggled_cb"/>
                       </widget>
-                      <packing>
-                        <property name="left_attach">1</property>
-                        <property name="right_attach">2</property>
-                        <property name="top_attach">1</property>
-                        <property name="bottom_attach">2</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <widget class="GtkImage" id="image1">
-                        <property name="visible">True</property>
-                        <property name="pixbuf">long_edge.xpm</property>
-                      </widget>
-                      <packing>
-                        <property name="left_attach">1</property>
-                        <property name="right_attach">2</property>
-                      </packing>
                     </child>
                     <child>
                       <widget class="GtkRadioButton" id="radiobutton2">
@@ -90,15 +79,26 @@
                       </packing>
                     </child>
                     <child>
-                      <widget class="GtkRadioButton" id="radiobutton1">
+                      <widget class="GtkImage" id="image1">
                         <property name="visible">True</property>
-                        <property name="can_focus">True</property>
-                        <property name="label" translatable="yes">Manual Long Edge</property>
-                        <property name="response_id">0</property>
-                        <property name="active">True</property>
-                        <property name="draw_indicator">True</property>
-                        <signal name="toggled" handler="radiobutton1_toggled_cb"/>
+                        <property name="pixbuf">long_edge.xpm</property>
                       </widget>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="right_attach">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkImage" id="image2">
+                        <property name="visible">True</property>
+                        <property name="pixbuf">short_edge.xpm</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="right_attach">2</property>
+                        <property name="top_attach">1</property>
+                        <property name="bottom_attach">2</property>
+                      </packing>
                     </child>
                   </widget>
                 </child>
@@ -378,6 +378,11 @@ printed side down.</property>
                       <widget class="GtkCheckButton" id="long_edge_reverse">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
+                        <property name="tooltip" translatable="yes">HP LJ 1005/1018/1020: reverse pages
+HP LJ P1005/P1006/P1505: reverse pages
+HP CLJ 1600/2600/CP1215: reverse pages
+Others: depends
+</property>
                         <property name="label" translatable="yes">Reverse Pages</property>
                         <property name="response_id">0</property>
                         <property name="draw_indicator">True</property>
@@ -387,6 +392,10 @@ printed side down.</property>
                       <widget class="GtkCheckButton" id="long_edge_invert">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
+                        <property name="tooltip" translatable="yes">HP LJ 1005/1018/1020: invert pages
+HP LJ P1005/P1006/P1505: invert pages
+HP CLJ 1600/2600/CP1215: invert pages
+Others: depends</property>
                         <property name="label" translatable="yes">Invert (rotate 180 degrees) Pages</property>
                         <property name="response_id">0</property>
                         <property name="draw_indicator">True</property>
@@ -430,6 +439,11 @@ printed side down.</property>
                       <widget class="GtkCheckButton" id="short_edge_reverse">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
+                        <property name="tooltip" translatable="yes">HP LJ 1005/1018/1020: reverse pages
+HP LJ P1005/P1006/P1505: reverse pages
+HP CLJ 1600/2600/CP1215: reverse pages
+Others: depends
+</property>
                         <property name="label" translatable="yes">Reverse Pages</property>
                         <property name="response_id">0</property>
                         <property name="draw_indicator">True</property>
@@ -439,6 +453,11 @@ printed side down.</property>
                       <widget class="GtkCheckButton" id="short_edge_invert">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
+                        <property name="tooltip" translatable="yes">HP LJ 1005/1018/1020: no invert pages
+HP LJ P1005/P1006: no invert pages
+HP CLJ 1600/2600/CP1215: no invert pages
+Others: depends
+</property>
                         <property name="label" translatable="yes">Invert (rotate 180 degrees) Pages</property>
                         <property name="response_id">0</property>
                         <property name="draw_indicator">True</property>
