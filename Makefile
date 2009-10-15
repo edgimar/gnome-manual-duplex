@@ -1,5 +1,5 @@
 
-VERSION=0.15
+VERSION=0.16
 
 INSTALL=install
 LPADMIN=/usr/sbin/lpadmin
@@ -26,6 +26,7 @@ FILES=\
 	gnome-manual-duplex.dsc.in \
 	gnome-manual-duplex.glade \
 	gnome-manual-duplex.png \
+	gnome-manual-duplex.ppd \
 	gnome-manual-duplex.py \
 	gnome-manual-duplex.spec.in \
 	long_edge.fig \
@@ -101,6 +102,9 @@ install: all
 	$(INSTALL) -d $(LIBCUPS)
 	$(INSTALL) -d $(LIBCUPS)/backend
 	$(INSTALL) -m755 gmd-backend.sh $(LIBCUPS)/backend/gmd
+	#
+	$(INSTALL) -d $(SHARE)/cups/model
+	$(INSTALL) $(PROG).ppd $(SHARE)/cups/model
 	#
 	# Done in gmd-applet.py now...
 	#$(LPADMIN) -p GnomeManualDuplex -E -v gmd:/ -L "Virtual Printer"

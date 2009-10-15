@@ -40,6 +40,7 @@ make DESTDIR=$RPM_BUILD_ROOT install
 /usr/lib/bonobo/servers/gmd.server
 /usr/lib/cups/backend/gmd
 /usr/share/applications/gnome-manual-duplex.desktop
+/usr/share/cups/model/gnome-manual-duplex.ppd
 /usr/share/doc/gnome-manual-duplex/COPYING
 /usr/share/doc/gnome-manual-duplex/README
 /usr/share/gnome-manual-duplex/gmd-applet.py

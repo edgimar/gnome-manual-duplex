@@ -197,6 +197,8 @@ class App(object):
 		    self.printdialog.get_settings(),
 		    self.printdialog.get_page_setup())
 		self.printdialog.PrintJob.set_source_file(self.tempfile.name)
+		# self.printdialog.set_manual_capabilities(
+		#     gtkunixprint.PRINT_CAPABILITY_GENERATE_PS)
 		if Debug == 0:
 		    self.printdialog.PrintJob.send(self.odd_pages_send_cb)
 		# print "print"
@@ -233,6 +235,8 @@ class App(object):
 	    self.printdialog.get_settings(),
 	    self.printdialog.get_page_setup())
 	self.printdialog.PrintJob.set_source_file(self.tempfile.name)
+	# self.printdialog.set_manual_capabilities(
+	# 	    gtkunixprint.PRINT_CAPABILITY_GENERATE_PS)
 	if Debug == 0:
 	    self.printdialog.PrintJob.send(self.even_pages_send_cb)
 	self.evenok.hide()
