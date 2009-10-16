@@ -184,7 +184,8 @@ def factory(applet, iid):
     event_box.show()
 
     image = gtk.Image()
-    pixbuf = gtk.gdk.pixbuf_new_from_file("/usr/share/pixmaps/gmd.svg")
+    pixbuf = gtk.gdk.pixbuf_new_from_file(
+	"/usr/share/pixmaps/gnome-manual-duplex.png")
     w,h = gtk.icon_size_lookup(gtk.ICON_SIZE_BUTTON)
     scaled = pixbuf.scale_simple(w, h, gtk.gdk.INTERP_BILINEAR)
     image.set_from_pixbuf(scaled)
