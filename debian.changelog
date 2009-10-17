@@ -1,3 +1,9 @@
+gnome-manual-duplex (0.17) stable; urgency=low
+
+  * Change icon
+
+ -- Rick Richardson <rickrich@gmail.com>  Sat, 16 Oct 2009 08:21:03 -0500
+
 gnome-manual-duplex (0.16) stable; urgency=low
 
   * Add gnome-manual-duplex.ppd (Cups-PDF.ppd)
