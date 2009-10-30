@@ -381,6 +381,7 @@ printed side down.</property>
                         <property name="tooltip" translatable="yes">HP LJ 1005/1018/1020: reverse pages
 HP LJ P1005/P1006/P1505: reverse pages
 HP CLJ 1600/2600/CP1215: reverse pages
+Minolta/QMS 2300 DL: reverse pages
 Others: depends
 </property>
                         <property name="label" translatable="yes">Reverse Pages</property>
@@ -395,6 +396,7 @@ Others: depends
                         <property name="tooltip" translatable="yes">HP LJ 1005/1018/1020: invert pages
 HP LJ P1005/P1006/P1505: invert pages
 HP CLJ 1600/2600/CP1215: invert pages
+Minolta/QMS 2300 DL: invert pages
 Others: depends</property>
                         <property name="label" translatable="yes">Invert (rotate 180 degrees) Pages</property>
                         <property name="response_id">0</property>
@@ -442,6 +444,7 @@ Others: depends</property>
                         <property name="tooltip" translatable="yes">HP LJ 1005/1018/1020: reverse pages
 HP LJ P1005/P1006/P1505: reverse pages
 HP CLJ 1600/2600/CP1215: reverse pages
+Minolta/QMS 2300 DL: reverse pages
 Others: depends
 </property>
                         <property name="label" translatable="yes">Reverse Pages</property>
@@ -456,6 +459,7 @@ Others: depends
                         <property name="tooltip" translatable="yes">HP LJ 1005/1018/1020: no invert pages
 HP LJ P1005/P1006: no invert pages
 HP CLJ 1600/2600/CP1215: no invert pages
+Minolta/QMS 2300 DL: no invert pages
 Others: depends
 </property>
                         <property name="label" translatable="yes">Invert (rotate 180 degrees) Pages</property>
