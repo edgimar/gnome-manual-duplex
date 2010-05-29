@@ -1,5 +1,5 @@
 
-VERSION=0.17
+VERSION=0.18
 
 INSTALL=install
 LPADMIN=/usr/sbin/lpadmin
