@@ -81,6 +81,8 @@ class App(object):
 		extra = " (default)"
 	    else:
 		extra = ""
+	    if printer == "GnomeManualDuplex":
+		continue
 	    if printer == None:
 		continue
 	    if instance != None:
