@@ -75,14 +75,17 @@ class App(object):
 
         liststore = gtk.ListStore(gobject.TYPE_STRING)
 	default_index = i = 0
-	for (printer, instance) in dests.keys ():
+	for (printer, instance) in sorted( dests.keys () ):
 	    if default_printer == printer:
 		default_index = i
+		extra = " (default)"
+	    else:
+		extra = ""
 	    if printer == None:
 		continue
 	    if instance != None:
 		continue
-	    liststore.append([printer])
+	    liststore.append([printer + extra])
 	    i = i + 1
         self.combo_printers.set_model(liststore)
         cell = gtk.CellRendererText()
