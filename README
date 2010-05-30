@@ -8,7 +8,7 @@ Install:
     # make install		-OR-	$ sudo make install
 
 Then using the GUI:
-    1)	System -> Gnome Manual Duplex
+    1)	System Tools -> Gnome Manual Duplex
 	- OR -
     2)	Add to Panel -> Gnome Manual Duplex applet -> Add
 	Print -> GnomeManualDuplex (Virtual Printer) -> Print
