@@ -14,6 +14,7 @@ LIBBONOBO=$(DESTDIR)/usr/lib/bonobo
 NULL=
 FILES=\
 	2pages.ps \
+	2pages.pdf \
 	COPYING \
 	debian.changelog \
 	debian.control \
