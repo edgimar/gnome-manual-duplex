@@ -1,6 +1,8 @@
 Requires:
     psutils
 	# yum install psutils	-OR-	$ sudo apt-get install psutils
+    file
+	# yum install file	-OR-	$ sudo apt-get install file
 
 Install:
     $ make
