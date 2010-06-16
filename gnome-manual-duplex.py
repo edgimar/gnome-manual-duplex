@@ -194,8 +194,17 @@ class App(object):
 	    if not self.SkipOddPages:
 		# Print out odd pages
 		# print self.filename
-		os.system("pstops 2:0 "
-		    + self.filename + " " + self.tempfile.name)
+		rc = os.system("file " + self.filename + " | grep -q PDF")
+		if rc == 256:
+		    self.is_pdf = 0
+		    os.system("pstops 2:0 "
+			+ self.filename + " " + self.tempfile.name)
+		else:
+		    self.is_pdf = 1
+		    os.system("pdftops " + self.filename + " - | pstops 2:0 > "
+			 + self.tempfile.name)
+		# print "is_pdf ", self.is_pdf
+		
 		self.printdialog.PrintJob = gtkunixprint.PrintJob(
 		    "title",
 		    self.printdialog.get_selected_printer(),
@@ -231,9 +240,15 @@ class App(object):
 		config = self.short_edge_config
 	reverse = [ '1', '-1' ]
 	invert = [ '', 'U(1w,1h)' ]
-	os.system("pstops '2:" 
-	    + reverse[(config>>1) & 1] + invert[config&1] + "' "
-	    + self.filename + " " + self.tempfile.name)
+	if self.is_pdf == 0:
+	    os.system("pstops '2:" 
+		+ reverse[(config>>1) & 1] + invert[config&1] + "' "
+		+ self.filename + " " + self.tempfile.name)
+	else:
+	    os.system("pdftops " + self.filename + " - | pstops '2:" 
+		+ reverse[(config>>1) & 1] + invert[config&1] + "' "
+		+ " > " + self.tempfile.name)
+	# os.system("cp " + self.tempfile.name + " /tmp/2")
 	self.printdialog.PrintJob = gtkunixprint.PrintJob(
 	    "title",
 	    self.printdialog.get_selected_printer(),
