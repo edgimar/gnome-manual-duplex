@@ -136,3 +136,7 @@ tarver: all
         sed -e "s?^?$$HERE/?" | \
         (cd ..; tar -c -z -f $$HERE/$$HERE.tar.gz -T-); \
         rm -f ../$$HERE
+
+w:	all
+	root $(MAKE) install
+	$(MAKE) tar
