@@ -14,9 +14,23 @@ import gtk
 import gtkunixprint
 import cups
 import ConfigParser
+import locale, gettext
 
 REVERSE = 2
 INVERT = 1
+APP="gnome-manual-duplex"
+DIR="po"
+
+#
+#	i18n
+#
+locale.setlocale(locale.LC_ALL, '')
+locale.bindtextdomain(APP, DIR)
+gettext.bindtextdomain(APP, DIR)
+gettext.textdomain(APP)
+lang = gettext.translation(APP, DIR, fallback=True)
+_ = lang.gettext
+gettext.install(APP, DIR)
 
 def load_config(self):
     global Config
@@ -40,6 +54,7 @@ class App(object):
             if os.path.exists(filename):
                 builder.add_from_file(filename)
                 break
+	builder.set_translation_domain(APP)
 
 	#builder.add_from_file("manfeed.xml")
 	self.window = builder.get_object("window1")
