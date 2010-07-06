@@ -1,4 +1,5 @@
 
+PROG=gnome-manual-duplex
 VERSION=0.20
 
 INSTALL=install
@@ -23,13 +24,13 @@ FILES=\
 	gmd-backend.sh \
 	gmd.server \
 	gmd.svg \
-	gnome-manual-duplex.desktop \
-	gnome-manual-duplex.dsc.in \
-	gnome-manual-duplex.glade \
-	gnome-manual-duplex.png \
-	gnome-manual-duplex.ppd \
-	gnome-manual-duplex.py \
-	gnome-manual-duplex.spec.in \
+	$(PROG).desktop \
+	$(PROG).dsc.in \
+	$(PROG).glade \
+	$(PROG).png \
+	$(PROG).ppd \
+	$(PROG).py \
+	$(PROG).spec.in \
 	long_edge.fig \
 	Makefile \
 	README \
@@ -60,8 +61,6 @@ FILES=\
 	    | sed -e 's/White/None/' -e 's/#FFFFFF/None/' \
 	    > $*.xpm
 
-PROG=gnome-manual-duplex
-
 all: $(PROG) $(PROG).xml $(PROG).spec $(PROG).dsc \
 	long_edge.xpm short_edge.xpm gmd-applet.py
 
@@ -81,7 +80,17 @@ $(PROG).dsc: $(PROG).dsc.in Makefile
 
 gmd-applet.py: Makefile gmd-applet.py.in
 
-gnome-manual-duplex.xml: Makefile
+$(PROG).xml: Makefile
+
+messages: messages.pot
+
+messages.pot: $(PROG).py $(PROG).glade gmd-applet.py Makefile
+	xgettext -k_ -kN_ -o $@ $(PROG).py $(PROG).glade gmd-applet.py
+	sed -i'~' -e 's/SOME .* TITLE/gmd translation template/g' \
+	    -e 's/YEAR THE .* HOLDER/2010 Rick Richardson/g' \
+	    -e 's/FIRST .*, YEAR/Rick Richardson <rickrich@gmail.com>, 2010/g' \
+	    -e 's/PACKAGE VERSION/$(PROG) '$(VERSION)'/g' \
+	    -e 's/PACKAGE/$(PROG)/g' $@
 
 install: all
 	# /usr/bin...
@@ -122,6 +131,8 @@ clean:
 	rm -f $(PROG) $(PROG).xml *.tar.gz *.spec *.dsc
 	rm -f long_edge.xpm short_edge.xpm
 	rm -f gmd-applet.py
+	rm -f messages.pot*
+	rm -rf locale
 
 tar:	tarver
 	HERE=`basename $$PWD`; \
