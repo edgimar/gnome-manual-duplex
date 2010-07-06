@@ -95,7 +95,7 @@ messages.pot: $(PROG).py $(PROG).glade gmd-applet.py Makefile
 
 # msginit -i messages.pot -o po/en_US.po
 po/en_US.po: messages.pot
-	msgmerge -U $@ messages.pot
+	msgmerge -q -U $@ messages.pot
 	touch $@
 
 locale/en_US/LC_MESSAGES/$(PROG).mo: po/en_US.po
