@@ -136,6 +136,12 @@ install: all
 	$(INSTALL) -d $(SHARE)/doc/$(PROG)
 	$(INSTALL) -m644 README $(SHARE)/doc/$(PROG)
 	$(INSTALL) -m644 COPYING $(SHARE)/doc/$(PROG)
+	# /usr/share/locale
+	$(INSTALL) -d $(SHARE)/locale
+	$(INSTALL) -d $(SHARE)/locale/en_US
+	$(INSTALL) -d $(SHARE)/locale/en_US/LC_MESSAGES
+	$(INSTALL) -m644 locale/en_US/LC_MESSAGES/$(PROG).mo \
+		$(SHARE)/locale/en_US/LC_MESSAGES/
 
 clean:
 	rm -f $(PROG) $(PROG).xml *.tar.gz *.spec *.dsc

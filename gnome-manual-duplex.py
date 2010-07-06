@@ -26,7 +26,7 @@ DIR="po"
 #
 locale.setlocale(locale.LC_ALL, '')
 locale.bindtextdomain(APP, DIR)
-gettext.bindtextdomain(APP, DIR)
+DIR = gettext.bindtextdomain(APP)
 gettext.textdomain(APP)
 lang = gettext.translation(APP, DIR, fallback=True)
 _ = lang.gettext
