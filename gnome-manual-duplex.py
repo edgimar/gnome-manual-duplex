@@ -24,7 +24,7 @@ DIR="po"
 #
 #	i18n
 #
-locale.setlocale(locale.LC_ALL, '')
+#locale.setlocale(locale.LC_ALL, '')
 locale.bindtextdomain(APP, DIR)
 DIR = gettext.bindtextdomain(APP)
 gettext.textdomain(APP)
