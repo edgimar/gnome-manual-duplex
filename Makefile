@@ -36,6 +36,7 @@ FILES=\
 	README \
 	short_edge.fig \
 	po/en_US.po \
+	po/fr_FR.po \
 	$(NULL)
 
 .SUFFIXES: .glade .xml .fig .xpm .py.in .py
@@ -83,7 +84,10 @@ gmd-applet.py: Makefile gmd-applet.py.in
 
 $(PROG).xml: Makefile
 
-messages: messages.pot locale/en_US/LC_MESSAGES/$(PROG).mo
+messages: messages.pot \
+	    locale/en_US/LC_MESSAGES/$(PROG).mo \
+	    locale/fr_FR/LC_MESSAGES/$(PROG).mo \
+	    $(NULL)
 
 messages.pot: $(PROG).py $(PROG).glade gmd-applet.py Makefile
 	xgettext -k_ -kN_ -o $@ $(PROG).py $(PROG).glade gmd-applet.py
@@ -99,8 +103,16 @@ po/en_US.po: messages.pot
 	touch $@
 
 locale/en_US/LC_MESSAGES/$(PROG).mo: po/en_US.po
-	mkdir -p locale/en_US/LC_MESSAGES/
-	msgfmt po/en_US.po -o $@
+	mkdir -p  `dirname $@`
+	msgfmt $< -o $@
+
+po/fr_FR.po: messages.pot
+	msgmerge -q -U $@ messages.pot
+	touch $@
+
+locale/fr_FR/LC_MESSAGES/$(PROG).mo: po/fr_FR.po
+	mkdir -p  `dirname $@`
+	msgfmt $< -o $@
 
 install: all
 	# /usr/bin...
@@ -138,10 +150,13 @@ install: all
 	$(INSTALL) -m644 COPYING $(SHARE)/doc/$(PROG)
 	# /usr/share/locale
 	$(INSTALL) -d $(SHARE)/locale
-	$(INSTALL) -d $(SHARE)/locale/en_US
-	$(INSTALL) -d $(SHARE)/locale/en_US/LC_MESSAGES
-	$(INSTALL) -m644 locale/en_US/LC_MESSAGES/$(PROG).mo \
-		$(SHARE)/locale/en_US/LC_MESSAGES/
+	cd locale; \
+	for xx_XX in *; do \
+	    $(INSTALL) -d $(SHARE)/locale/$$xx_XX; \
+	    $(INSTALL) -d $(SHARE)/locale/$$xx_XX/LC_MESSAGES; \
+	    $(INSTALL) -m644 $$xx_XX/LC_MESSAGES/$(PROG).mo \
+		$(SHARE)/locale/$$xx_XX/LC_MESSAGES/ ; \
+	done
 
 clean:
 	rm -f $(PROG) $(PROG).xml *.tar.gz *.spec *.dsc
