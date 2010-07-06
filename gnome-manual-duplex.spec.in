@@ -1,6 +1,6 @@
 Name:           gnome-manual-duplex
 # List of additional build dependencies
-BuildRequires: gtk2-devel cups netpbm-progs transfig
+BuildRequires: gtk2-devel cups netpbm-progs transfig gettext
 Requires:	psutils file
 Version:        ${VERSION}
 Release:        1
@@ -49,3 +49,4 @@ make DESTDIR=$RPM_BUILD_ROOT install
 /usr/share/gnome-manual-duplex/short_edge.xpm
 /usr/share/pixmaps/gmd.svg
 /usr/share/pixmaps/gnome-manual-duplex.png
+/usr/share/locale/*
