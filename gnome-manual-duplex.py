@@ -282,5 +282,6 @@ class App(object):
 	return
 
 if __name__ == "__main__":
+    # print _('i18n test')
     app = App()
     gtk.main()
