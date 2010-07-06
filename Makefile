@@ -35,6 +35,7 @@ FILES=\
 	Makefile \
 	README \
 	short_edge.fig \
+	po/en_US.po \
 	$(NULL)
 
 .SUFFIXES: .glade .xml .fig .xpm .py.in .py
@@ -61,7 +62,7 @@ FILES=\
 	    | sed -e 's/White/None/' -e 's/#FFFFFF/None/' \
 	    > $*.xpm
 
-all: $(PROG) $(PROG).xml $(PROG).spec $(PROG).dsc \
+all: $(PROG) $(PROG).xml $(PROG).spec $(PROG).dsc messages.pot \
 	long_edge.xpm short_edge.xpm gmd-applet.py
 
 $(PROG).spec: $(PROG).spec.in Makefile
@@ -91,6 +92,10 @@ messages.pot: $(PROG).py $(PROG).glade gmd-applet.py Makefile
 	    -e 's/FIRST .*, YEAR/Rick Richardson <rickrich@gmail.com>, 2010/g' \
 	    -e 's/PACKAGE VERSION/$(PROG) '$(VERSION)'/g' \
 	    -e 's/PACKAGE/$(PROG)/g' $@
+
+po/en_US.po: messages.pot
+	# msginit -i messages.pot -o po/en_US.po
+	msgmerge -U $@ messages.pot
 
 install: all
 	# /usr/bin...
