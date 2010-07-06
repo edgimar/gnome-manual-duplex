@@ -46,6 +46,7 @@ class App(object):
     def __init__(self):
 
 	builder = gtk.Builder()
+	builder.set_translation_domain(PROGNAME)
 	ui_file = "gnome-manual-duplex.xml"
 	ui_folders = [ '.', '/usr/share/gnome-manual-duplex']
 	for ui_folder in ui_folders:
@@ -53,7 +54,6 @@ class App(object):
             if os.path.exists(filename):
                 builder.add_from_file(filename)
                 break
-	builder.set_translation_domain(PROGNAME)
 
 	#builder.add_from_file("manfeed.xml")
 	self.window = builder.get_object("window1")
