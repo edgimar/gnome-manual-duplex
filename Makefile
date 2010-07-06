@@ -62,7 +62,7 @@ FILES=\
 	    | sed -e 's/White/None/' -e 's/#FFFFFF/None/' \
 	    > $*.xpm
 
-all: $(PROG) $(PROG).xml $(PROG).spec $(PROG).dsc messages.pot \
+all: $(PROG) $(PROG).xml $(PROG).spec $(PROG).dsc messages \
 	long_edge.xpm short_edge.xpm gmd-applet.py
 
 $(PROG).spec: $(PROG).spec.in Makefile
@@ -83,7 +83,7 @@ gmd-applet.py: Makefile gmd-applet.py.in
 
 $(PROG).xml: Makefile
 
-messages: messages.pot
+messages: messages.pot locale/en_US/LC_MESSAGES/$(PROG).mo
 
 messages.pot: $(PROG).py $(PROG).glade gmd-applet.py Makefile
 	xgettext -k_ -kN_ -o $@ $(PROG).py $(PROG).glade gmd-applet.py
@@ -93,9 +93,14 @@ messages.pot: $(PROG).py $(PROG).glade gmd-applet.py Makefile
 	    -e 's/PACKAGE VERSION/$(PROG) '$(VERSION)'/g' \
 	    -e 's/PACKAGE/$(PROG)/g' $@
 
+# msginit -i messages.pot -o po/en_US.po
 po/en_US.po: messages.pot
-	# msginit -i messages.pot -o po/en_US.po
 	msgmerge -U $@ messages.pot
+	touch $@
+
+locale/en_US/LC_MESSAGES/$(PROG).mo: po/en_US.po
+	mkdir -p locale/en_US/LC_MESSAGES/
+	msgfmt po/en_US.po -o $@
 
 install: all
 	# /usr/bin...
