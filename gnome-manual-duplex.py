@@ -18,19 +18,18 @@ import locale, gettext
 
 REVERSE = 2
 INVERT = 1
-APP="gnome-manual-duplex"
-DIR="po"
+PROGNAME="gnome-manual-duplex"
 
 #
 #	i18n
 #
 #locale.setlocale(locale.LC_ALL, '')
-locale.bindtextdomain(APP, DIR)
-DIR = gettext.bindtextdomain(APP)
-gettext.textdomain(APP)
-lang = gettext.translation(APP, DIR, fallback=True)
+#locale.bindtextdomain(PROGNAME, DIR)
+locale_dir = gettext.bindtextdomain(PROGNAME)	# /usr/share/locale/...
+gettext.textdomain(PROGNAME)
+lang = gettext.translation(PROGNAME, locale_dir, fallback=True)
 _ = lang.gettext
-gettext.install(APP, DIR)
+gettext.install(PROGNAME, locale_dir)
 
 def load_config(self):
     global Config
@@ -54,7 +53,7 @@ class App(object):
             if os.path.exists(filename):
                 builder.add_from_file(filename)
                 break
-	builder.set_translation_domain(APP)
+	builder.set_translation_domain(PROGNAME)
 
 	#builder.add_from_file("manfeed.xml")
 	self.window = builder.get_object("window1")
