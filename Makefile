@@ -39,7 +39,7 @@ FILES=\
 	po/fr_FR.po \
 	$(NULL)
 
-.SUFFIXES: .glade .xml .fig .xpm .py.in .py
+.SUFFIXES: .glade .xml .fig .xpm .py.in .py .mo .po .pot
 
 .glade.xml:
 	gtk-builder-convert $*.glade - \
@@ -84,6 +84,19 @@ gmd-applet.py: Makefile gmd-applet.py.in
 
 $(PROG).xml: Makefile
 
+#
+#	i18n
+#
+#	msginit -i messages.pot -o po/en_US.po
+#
+locale/%/LC_MESSAGES/$(PROG).mo: po/%.po
+	mkdir -p  `dirname $@`
+	msgfmt $< -o $@
+
+po/%.po: messages.pot
+	msgmerge -q -U $@ messages.pot
+	touch $@
+
 messages: messages.pot \
 	    locale/en_US/LC_MESSAGES/$(PROG).mo \
 	    locale/fr_FR/LC_MESSAGES/$(PROG).mo \
@@ -96,23 +109,6 @@ messages.pot: $(PROG).py $(PROG).glade gmd-applet.py Makefile
 	    -e 's/FIRST .*, YEAR/Rick Richardson <rickrich@gmail.com>, 2010/g' \
 	    -e 's/PACKAGE VERSION/$(PROG) '$(VERSION)'/g' \
 	    -e 's/PACKAGE/$(PROG)/g' $@
-
-# msginit -i messages.pot -o po/en_US.po
-po/en_US.po: messages.pot
-	msgmerge -q -U $@ messages.pot
-	touch $@
-
-locale/en_US/LC_MESSAGES/$(PROG).mo: po/en_US.po
-	mkdir -p  `dirname $@`
-	msgfmt $< -o $@
-
-po/fr_FR.po: messages.pot
-	msgmerge -q -U $@ messages.pot
-	touch $@
-
-locale/fr_FR/LC_MESSAGES/$(PROG).mo: po/fr_FR.po
-	mkdir -p  `dirname $@`
-	msgfmt $< -o $@
 
 install: all
 	# /usr/bin...
