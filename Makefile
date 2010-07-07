@@ -89,6 +89,9 @@ $(PROG).xml: Makefile
 #
 #	msginit -i messages.pot -o po/en_US.po
 #
+POFILES := $(wildcard po/*.po)
+MOFILES := $(patsubst po/%.po,locale/%/LC_MESSAGES/$(PROG).mo,$(POFILES))
+
 locale/%/LC_MESSAGES/$(PROG).mo: po/%.po
 	mkdir -p  `dirname $@`
 	msgfmt $< -o $@
@@ -97,10 +100,7 @@ po/%.po: messages.pot
 	msgmerge -q -U $@ messages.pot
 	touch $@
 
-messages: messages.pot \
-	    locale/en_US/LC_MESSAGES/$(PROG).mo \
-	    locale/fr_FR/LC_MESSAGES/$(PROG).mo \
-	    $(NULL)
+messages: messages.pot $(MOFILES)
 
 messages.pot: $(PROG).py $(PROG).glade gmd-applet.py Makefile
 	xgettext -k_ -kN_ -o $@ $(PROG).py $(PROG).glade gmd-applet.py
