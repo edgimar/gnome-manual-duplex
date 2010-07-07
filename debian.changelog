@@ -1,3 +1,9 @@
+gnome-manual-duplex (0.21) stable; urgency=low
+
+  * i18n
+
+ -- Rick Richardson <rickrich@gmail.com>  Wed, 7 Jul 2010 08:21:03 -0500
+
 gnome-manual-duplex (0.20) stable; urgency=low
 
   * Do it for pdf's, too.
