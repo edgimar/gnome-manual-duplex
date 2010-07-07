@@ -37,6 +37,7 @@ FILES=\
 	short_edge.fig \
 	po/en_US.po \
 	po/fr_FR.po \
+	po/de.po \
 	$(NULL)
 
 .SUFFIXES: .glade .xml .fig .xpm .py.in .py .mo .po .pot
@@ -100,7 +101,7 @@ po/%.po: messages.pot
 	msgmerge -q -U $@ messages.pot
 	touch $@
 
-messages: messages.pot $(MOFILES)
+messages: messages.pot $(POFILES) $(MOFILES)
 
 messages.pot: $(PROG).py $(PROG).glade gmd-applet.py Makefile
 	xgettext -k_ -kN_ -o $@ $(PROG).py $(PROG).glade gmd-applet.py
