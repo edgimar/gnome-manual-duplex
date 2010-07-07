@@ -63,10 +63,19 @@ FILES=\
 	fig2dev -m 0.50 -L xpm $*.fig \
 	    | sed -e 's/White/None/' -e 's/#FFFFFF/None/' \
 	    > $*.xpm
-
+#
+#	All
+#
 all: $(PROG) $(PROG).xml $(PROG).spec $(PROG).dsc messages \
 	long_edge.xpm short_edge.xpm gmd-applet.py
 
+gmd-applet.py: Makefile gmd-applet.py.in
+
+$(PROG).xml: Makefile
+
+#
+#	Packaging
+#
 $(PROG).spec: $(PROG).spec.in Makefile
 	rm -f $@
 	sed < $@.in > $@ \
@@ -80,10 +89,6 @@ $(PROG).dsc: $(PROG).dsc.in Makefile
             -e "s@\$${VERSION}@$(VERSION)@" \
             || (rm -f $@ && exit 1)
 	chmod 444 $@
-
-gmd-applet.py: Makefile gmd-applet.py.in
-
-$(PROG).xml: Makefile
 
 #
 #	i18n
@@ -111,6 +116,9 @@ messages.pot: $(PROG).py $(PROG).glade gmd-applet.py Makefile
 	    -e 's/PACKAGE VERSION/$(PROG) '$(VERSION)'/g' \
 	    -e 's/PACKAGE/$(PROG)/g' $@
 
+#
+#	Install
+#
 install: all
 	# /usr/bin...
 	$(INSTALL) -d $(BIN)
