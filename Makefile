@@ -35,6 +35,7 @@ FILES=\
 	Makefile \
 	README \
 	short_edge.fig \
+	messages.pot \
 	po/en_US.po \
 	po/fr_FR.po \
 	po/de.po \

@@ -1,6 +1,11 @@
 
 https://build.opensuse.org/home/list_my
 
+http://translationproject.org/
+http://www.transifex.net/
+http://pepipopum.dixo.net/
+http://translate.umpirsky.com/
+
 curl -F pofile=@input-po-filename \
         -F language=target-language-code \
         -F output=pofile 
