@@ -42,20 +42,20 @@ msgstr "<b>Imprimer</b>"
 
 #: gnome-manual-duplex.glade:166
 msgid "gtk-about"
-msgstr "gtk-about"
+msgstr "Sur"
 
 #: gnome-manual-duplex.glade:177
 msgid "gtk-preferences"
-msgstr "gtk-preferences"
+msgstr "Les Préférences"
 
 #: gnome-manual-duplex.glade:191 gnome-manual-duplex.glade:303
 #: gnome-manual-duplex.glade:504
 msgid "gtk-cancel"
-msgstr "gtk-cancel"
+msgstr "Annuler"
 
 #: gnome-manual-duplex.glade:205
 msgid "gtk-print"
-msgstr "gtk-print"
+msgstr "Imprimer"
 
 #: gnome-manual-duplex.glade:263
 msgid ""
@@ -65,7 +65,13 @@ msgid ""
 "remove the paper stack from the\n"
 "Output Bin.  Do not discard blank\n"
 "sheets."
-msgstr "<b><big>1.</big></b> Sans changer l&#39;orientation, retirez la pile de papier du réceptacle. Ne jetez pas les feuilles vierges."
+msgstr ""
+"<b><big>1.</big></b>\n"
+"\n"
+"Sans changer l&#39;orientation,\n"
+"enlever la pile de papier à partir du\n"
+"Sortie Bin. Ne jetez pas vide\n"
+"feuilles."
 
 #: gnome-manual-duplex.glade:277
 msgid ""
@@ -74,7 +80,12 @@ msgid ""
 "Maintaining the same orientation,\n"
 "insert the paper stack into Tray 1\n"
 "printed side down."
-msgstr "<b><big>2.</big></b> Maintenir la même orientation, insérez la pile de papier dans le bac 1 côté imprimé vers le bas."
+msgstr ""
+"<b><big>2.</big></b>\n"
+"\n"
+"Maintenir la même orientation,\n"
+"insérer la pile de papier dans le bac 1\n"
+"côté imprimé vers le bas."
 
 #: gnome-manual-duplex.glade:314
 msgid "gtk-ok"
@@ -93,6 +104,12 @@ msgid ""
 "Minolta/QMS 2300 DL: reverse pages\n"
 "Others: depends\n"
 msgstr ""
+"HP LJ 1005/1018/1020: pages inverse\n"
+"HP LJ P1005/P1006/P1505: pages inverse\n"
+"HP LJ P1102 Pro, P1566: pages inverse\n"
+"HP CLJ 1600/2600/CP1215: pages inverse\n"
+"Minolta/QMS 2300 DL: pages inverse\n"
+"D'autres: dépend\n"
 
 #: gnome-manual-duplex.glade:388 gnome-manual-duplex.glade:453
 msgid "Reverse Pages"
@@ -106,7 +123,13 @@ msgid ""
 "HP CLJ 1600/2600/CP1215: invert pages\n"
 "Minolta/QMS 2300 DL: invert pages\n"
 "Others: depends"
-msgstr "HP LJ 1005/1018/1020: pages interverti HP P1005/P1006/P1505 LJ: pages interverti HP LJ P1102 Pro, P1566: pages interverti HP CLJ 1600/2600/CP1215: pages interverti Minolta / QMS 2300 DL: interverti autres pages: dépend"
+msgstr ""
+"HP LJ 1005/1018/1020: pages interverti\n"
+"HP P1005/P1006/P1505 LJ: pages interverti\n"
+"HP LJ P1102 Pro, P1566: pages interverti\n"
+"HP CLJ 1600/2600/CP1215: pages interverti\n"
+"Minolta/QMS 2300 DL: pages interverti\n"
+"D'autres: dépend"
 
 #: gnome-manual-duplex.glade:403 gnome-manual-duplex.glade:469
 msgid "Invert (rotate 180 degrees) Pages"
@@ -125,6 +148,12 @@ msgid ""
 "Minolta/QMS 2300 DL: no invert pages\n"
 "Others: depends\n"
 msgstr ""
+"HP LJ 1005/1018/1020: n Aucune page ne contient interverti\n"
+"HP LJ P1005/P1006: n Aucune page ne contient interverti\n"
+"HP LJ P1102 Pro, P1566: n Aucune page ne contient interverti\n"
+"HP CLJ 1600/2600/CP1215: n Aucune page ne contient interverti\n"
+"Minolta/QMS 2300 DL: n Aucune page ne contient interverti\n"
+"D'autres: dépend\n"
 
 #: gnome-manual-duplex.glade:484
 msgid "<b>Even Short Edge</b>"
@@ -132,7 +161,7 @@ msgstr "<b>Bord court Même</b>"
 
 #: gnome-manual-duplex.glade:515
 msgid "gtk-save"
-msgstr "gtk-save"
+msgstr "Sauver"
 
 #: gnome-manual-duplex.glade:534
 msgid "About Glade"
