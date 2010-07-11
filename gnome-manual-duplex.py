@@ -26,6 +26,7 @@ PROGNAME="gnome-manual-duplex"
 #locale.setlocale(locale.LC_ALL, '')
 #locale.bindtextdomain(PROGNAME, DIR)
 locale_dir = gettext.bindtextdomain(PROGNAME)	# /usr/share/locale/...
+gettext.bindtextdomain(PROGNAME, locale_dir)
 gettext.textdomain(PROGNAME)
 lang = gettext.translation(PROGNAME, locale_dir, fallback=True)
 _ = lang.gettext
