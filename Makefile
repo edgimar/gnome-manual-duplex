@@ -37,8 +37,9 @@ FILES=\
 	short_edge.fig \
 	messages.pot \
 	po/en_US.po \
-	po/fr_FR.po \
+	po/fr.po \
 	po/de.po \
+	po/pt.po \
 	$(NULL)
 
 .SUFFIXES: .glade .xml .fig .xpm .py.in .py .mo .po .pot
