@@ -93,7 +93,7 @@ class App(object):
 	for (printer, instance) in sorted( dests.keys () ):
 	    if default_printer == printer:
 		default_index = i
-		extra = " (default)"
+		extra = _(" (default)")
 	    else:
 		extra = ""
 	    if printer == "GnomeManualDuplex":

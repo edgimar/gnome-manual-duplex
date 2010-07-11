@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-manual-duplex 0.20\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-10 05:06-0500\n"
+"POT-Creation-Date: 2010-07-11 16:23-0500\n"
 "PO-Revision-Date: 2010-07-11 18:56+0100\n"
 "Last-Translator: Mario Blättermann <mariobl@gnome.org>\n"
 "Language-Team: English\n"
@@ -16,6 +16,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: gnome-manual-duplex.py:96
+msgid " (default)"
+msgstr ""
 
 #: gnome-manual-duplex.glade:32
 msgid "<b>Job Name</b>"
@@ -49,8 +53,7 @@ msgstr "gtk-about"
 msgid "gtk-preferences"
 msgstr "gtk-preferences"
 
-#: gnome-manual-duplex.glade:191
-#: gnome-manual-duplex.glade:303
+#: gnome-manual-duplex.glade:191 gnome-manual-duplex.glade:303
 #: gnome-manual-duplex.glade:504
 msgid "gtk-cancel"
 msgstr "gtk-cancel"
@@ -98,8 +101,7 @@ msgstr "gtk-ok"
 msgid "<b>Printer</b>"
 msgstr "<b>Drucker</b>"
 
-#: gnome-manual-duplex.glade:381
-#: gnome-manual-duplex.glade:446
+#: gnome-manual-duplex.glade:381 gnome-manual-duplex.glade:446
 msgid ""
 "HP LJ 1005/1018/1020: reverse pages\n"
 "HP LJ P1005/P1006/P1505: reverse pages\n"
@@ -115,8 +117,7 @@ msgstr ""
 "Minolta/QMS 2300 DL: Seiten umkehren\n"
 "Andere: abhängig vom Typ\n"
 
-#: gnome-manual-duplex.glade:388
-#: gnome-manual-duplex.glade:453
+#: gnome-manual-duplex.glade:388 gnome-manual-duplex.glade:453
 msgid "Reverse Pages"
 msgstr "Seiten umkehren"
 
@@ -136,8 +137,7 @@ msgstr ""
 "Minolta/QMS 2300 DL: Seiten umkehren\n"
 "Andere: abhängig vom Typ"
 
-#: gnome-manual-duplex.glade:403
-#: gnome-manual-duplex.glade:469
+#: gnome-manual-duplex.glade:403 gnome-manual-duplex.glade:469
 msgid "Invert (rotate 180 degrees) Pages"
 msgstr "Seiten um 180 Grad drehen"
 
@@ -184,4 +184,3 @@ msgstr "Projektwebseite"
 #: gnome-manual-duplex.glade:544
 msgid "GPL"
 msgstr "GPL"
-
