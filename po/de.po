@@ -110,7 +110,7 @@ msgstr ""
 "HP LJ P1102 Pro, P1566: reverse Seiten\n"
 "HP CLJ 1600/2600/CP1215: reverse Seiten\n"
 "Minolta/QMS 2300 DL: reverse Seiten\n"
-"Andere: hangt\n"
+"Andere: hängt\n"
 
 #: gnome-manual-duplex.glade:388 gnome-manual-duplex.glade:453
 msgid "Reverse Pages"
@@ -130,7 +130,7 @@ msgstr ""
 "HP LJ P1102 Pro, P1566: Invertzucker Seiten\n"
 "HP CLJ 1600/2600/CP1215: Invertzucker Seiten\n"
 "Minolta / QMS 2300 DL: Invertzucker Seiten\n"
-"Andere: hangt"
+"Andere: hängt"
 
 #: gnome-manual-duplex.glade:403 gnome-manual-duplex.glade:469
 msgid "Invert (rotate 180 degrees) Pages"
@@ -154,7 +154,7 @@ msgstr ""
 "HP LJ P1102 Pro, P1566: kein invertieren Seiten\n"
 "HP CLJ 1600/2600/CP1215: keine Invertzucker Seiten\n"
 "Minolta/QMS 2300 DL: Nein Invertzucker Seiten\n"
-"Andere: hangt\n" 
+"Andere: hängt\n" 
 
 #: gnome-manual-duplex.glade:484
 msgid "<b>Even Short Edge</b>"
