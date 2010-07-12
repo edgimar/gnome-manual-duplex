@@ -113,7 +113,7 @@ msgstr ""
 "HP LJ P1102 Pro, P1566: pages inverse\n"
 "HP CLJ 1600/2600/CP1215: pages inverse\n"
 "Minolta/QMS 2300 DL: pages inverse\n"
-"D'autres: dépend\n"
+"D'autres: dépend"
 
 #: gnome-manual-duplex.glade:387 gnome-manual-duplex.glade:451
 msgid "Reverse Pages"
@@ -157,7 +157,7 @@ msgstr ""
 "HP LJ P1102 Pro, P1566: Aucune page ne contient interverti\n"
 "HP CLJ 1600/2600/CP1215: Aucune page ne contient interverti\n"
 "Minolta/QMS 2300 DL: Aucune page ne contient interverti\n"
-"D'autres: dépend\n"
+"D'autres: dépend"
 
 #: gnome-manual-duplex.glade:481
 msgid "<b>Even Short Edge</b>"
