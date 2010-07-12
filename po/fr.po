@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the gnome-manual-duplex package.
 # Rick Richardson <rickrich@gmail.com>, 2010.
 #
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-manual-duplex 0.21\n"
@@ -100,7 +101,6 @@ msgid "<b>Printer</b>"
 msgstr "<b>Imprimeur</b>"
 
 #: gnome-manual-duplex.glade:381 gnome-manual-duplex.glade:445
-#, fuzzy
 msgid ""
 "HP LJ 1005/1018/1020: reverse pages\n"
 "HP LJ P1005/P1006/P1505: reverse pages\n"
@@ -145,7 +145,6 @@ msgid "<b>Even Long Edge</b>"
 msgstr "<b>Même les bords longs</b>"
 
 #: gnome-manual-duplex.glade:460
-#, fuzzy
 msgid ""
 "HP LJ 1005/1018/1020: no invert pages\n"
 "HP LJ P1005/P1006: no invert pages\n"
