@@ -116,7 +116,7 @@ msgstr ""
 "HP LJ Pro P1102, P1566: Seiten umkehren\n"
 "HP CLJ 1600/2600/CP1215: Seiten umkehren\n"
 "Minolta/QMS 2300 DL: Seiten umkehren\n"
-"Andere: abhängig vom Typ\n"
+"Andere: abhängig vom Typ"
 
 #: gnome-manual-duplex.glade:387 gnome-manual-duplex.glade:451
 msgid "Reverse Pages"
@@ -161,7 +161,7 @@ msgstr ""
 "HP LJ Pro P1102, P1566: Seiten nicht umkehren\n"
 "HP CLJ 1600/2600/CP1215: Seiten nicht umkehren\n"
 "Minolta/QMS 2300 DL: Seiten nicht umkehren\n"
-"Andere: abhängig vom Typ\n"
+"Andere: abhängig vom Typ"
 
 #: gnome-manual-duplex.glade:481
 msgid "<b>Even Short Edge</b>"

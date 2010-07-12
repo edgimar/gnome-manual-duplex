@@ -46,7 +46,7 @@ msgstr "<b>Imprimer</b>"
 
 #: gnome-manual-duplex.glade:166
 msgid "gtk-about"
-msgstr "Sur"
+msgstr "gtk-about"
 
 #: gnome-manual-duplex.glade:177
 msgid "gtk-preferences"
