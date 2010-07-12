@@ -100,7 +100,6 @@ msgid "<b>Printer</b>"
 msgstr "<b>Impressora</b>"
 
 #: gnome-manual-duplex.glade:381 gnome-manual-duplex.glade:445
-#, fuzzy
 msgid ""
 "HP LJ 1005/1018/1020: reverse pages\n"
 "HP LJ P1005/P1006/P1505: reverse pages\n"
@@ -145,7 +144,6 @@ msgid "<b>Even Long Edge</b>"
 msgstr "<b>Mesmo Long Edge</b>"
 
 #: gnome-manual-duplex.glade:460
-#, fuzzy
 msgid ""
 "HP LJ 1005/1018/1020: no invert pages\n"
 "HP LJ P1005/P1006: no invert pages\n"
