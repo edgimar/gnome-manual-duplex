@@ -40,6 +40,7 @@ FILES=\
 	po/fr.po \
 	po/de.po \
 	po/pt.po \
+	po/es.po \
 	$(NULL)
 
 .SUFFIXES: .glade .xml .fig .xpm .py.in .py .mo .po .pot
@@ -105,17 +106,18 @@ locale/%/LC_MESSAGES/$(PROG).mo: po/%.po
 	msgfmt $< -o $@
 
 po/%.po: messages.pot
-	msgmerge -q -U $@ messages.pot
+	msgmerge --backup none -q -U $@ messages.pot
 	touch $@
 
 messages: messages.pot $(POFILES) $(MOFILES)
 
 messages.pot: $(PROG).py $(PROG).glade gmd-applet.py Makefile
 	xgettext -k_ -kN_ -o $@ $(PROG).py $(PROG).glade gmd-applet.py
-	sed -i'~' -e 's/SOME .* TITLE/gmd translation template/g' \
+	sed -i -e 's/SOME .* TITLE/gmd translation template/g' \
 	    -e 's/YEAR THE .* HOLDER/2010 Rick Richardson/g' \
 	    -e 's/FIRST .*, YEAR/Rick Richardson <rickrich@gmail.com>, 2010/g' \
 	    -e 's/PACKAGE VERSION/$(PROG) '$(VERSION)'/g' \
+	    -e 's/CHARSET/UTF-8/g' \
 	    -e 's/PACKAGE/$(PROG)/g' $@
 
 #

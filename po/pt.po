@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-manual-duplex 0.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-11 16:23-0500\n"
+"POT-Creation-Date: 2010-07-12 15:13-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -53,7 +53,7 @@ msgid "gtk-preferences"
 msgstr "Preferencias"
 
 #: gnome-manual-duplex.glade:191 gnome-manual-duplex.glade:303
-#: gnome-manual-duplex.glade:504
+#: gnome-manual-duplex.glade:501
 msgid "gtk-cancel"
 msgstr "gtk-cancel"
 
@@ -99,14 +99,15 @@ msgstr "gtk-ok"
 msgid "<b>Printer</b>"
 msgstr "<b>Impressora</b>"
 
-#: gnome-manual-duplex.glade:381 gnome-manual-duplex.glade:446
+#: gnome-manual-duplex.glade:381 gnome-manual-duplex.glade:445
+#, fuzzy
 msgid ""
 "HP LJ 1005/1018/1020: reverse pages\n"
 "HP LJ P1005/P1006/P1505: reverse pages\n"
 "HP LJ Pro P1102, P1566: reverse pages\n"
 "HP CLJ 1600/2600/CP1215: reverse pages\n"
 "Minolta/QMS 2300 DL: reverse pages\n"
-"Others: depends\n"
+"Others: depends"
 msgstr ""
 "HP LJ 1005/1018/1020: páginas de inverter\n"
 "HP LJ P1005/P1006/P1505: páginas de inverter\n"
@@ -115,11 +116,11 @@ msgstr ""
 "Minolta / QMS 2300 DL: páginas de inverter\n"
 "Outros: depende\n"
 
-#: gnome-manual-duplex.glade:388 gnome-manual-duplex.glade:453
+#: gnome-manual-duplex.glade:387 gnome-manual-duplex.glade:451
 msgid "Reverse Pages"
 msgstr "Reverse Pages"
 
-#: gnome-manual-duplex.glade:397
+#: gnome-manual-duplex.glade:396
 msgid ""
 "HP LJ 1005/1018/1020: invert pages\n"
 "HP LJ P1005/P1006/P1505: invert pages\n"
@@ -135,22 +136,23 @@ msgstr ""
 "Minolta/QMS 2300 DL: páginas invertido\n"
 "Outros: depende"
 
-#: gnome-manual-duplex.glade:403 gnome-manual-duplex.glade:469
+#: gnome-manual-duplex.glade:402 gnome-manual-duplex.glade:466
 msgid "Invert (rotate 180 degrees) Pages"
 msgstr "Inverter (girar 180 graus) Paginas"
 
-#: gnome-manual-duplex.glade:418
+#: gnome-manual-duplex.glade:417
 msgid "<b>Even Long Edge</b>"
 msgstr "<b>Mesmo Long Edge</b>"
 
-#: gnome-manual-duplex.glade:462
+#: gnome-manual-duplex.glade:460
+#, fuzzy
 msgid ""
 "HP LJ 1005/1018/1020: no invert pages\n"
 "HP LJ P1005/P1006: no invert pages\n"
 "HP LJ Pro P1102, P1566: no invert pages\n"
 "HP CLJ 1600/2600/CP1215: no invert pages\n"
 "Minolta/QMS 2300 DL: no invert pages\n"
-"Others: depends\n"
+"Others: depends"
 msgstr ""
 "HP LJ 1005/1018/1020: nenhuma páginas invertido\n"
 "HP LJ P1005/P1006: nenhuma páginas invertido\n"
@@ -159,26 +161,26 @@ msgstr ""
 "Minolta/QMS 2300 DL: nenhuma páginas invertido\n"
 "Outros: depende\n"
 
-#: gnome-manual-duplex.glade:484
+#: gnome-manual-duplex.glade:481
 msgid "<b>Even Short Edge</b>"
 msgstr "<b>Mesmo Short Edge</b>"
 
-#: gnome-manual-duplex.glade:515
+#: gnome-manual-duplex.glade:512
 msgid "gtk-save"
 msgstr "gtk-save"
 
-#: gnome-manual-duplex.glade:534
+#: gnome-manual-duplex.glade:531
 msgid "About Glade"
 msgstr "Sobre o Glade"
 
-#: gnome-manual-duplex.glade:541
+#: gnome-manual-duplex.glade:538
 msgid "Copyright 2009-2010 Rick Richardson.  All Rights Reserved."
 msgstr "Copyright Rick Richardson 2009-2010. Todos os direitos reservados."
 
-#: gnome-manual-duplex.glade:543
+#: gnome-manual-duplex.glade:540
 msgid "Home Page"
 msgstr "Home Page"
 
-#: gnome-manual-duplex.glade:544
+#: gnome-manual-duplex.glade:541
 msgid "GPL"
 msgstr "GPL"
