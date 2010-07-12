@@ -147,7 +147,6 @@ msgid "<b>Even Long Edge</b>"
 msgstr "<b>Lange Seite gerade</b>"
 
 #: gnome-manual-duplex.glade:460
-#, fuzzy
 msgid ""
 "HP LJ 1005/1018/1020: no invert pages\n"
 "HP LJ P1005/P1006: no invert pages\n"
