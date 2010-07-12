@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the gnome-manual-duplex package.
 # Rick Richardson <rickrich@gmail.com>, 2010.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-manual-duplex 0.21\n"
