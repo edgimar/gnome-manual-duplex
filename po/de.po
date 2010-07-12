@@ -19,7 +19,7 @@ msgstr ""
 
 #: gnome-manual-duplex.py:96
 msgid " (default)"
-msgstr ""
+msgstr " (default)"
 
 #: gnome-manual-duplex.glade:32
 msgid "<b>Job Name</b>"
