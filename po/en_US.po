@@ -22,7 +22,7 @@ msgstr " (default)"
 
 #: gnome-manual-duplex.glade:32
 msgid "<b>Job Name</b>"
-msgstr "xxx<b>Job Name</b>"
+msgstr "<b>Job Name</b>"
 
 #: gnome-manual-duplex.glade:59
 msgid "Manual Long Edge"
