@@ -50,16 +50,16 @@ msgstr "gtk-about"
 
 #: gnome-manual-duplex.glade:177
 msgid "gtk-preferences"
-msgstr "Les Préférences"
+msgstr "gtk-preferences"
 
 #: gnome-manual-duplex.glade:191 gnome-manual-duplex.glade:303
 #: gnome-manual-duplex.glade:501
 msgid "gtk-cancel"
-msgstr "Annuler"
+msgstr "gtk-cancel"
 
 #: gnome-manual-duplex.glade:205
 msgid "gtk-print"
-msgstr "Imprimer"
+msgstr "gtk-print"
 
 #: gnome-manual-duplex.glade:263
 msgid ""
@@ -165,7 +165,7 @@ msgstr "<b>Bord Court Même</b>"
 
 #: gnome-manual-duplex.glade:512
 msgid "gtk-save"
-msgstr "Sauver"
+msgstr "gtk-save"
 
 #: gnome-manual-duplex.glade:531
 msgid "About Glade"
