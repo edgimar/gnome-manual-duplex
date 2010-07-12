@@ -383,8 +383,7 @@ HP LJ P1005/P1006/P1505: reverse pages
 HP LJ Pro P1102, P1566: reverse pages
 HP CLJ 1600/2600/CP1215: reverse pages
 Minolta/QMS 2300 DL: reverse pages
-Others: depends
-</property>
+Others: depends</property>
                         <property name="label" translatable="yes">Reverse Pages</property>
                         <property name="response_id">0</property>
                         <property name="draw_indicator">True</property>
@@ -448,8 +447,7 @@ HP LJ P1005/P1006/P1505: reverse pages
 HP LJ Pro P1102, P1566: reverse pages
 HP CLJ 1600/2600/CP1215: reverse pages
 Minolta/QMS 2300 DL: reverse pages
-Others: depends
-</property>
+Others: depends</property>
                         <property name="label" translatable="yes">Reverse Pages</property>
                         <property name="response_id">0</property>
                         <property name="draw_indicator">True</property>
@@ -464,8 +462,7 @@ HP LJ P1005/P1006: no invert pages
 HP LJ Pro P1102, P1566: no invert pages
 HP CLJ 1600/2600/CP1215: no invert pages
 Minolta/QMS 2300 DL: no invert pages
-Others: depends
-</property>
+Others: depends</property>
                         <property name="label" translatable="yes">Invert (rotate 180 degrees) Pages</property>
                         <property name="response_id">0</property>
                         <property name="draw_indicator">True</property>
