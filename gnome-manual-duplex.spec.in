@@ -47,6 +47,7 @@ make DESTDIR=$RPM_BUILD_ROOT install
 /usr/share/gnome-manual-duplex/gnome-manual-duplex.xml
 /usr/share/gnome-manual-duplex/long_edge.xpm
 /usr/share/gnome-manual-duplex/short_edge.xpm
+/usr/share/man/man1/gnome-manual-duplex.1
 /usr/share/pixmaps/gmd.svg
 /usr/share/pixmaps/gnome-manual-duplex.png
 /usr/share/locale/*
