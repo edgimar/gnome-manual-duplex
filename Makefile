@@ -11,6 +11,7 @@ APPL=$(DESTDIR)/usr/share/applications
 PIXMAPS=$(DESTDIR)/usr/share/pixmaps
 LIBCUPS=$(DESTDIR)/usr/lib/cups
 LIBBONOBO=$(DESTDIR)/usr/lib/bonobo
+MANDIR=$(DESTDIR)/usr/share/man
 
 NULL=
 FILES=\
@@ -31,6 +32,7 @@ FILES=\
 	$(PROG).ppd \
 	$(PROG).py \
 	$(PROG).spec.in \
+	$(PROG).1 \
 	long_edge.fig \
 	Makefile \
 	README \
@@ -166,6 +168,10 @@ install: all
 	    $(INSTALL) -m644 $$xx_XX/LC_MESSAGES/$(PROG).mo \
 		$(SHARE)/locale/$$xx_XX/LC_MESSAGES/ ; \
 	done
+	# Install manual pages
+	$(INSTALL) -d -m 755 $(MANDIR)
+	$(INSTALL) -d -m 755 $(MANDIR)/man1/
+	$(INSTALL) -c -m 644 $(PROG).1 $(MANDIR)/man1/
 
 clean:
 	rm -f $(PROG) $(PROG).xml *.tar.gz *.spec *.dsc
