@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the gnome-manual-duplex package.
 # Rick Richardson <rickrich@gmail.com>, 2010.
 # Mario Blättermann <mariobl@gnome.org>, 2010.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-manual-duplex 0.20\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: gnome-manual-duplex.py:96
 msgid " (default)"
-msgstr " (default)"
+msgstr " (standard)"
 
 #: gnome-manual-duplex.glade:32
 msgid "<b>Job Name</b>"
