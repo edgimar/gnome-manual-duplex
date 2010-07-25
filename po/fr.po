@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-manual-duplex 0.21\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-12 15:13-0500\n"
+"POT-Creation-Date: 2010-07-25 09:06-0500\n"
 "PO-Revision-Date: 2010-07-12 15:46-0500\n"
 "Last-Translator: http://pepipopum.dixo.net/\n"
 "Language-Team: French\n"
@@ -17,8 +17,9 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: gnome-manual-duplex.py:96
-msgid " (default)"
-msgstr " (par défaut)"
+#, fuzzy
+msgid "(default)"
+msgstr "(par défaut)"
 
 #: gnome-manual-duplex.glade:32
 msgid "<b>Job Name</b>"
