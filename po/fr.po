@@ -16,8 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: gnome-manual-duplex.py:96
-#, fuzzy
 msgid "(default)"
 msgstr "(par défaut)"
 
