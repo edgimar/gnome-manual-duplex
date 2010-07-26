@@ -38,11 +38,12 @@ FILES=\
 	README \
 	short_edge.fig \
 	messages.pot \
-	po/en_US.po \
-	po/fr.po \
 	po/de.po \
-	po/pt.po \
+	po/en_US.po \
 	po/es.po \
+	po/fi.po \
+	po/fr.po \
+	po/pt.po \
 	$(NULL)
 
 .SUFFIXES: .glade .xml .fig .xpm .py.in .py .mo .po .pot
