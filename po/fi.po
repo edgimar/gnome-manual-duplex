@@ -26,11 +26,11 @@ msgstr "<b>Työn nimi</b>"
 
 #: gnome-manual-duplex.glade:59
 msgid "Manual Long Edge"
-msgstr "Manual Long Edge"
+msgstr ""
 
 #: gnome-manual-duplex.glade:70
 msgid "Manual Short Edge"
-msgstr "Manual Short Edge"
+msgstr ""
 
 #: gnome-manual-duplex.glade:110
 msgid "<b>Output Format</b>"
@@ -71,12 +71,6 @@ msgid ""
 "Output Bin.  Do not discard blank\n"
 "sheets."
 msgstr ""
-"<big><b>1.</b></big>\n"
-"\n"
-"Without changing the orientation,\n"
-"remove the paper stack from the\n"
-"Output Bin.  Do not discard blank\n"
-"sheets."
 
 #: gnome-manual-duplex.glade:277
 msgid ""
@@ -86,11 +80,6 @@ msgid ""
 "insert the paper stack into Tray 1\n"
 "printed side down."
 msgstr ""
-"<big><b>2.</b></big>\n"
-"\n"
-"Maintaining the same orientation,\n"
-"insert the paper stack into Tray 1\n"
-"printed side down."
 
 #: gnome-manual-duplex.glade:314
 msgid "gtk-ok"
@@ -110,12 +99,6 @@ msgid ""
 "Minolta/QMS 2300 DL: reverse pages\n"
 "Others: depends"
 msgstr ""
-"HP LJ 1005/1018/1020: reverse pages\n"
-"HP LJ P1005/P1006/P1505: reverse pages\n"
-"HP LJ Pro P1102, P1566: reverse pages\n"
-"HP CLJ 1600/2600/CP1215: reverse pages\n"
-"Minolta/QMS 2300 DL: reverse pages\n"
-"Others: depends"
 
 #: gnome-manual-duplex.glade:387
 #: gnome-manual-duplex.glade:451
@@ -131,12 +114,6 @@ msgid ""
 "Minolta/QMS 2300 DL: invert pages\n"
 "Others: depends"
 msgstr ""
-"HP LJ 1005/1018/1020: invert pages\n"
-"HP LJ P1005/P1006/P1505: invert pages\n"
-"HP LJ Pro P1102, P1566: invert pages\n"
-"HP CLJ 1600/2600/CP1215: invert pages\n"
-"Minolta/QMS 2300 DL: invert pages\n"
-"Others: depends"
 
 #: gnome-manual-duplex.glade:402
 #: gnome-manual-duplex.glade:466
@@ -145,7 +122,7 @@ msgstr "Peilaa sivut (käännä 180 astetta)"
 
 #: gnome-manual-duplex.glade:417
 msgid "<b>Even Long Edge</b>"
-msgstr "<b>Even Long Edge</b>"
+msgstr ""
 
 #: gnome-manual-duplex.glade:460
 msgid ""
@@ -156,16 +133,10 @@ msgid ""
 "Minolta/QMS 2300 DL: no invert pages\n"
 "Others: depends"
 msgstr ""
-"HP LJ 1005/1018/1020: no invert pages\n"
-"HP LJ P1005/P1006: no invert pages\n"
-"HP LJ Pro P1102, P1566: no invert pages\n"
-"HP CLJ 1600/2600/CP1215: no invert pages\n"
-"Minolta/QMS 2300 DL: no invert pages\n"
-"Others: depends"
 
 #: gnome-manual-duplex.glade:481
 msgid "<b>Even Short Edge</b>"
-msgstr "<b>Even Short Edge</b>"
+msgstr ""
 
 #: gnome-manual-duplex.glade:512
 msgid "gtk-save"
@@ -186,4 +157,3 @@ msgstr "Kotisivu"
 #: gnome-manual-duplex.glade:541
 msgid "GPL"
 msgstr "GPL"
-
