@@ -25,7 +25,7 @@ msgstr "<b>Nome do trabalho</b>"
 
 #: gnome-manual-duplex.glade:59
 msgid "Manual Long Edge"
-msgstr "Manual Long Edge"
+msgstr "Manual Borda Longa"
 
 #: gnome-manual-duplex.glade:70
 msgid "Manual Short Edge"
@@ -45,11 +45,11 @@ msgstr "<b>Impressão</b>"
 
 #: gnome-manual-duplex.glade:166
 msgid "gtk-about"
-msgstr "Sobre"
+msgstr "gtk-about"
 
 #: gnome-manual-duplex.glade:177
 msgid "gtk-preferences"
-msgstr "Preferencias"
+msgstr "gtk-preferences"
 
 #: gnome-manual-duplex.glade:191 gnome-manual-duplex.glade:303
 #: gnome-manual-duplex.glade:501
@@ -58,7 +58,7 @@ msgstr "gtk-cancel"
 
 #: gnome-manual-duplex.glade:205
 msgid "gtk-print"
-msgstr "Imprimir"
+msgstr "gtk-print"
 
 #: gnome-manual-duplex.glade:263
 msgid ""
