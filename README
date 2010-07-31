@@ -4,6 +4,12 @@ Requires:
     file
 	# yum install file	-OR-	$ sudo apt-get install file
 
+Download and unpack:
+    https://sourceforge.net/projects/g-manual-duplex/files/
+
+    $ tar zxf gnome-manual-duplex.tar.gz
+    $ cd gnome-manual-duplex
+
 Install:
     $ make
     $ su
