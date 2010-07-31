@@ -27,3 +27,8 @@ Works with:
 Translations:
     http://www.transifex.net/projects/p/gnome-manual-duplex/c/default/
     http://translationproject.org/domain/gnome-manual-duplex.html
+
+Subversion Access:
+    svn co \
+	https://g-manual-duplex.svn.sourceforge.net/svnroot/g-manual-duplex \
+	gnome-manual-duplex 
