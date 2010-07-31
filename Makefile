@@ -199,3 +199,6 @@ tarver: all
 w:	all
 	root $(MAKE) install
 	$(MAKE) tar
+
+web:
+	scp index.php rickrich,g-manual-duplex@web.sourceforge.net:htdocs
