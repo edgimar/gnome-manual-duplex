@@ -210,7 +210,8 @@ class App(object):
 		# Print out odd pages
 		# print self.filename
 		rc = os.system("file " + self.filename + " | grep -q PDF")
-		print "{ps,pdf}tops '2:0'"
+		print "{ps,pdf}tops '2:0'" + self.filename + \
+		    " " + self.tempfile.name
 		if rc == 256:
 		    self.is_pdf = 0
 		    os.system("pstops 2:0 "
@@ -257,7 +258,8 @@ class App(object):
 	reverse = [ '1', '-1' ]
 	invert = [ '', 'U(1w,1h)' ]
 	print "{ps,pdf}tops '2:" + \
-	    reverse[(config>>1) & 1] + invert[config&1] + "'"
+	    reverse[(config>>1) & 1] + invert[config&1] + "' " + \
+	    self.filename + " " + self.tempfile.name
 	if self.is_pdf == 0:
 	    os.system("pstops '2:" 
 		+ reverse[(config>>1) & 1] + invert[config&1] + "' "
