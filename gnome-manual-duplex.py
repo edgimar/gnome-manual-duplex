@@ -210,7 +210,7 @@ class App(object):
 		# Print out odd pages
 		# print self.filename
 		rc = os.system("file " + self.filename + " | grep -q PDF")
-		print "{ps,pdf}tops '2:0'" + self.filename + \
+		print "{ps,pdf}tops '2:0' " + self.filename + \
 		    " " + self.tempfile.name
 		if rc == 256:
 		    self.is_pdf = 0
