@@ -72,8 +72,21 @@ FILES=\
 #
 #	All
 #
-all: $(PROG) $(PROG).xml $(PROG).spec $(PROG).dsc messages \
+all: all-test $(PROG) $(PROG).xml $(PROG).spec $(PROG).dsc messages \
 	long_edge.xpm short_edge.xpm gmd-applet.py
+
+all-test:
+	#
+	#        # Dependencies...
+	#
+	@if ! type fig2dev >/dev/null 2>&1; then \
+	    echo "      ***"; \
+	    echo "      *** Error: fig2dev is not installed!"; \
+	    echo "      ***"; \
+	    echo "      *** Install transfig package (yum install transfig)"; \
+	    echo "      ***"; \
+	    exit 1; \
+	fi
 
 gmd-applet.py: Makefile gmd-applet.py.in
 
