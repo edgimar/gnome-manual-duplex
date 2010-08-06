@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 global Debug
-Debug = 1
+Debug = 0
  
 import sys
 import os
