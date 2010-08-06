@@ -100,6 +100,7 @@ all-test:
 	    echo "      *** Error: gtk-builder-convert is not installed!"; \
 	    echo "      ***"; \
 	    echo "      *** Install gtk2-devel package (yum install gtk2-devel)"; \
+	    echo "      *** (apt-get install libgtk2.0-dev)"; \
 	    echo "      ***"; \
 	    exit 1; \
 	fi
