@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 global Debug
-Debug = 0
+Debug = 1
  
 import sys
 import os
@@ -89,11 +89,12 @@ class App(object):
 	default_printer = connection.getDefault()
 
         liststore = gtk.ListStore(gobject.TYPE_STRING)
-	default_index = i = 0
+	self.default_index = i = 0
 	for (printer, instance) in sorted( dests.keys () ):
 	    if default_printer == printer:
-		default_index = i
+		self.default_index = i
 		extra = " " + _("(default)")
+		self.real_default_printer = printer
 	    else:
 		extra = ""
 	    if printer == "GnomeManualDuplex":
@@ -108,7 +109,7 @@ class App(object):
         cell = gtk.CellRendererText()
         self.combo_printers.pack_start(cell, True)
         self.combo_printers.add_attribute(cell, 'text', 0)
-        self.combo_printers.set_active(default_index)
+        self.combo_printers.set_active(self.default_index)
         self.long_edge_reverse = builder.get_object("long_edge_reverse")
         self.long_edge_invert = builder.get_object("long_edge_invert")
         self.short_edge_reverse = builder.get_object("short_edge_reverse")
@@ -148,7 +149,7 @@ class App(object):
     def pref_cb(self, widget, data=None):
         self.pref.show()
 	printer = self.combo_printers.get_active_text()
-	#print printer
+	#print printer, self.default_index
 	try:
 	    #print Config.get(printer, 'long_edge_config')
 	    long_edge_config = Config.get(printer, 'long_edge_config')
@@ -168,7 +169,11 @@ class App(object):
 
     def pref_save_clicked_cb(self, widget, data=None):
 	#print self.combo_printers.get_active()		#18
-	printer = self.combo_printers.get_active_text()	#hp1020
+	if self.default_index == self.combo_printers.get_active():
+	    printer = self.real_default_printer
+	else:
+	    printer = self.combo_printers.get_active_text()	#hp1020
+	#print printer
 	Config.remove_section(printer)
 	Config.add_section(printer)
 	long_edge_config = (int(self.long_edge_reverse.get_active() ) << 1) \
