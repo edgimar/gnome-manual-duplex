@@ -95,6 +95,14 @@ all-test:
 	    echo "      ***"; \
 	    exit 1; \
 	fi
+	@if ! type gtk-builder-convert >/dev/null 2>&1; then \
+	    echo "      ***"; \
+	    echo "      *** Error: gtk-builder-convert is not installed!"; \
+	    echo "      ***"; \
+	    echo "      *** Install gtk2-devel package (yum install gtk2-devel)"; \
+	    echo "      ***"; \
+	    exit 1; \
+	fi
 
 gmd-applet.py: Makefile gmd-applet.py.in
 
