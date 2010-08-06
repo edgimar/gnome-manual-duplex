@@ -87,6 +87,14 @@ all-test:
 	    echo "      ***"; \
 	    exit 1; \
 	fi
+	@if ! type xgettext >/dev/null 2>&1; then \
+	    echo "      ***"; \
+	    echo "      *** Error: xgettext is not installed!"; \
+	    echo "      ***"; \
+	    echo "      *** Install gettext package (yum install gettext)"; \
+	    echo "      ***"; \
+	    exit 1; \
+	fi
 
 gmd-applet.py: Makefile gmd-applet.py.in
 
