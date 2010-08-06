@@ -77,7 +77,7 @@ all: all-test $(PROG) $(PROG).xml $(PROG).spec $(PROG).dsc messages \
 
 all-test:
 	#
-	#        # Dependencies...
+	# Dependencies...
 	#
 	@if ! type fig2dev >/dev/null 2>&1; then \
 	    echo "      ***"; \
