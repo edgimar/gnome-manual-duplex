@@ -148,7 +148,10 @@ class App(object):
 
     def pref_cb(self, widget, data=None):
         self.pref.show()
-	printer = self.combo_printers.get_active_text()
+	if self.default_index == self.combo_printers.get_active():
+	    printer = self.real_default_printer
+	else:
+	    printer = self.combo_printers.get_active_text()	#hp1020
 	#print printer, self.default_index
 	try:
 	    #print Config.get(printer, 'long_edge_config')
