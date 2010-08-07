@@ -19,7 +19,7 @@ Then using the GUI:
     1)	System Tools -> Gnome Manual Duplex
 	- OR -
     2)	Add to Panel -> Gnome Manual Duplex applet -> Add
-	    Do it at least once, then...
+	    ...Do it at least once, then...
 	Print -> GnomeManualDuplex (Virtual Printer) -> Print
     
     Works with *.ps and *.pdf files.
