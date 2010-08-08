@@ -44,6 +44,7 @@ FILES=\
 	po/fi.po \
 	po/fr.po \
 	po/pt.po \
+	po/sv.po \
 	$(NULL)
 
 .SUFFIXES: .glade .xml .fig .xpm .py.in .py .mo .po .pot
