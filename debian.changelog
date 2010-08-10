@@ -1,3 +1,9 @@
+gnome-manual-duplex (0.26) stable; urgency=low
+
+  * Translations: sv.
+
+ -- Rick Richardson <rickrich@gmail.com>  Tue, 10 Aug 2010 08:21:03 -0500
+
 gnome-manual-duplex (0.25) stable; urgency=low
 
   * Bug: default printer
