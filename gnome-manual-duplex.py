@@ -63,7 +63,7 @@ class App(object):
 	    usage()
 	for opt, arg in opts:
 	    if opt == '-D':
-		Debug = arg
+		Debug = int(arg)
 
 	builder = gtk.Builder()
 	builder.set_translation_domain(PROGNAME)

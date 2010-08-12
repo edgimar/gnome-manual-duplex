@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-manual-duplex 0.20\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-25 09:06-0500\n"
+"POT-Creation-Date: 2010-08-12 16:01-0500\n"
 "PO-Revision-Date: 2010-07-26 23:58+0200\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: English\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: gnome-manual-duplex.py:96
+#: gnome-manual-duplex.py:118
 msgid "(default)"
 msgstr "(oletus)"
 
@@ -52,8 +52,7 @@ msgstr "gtk-about"
 msgid "gtk-preferences"
 msgstr "gtk-preferences"
 
-#: gnome-manual-duplex.glade:191
-#: gnome-manual-duplex.glade:303
+#: gnome-manual-duplex.glade:191 gnome-manual-duplex.glade:303
 #: gnome-manual-duplex.glade:501
 msgid "gtk-cancel"
 msgstr "gtk-cancel"
@@ -89,8 +88,7 @@ msgstr "gtk-ok"
 msgid "<b>Printer</b>"
 msgstr "<b>Tulostin</b>"
 
-#: gnome-manual-duplex.glade:381
-#: gnome-manual-duplex.glade:445
+#: gnome-manual-duplex.glade:381 gnome-manual-duplex.glade:445
 msgid ""
 "HP LJ 1005/1018/1020: reverse pages\n"
 "HP LJ P1005/P1006/P1505: reverse pages\n"
@@ -100,8 +98,7 @@ msgid ""
 "Others: depends"
 msgstr ""
 
-#: gnome-manual-duplex.glade:387
-#: gnome-manual-duplex.glade:451
+#: gnome-manual-duplex.glade:387 gnome-manual-duplex.glade:451
 msgid "Reverse Pages"
 msgstr "Käänteiset sivut"
 
@@ -115,8 +112,7 @@ msgid ""
 "Others: depends"
 msgstr ""
 
-#: gnome-manual-duplex.glade:402
-#: gnome-manual-duplex.glade:466
+#: gnome-manual-duplex.glade:402 gnome-manual-duplex.glade:466
 msgid "Invert (rotate 180 degrees) Pages"
 msgstr "Peilaa sivut (käännä 180 astetta)"
 
@@ -148,7 +144,8 @@ msgstr "Tietoja Gladesta"
 
 #: gnome-manual-duplex.glade:538
 msgid "Copyright 2009-2010 Rick Richardson.  All Rights Reserved."
-msgstr "Tekijänoikeus 2009-2010 Rick Richardson.  Oikeudet muutoksiin pidätetään."
+msgstr ""
+"Tekijänoikeus 2009-2010 Rick Richardson.  Oikeudet muutoksiin pidätetään."
 
 #: gnome-manual-duplex.glade:540
 msgid "Home Page"

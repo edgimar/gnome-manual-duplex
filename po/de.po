@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-manual-duplex 0.20\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-25 09:06-0500\n"
+"POT-Creation-Date: 2010-08-12 16:01-0500\n"
 "PO-Revision-Date: 2010-07-11 18:56+0100\n"
 "Last-Translator: Mario Blättermann <mariobl@gnome.org>\n"
 "Language-Team: English\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: gnome-manual-duplex.py:96
+#: gnome-manual-duplex.py:118
 msgid "(default)"
 msgstr "(standard)"
 
