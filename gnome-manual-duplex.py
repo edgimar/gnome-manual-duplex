@@ -4,6 +4,7 @@ global Debug
 Debug = 0
  
 import sys
+import getopt
 import os
 import tempfile
 
@@ -32,6 +33,15 @@ lang = gettext.translation(PROGNAME, locale_dir, fallback=True)
 _ = lang.gettext
 gettext.install(PROGNAME, locale_dir)
 
+def usage():
+    global Debug
+    print "Usage:"
+    print "    %s [options] [ps/pdf-file]" % sys.argv[0]
+    print
+    print "Options:"
+    print "    -D lvl	Set Debug level [%s]" % Debug
+    sys.exit(1)
+
 def load_config(self):
     global Config
 
@@ -45,6 +55,15 @@ def load_config(self):
  
 class App(object):       
     def __init__(self):
+	global Debug
+
+	try:                                
+	    opts, args = getopt.getopt(sys.argv[1:], "D:", ["debug="])
+	except getopt.GetoptError:
+	    usage()
+	for opt, arg in opts:
+	    if opt == '-D':
+		Debug = arg
 
 	builder = gtk.Builder()
 	builder.set_translation_domain(PROGNAME)
@@ -60,9 +79,12 @@ class App(object):
 	self.window = builder.get_object("window1")
 	self.about = builder.get_object("aboutdialog1")
 	self.JobName = builder.get_object("filechooserbutton1")
-	if len(sys.argv) == 2:
-	    self.filename = sys.argv[1]
-	    self.JobName.set_filename(sys.argv[1])
+
+	if len(args) >= 2:
+	    usage()
+	elif len(args) == 1:
+	    self.filename = args[0]
+	    self.JobName.set_filename(args[0])
 	else:
 	    self.filename = ''
 
