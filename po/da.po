@@ -1,0 +1,183 @@
+# Danish translation gnome-manual-duplex.
+# Copyright (C) 2010 Rick Richardson & nedenstående oversættere.
+# This file is distributed under the same license as the gnome-manual-duplex package.
+# Joe Hansen <joedalton2@yahoo.dk>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-manual-duplex 0.26\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-08-08 13:08-0500\n"
+"PO-Revision-Date: 2010-08-12 20:36+0200\n"
+"Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
+"Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: gnome-manual-duplex.py:96
+msgid "(default)"
+msgstr "(standard)"
+
+#: gnome-manual-duplex.glade:32
+msgid "<b>Job Name</b>"
+msgstr "<b>Jobnavn</b>"
+
+#: gnome-manual-duplex.glade:59
+msgid "Manual Long Edge"
+msgstr "Manual - langt kant"
+
+#: gnome-manual-duplex.glade:70
+msgid "Manual Short Edge"
+msgstr "Manual - kort kant"
+
+#: gnome-manual-duplex.glade:110
+msgid "<b>Output Format</b>"
+msgstr "<b>Uddataformat</b>"
+
+#: gnome-manual-duplex.glade:135
+msgid "Skip Odd Pages"
+msgstr "Spring ulige sider over"
+
+#: gnome-manual-duplex.glade:146
+msgid "<b>Print</b>"
+msgstr "<b>Udskriv</b>"
+
+#: gnome-manual-duplex.glade:166
+msgid "gtk-about"
+msgstr "gtk-about"
+
+#: gnome-manual-duplex.glade:177
+msgid "gtk-preferences"
+msgstr "gtk-preferences"
+
+#: gnome-manual-duplex.glade:191 gnome-manual-duplex.glade:303
+#: gnome-manual-duplex.glade:501
+msgid "gtk-cancel"
+msgstr "gtk-cancel"
+
+#: gnome-manual-duplex.glade:205
+msgid "gtk-print"
+msgstr "gtk-print"
+
+#: gnome-manual-duplex.glade:263
+msgid ""
+"<big><b>1.</b></big>\n"
+"\n"
+"Without changing the orientation,\n"
+"remove the paper stack from the\n"
+"Output Bin.  Do not discard blank\n"
+"sheets."
+msgstr ""
+"<big><b>1.</b></big>\n"
+"\n"
+"Uden at rette retningen, \n"
+"fjern papirstakken fra\n"
+"uddatakassen. Kasser ikke tomme\n"
+"ark."
+
+#: gnome-manual-duplex.glade:277
+msgid ""
+"<big><b>2.</b></big>\n"
+"\n"
+"Maintaining the same orientation,\n"
+"insert the paper stack into Tray 1\n"
+"printed side down."
+msgstr ""
+"<big><b>2.</b></big>\n"
+"\n"
+"Bevar den samme retning,\n"
+"indsæt papirstakken i bakke 1\n"
+"med siden for print nederst."
+
+#: gnome-manual-duplex.glade:314
+msgid "gtk-ok"
+msgstr "gtk-ok"
+
+#: gnome-manual-duplex.glade:356
+msgid "<b>Printer</b>"
+msgstr "<b>Printer</b>"
+
+#: gnome-manual-duplex.glade:381 gnome-manual-duplex.glade:445
+msgid ""
+"HP LJ 1005/1018/1020: reverse pages\n"
+"HP LJ P1005/P1006/P1505: reverse pages\n"
+"HP LJ Pro P1102, P1566: reverse pages\n"
+"HP CLJ 1600/2600/CP1215: reverse pages\n"
+"Minolta/QMS 2300 DL: reverse pages\n"
+"Others: depends"
+msgstr ""
+"HP LJ 1005/1018/1020: Omvendte sider\n"
+"HP LJ P1005/P1006/P1505: Omvendte sider\n"
+"HP LJ Pro P1102, P1566: Omvendte sider\n"
+"HP CLJ 1600/2600/CP1215: Omvendte sider\n"
+"Minolta/QMS 2300 DL: Omvendte sider\n"
+"Andre: Afhænger"
+
+#: gnome-manual-duplex.glade:387 gnome-manual-duplex.glade:451
+msgid "Reverse Pages"
+msgstr "Omvendte sider"
+
+#: gnome-manual-duplex.glade:396
+msgid ""
+"HP LJ 1005/1018/1020: invert pages\n"
+"HP LJ P1005/P1006/P1505: invert pages\n"
+"HP LJ Pro P1102, P1566: invert pages\n"
+"HP CLJ 1600/2600/CP1215: invert pages\n"
+"Minolta/QMS 2300 DL: invert pages\n"
+"Others: depends"
+msgstr ""
+"HP LJ 1005/1018/1020: Omvendte sider\n"
+"HP LJ P1005/P1006/P1505: Omvendte sider\n"
+"HP LJ Pro P1102, P1566: Omvendte sider\n"
+"HP CLJ 1600/2600/CP1215: Omvendte sider\n"
+"Minolta/QMS 2300 DL: Omvendte sider\n"
+"Andre: Afhænger"
+
+#: gnome-manual-duplex.glade:402 gnome-manual-duplex.glade:466
+msgid "Invert (rotate 180 degrees) Pages"
+msgstr "Vend (roter 180 grader) sider om"
+
+#: gnome-manual-duplex.glade:417
+msgid "<b>Even Long Edge</b>"
+msgstr "<b>Lige lang kant</b>"
+
+#: gnome-manual-duplex.glade:460
+msgid ""
+"HP LJ 1005/1018/1020: no invert pages\n"
+"HP LJ P1005/P1006: no invert pages\n"
+"HP LJ Pro P1102, P1566: no invert pages\n"
+"HP CLJ 1600/2600/CP1215: no invert pages\n"
+"Minolta/QMS 2300 DL: no invert pages\n"
+"Others: depends"
+msgstr ""
+"HP LJ 1005/1018/1020: ingen omvendte sider\n"
+"HP LJ P1005/P1006: ingen omvendte sider\n"
+"HP LJ Pro P1102, P1566: ingen omvendte sider\n"
+"HP CLJ 1600/2600/CP1215: ingen omvendte sider\n"
+"Minolta/QMS 2300 DL: ingen omvendte sider\n"
+"Andre: Afhænger"
+
+#: gnome-manual-duplex.glade:481
+msgid "<b>Even Short Edge</b>"
+msgstr "<b>Lige kort kant</b>"
+
+#: gnome-manual-duplex.glade:512
+msgid "gtk-save"
+msgstr "gtk-save"
+
+#: gnome-manual-duplex.glade:531
+msgid "About Glade"
+msgstr "Om Glade"
+
+#: gnome-manual-duplex.glade:538
+msgid "Copyright 2009-2010 Rick Richardson.  All Rights Reserved."
+msgstr "Ophavsret 2009-2010 Rick Richardson. Alle rettigheder forbeholdes."
+
+#: gnome-manual-duplex.glade:540
+msgid "Home Page"
+msgstr "Hjemmeside"
+
+#: gnome-manual-duplex.glade:541
+msgid "GPL"
+msgstr "GPL"

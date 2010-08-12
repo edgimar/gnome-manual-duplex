@@ -38,6 +38,7 @@ FILES=\
 	README \
 	short_edge.fig \
 	messages.pot \
+	po/da.po \
 	po/de.po \
 	po/en_US.po \
 	po/es.po \
