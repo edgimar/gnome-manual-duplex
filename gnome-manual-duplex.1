@@ -176,16 +176,23 @@
 gnome-manual-duplex \- Print pages(s) using a manual duplex method
 .SH SYNOPSIS
 .B gnome-manual-duplex 
-.RI "[" file "]"
+.RI [ options "] [" file "]"
 .SH DESCRIPTION
-This manual page explains the gnome-manual-duplex command.
+gnome-manual-duplex is a utility that adds manual duplex to the "Print" menu.
+It is a CUPS Virtual Printer as well as a standalone utility.
 It works with *.ps and *.pdf files.
 .PP
-Then using the GNOME GUI:
+Using the GNOME GUI:
     1)  System Tools -> Gnome Manual Duplex
         - OR -
     2)  Add to Panel -> Gnome Manual Duplex applet -> Add
+        ...Do it at least once, then...
         Print -> GnomeManualDuplex (Virtual Printer) -> Print
+.SH COMMAND LINE OPTIONS
+These are the options that can appear on the command line.
+.TP
+.BI \-D\0 level
+Set Debug level [0].
 .SH FILES
 .I /usr/bin/gnome-manual-duplex
 .SH AUTHOR
@@ -196,7 +203,10 @@ http://www.transifex.net/projects/p/gnome-manual-duplex/c/default/
 http://translationproject.org/domain/gnome-manual-duplex.html
 .SH "SEE ALSO"
 psutils(1), file(1),
+.br
 http://foo2zjs.rkkda.com/manual.pdf
+.br
+http://www.youtube.com/watch?v=c4Ghomz6RQI
 '/"
 '/"
 '/"
