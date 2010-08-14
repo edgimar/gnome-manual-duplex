@@ -38,6 +38,10 @@ def usage():
     print "Usage:"
     print "    %s [options] [ps/pdf-file]" % sys.argv[0]
     print
+    print "gnome-manual-duplex is a utility that adds manual duplex to the"
+    print "'Print' menu.  It is a CUPS Virtual Printer as well as  a"
+    print " standalone  utility.  It works with *.ps and *.pdf files."
+    print
     print "Options:"
     print "    -D lvl	Set Debug level [%s]" % Debug
     sys.exit(1)

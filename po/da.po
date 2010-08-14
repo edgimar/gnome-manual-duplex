@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-manual-duplex 0.26\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-08-12 16:01-0500\n"
+"POT-Creation-Date: 2010-08-14 13:59-0500\n"
 "PO-Revision-Date: 2010-08-12 20:36+0200\n"
 "Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: gnome-manual-duplex.py:118
+#: gnome-manual-duplex.py:122
 msgid "(default)"
 msgstr "(standard)"
 
