@@ -45,6 +45,7 @@ FILES=\
 	po/fi.po \
 	po/fr.po \
 	po/pt.po \
+	po/pt_BR.po \
 	po/sv.po \
 	$(NULL)
 
