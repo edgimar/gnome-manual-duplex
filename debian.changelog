@@ -1,3 +1,9 @@
+gnome-manual-duplex (0.29) stable; urgency=low
+
+  * Bug: insert quotes in filename
+
+ -- Rick Richardson <rickrich@gmail.com>  Tue, 17 Aug 2010 08:21:03 -0500
+
 gnome-manual-duplex (0.28) stable; urgency=low
 
   * Translations: pt_BR.
