@@ -13,6 +13,12 @@ LIBCUPS=$(DESTDIR)/usr/lib/cups
 LIBBONOBO=$(DESTDIR)/usr/lib/bonobo
 MANDIR=$(DESTDIR)/usr/share/man
 
+UNAME := $(shell uname)
+GSED=sed
+ifeq ($(UNAME),Darwin)
+    GSED=gsed
+endif
+
 NULL=
 FILES=\
 	2pages.ps \
@@ -149,7 +155,7 @@ messages: messages.pot $(POFILES) $(MOFILES)
 
 messages.pot: $(PROG).py $(PROG).glade gmd-applet.py Makefile
 	xgettext -k_ -kN_ -o $@ $(PROG).py $(PROG).glade gmd-applet.py
-	sed -i -e 's/SOME .* TITLE/gmd translation template/g' \
+	$(GSED) -i -e 's/SOME .* TITLE/gmd translation template/g' \
 	    -e 's/YEAR THE .* HOLDER/2010 Rick Richardson/g' \
 	    -e 's/FIRST .*, YEAR/Rick Richardson <rickrich@gmail.com>, 2010/g' \
 	    -e 's/PACKAGE VERSION/$(PROG) '$(VERSION)'/g' \
