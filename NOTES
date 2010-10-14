@@ -12,3 +12,7 @@ curl -F pofile=@input-po-filename \
         -F output=pofile 
         http://pepipopum.dixo.net \
         --output output-po-filename
+
+#
+put-rkkda  foo2zjs/tmp gnome-manual-duplex.tar.gz 
+mutt -s  "gnome-manual-duplex 0.30 pot file" coordinator@translationproject.org -a messages.pot
