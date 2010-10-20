@@ -197,6 +197,55 @@ def factory(applet, iid):
     applet.show_all()
     check_needed()
 
+def add_systray_icon(main_window):
+    assert(gtk.gtk_version > (2, 10))
+
+    class GmdStatusIcon(gtk.StatusIcon):
+        def __init__(self):
+                gtk.StatusIcon.__init__(self)
+                menu = '''
+                    <ui>
+                     <menubar name="Menubar">
+                      <menu action="Menu">
+                       <menuitem action="About"/>
+                       <menuitem action="Quit"/>
+                      </menu>
+                     </menubar>
+                    </ui>
+                '''
+                self.mainwindow = main_window
+                actions = [ ('Menu',  None, 'Menu'),
+                            ('About', gtk.STOCK_ABOUT,
+                              '_About...', None, 'About Manual Duplex Applet', self.on_about),
+                            ('Quit', gtk.STOCK_QUIT,
+                              '_Quit', None, '', self.on_quit)]
+                ag = gtk.ActionGroup('Actions')
+                ag.add_actions(actions)
+                self.manager = gtk.UIManager()
+                self.manager.insert_action_group(ag, 0)
+                self.manager.add_ui_from_string(menu)
+                self.menu = self.manager.get_widget('/Menubar/Menu/About').props.parent
+                self.set_from_file("/usr/share/pixmaps/gnome-manual-duplex.png")
+                self.set_tooltip("Manual Duplex Applet")
+                self.set_visible(True)
+                self.connect('activate', self.on_activate)
+                self.connect('popup-menu', self.on_popup_menu)
+
+        def on_activate(self, data):
+            os.system("gnome-manual-duplex")
+
+        def on_popup_menu(self, status, button, time):
+                self.menu.popup(None, None, None, button, time)
+
+        def on_about(self, data):
+            showAboutDialog(data)
+            
+        def on_quit(self, data):
+            gtk.main_quit()
+ 
+    GmdStatusIcon()
+    check_needed()
+
 def create_menu (applet):
     propxml="""
 	    <popup name="button3">
@@ -273,6 +322,15 @@ elif (len(sys.argv) == 2) and (sys.argv[1] == "run-in-window"):
     app = gnomeapplet.Applet()
     factory(app, None)
     app.reparent(main_window)
+    main_window.show_all()
+    gtk.main()
+    sys.exit()
+elif (len(sys.argv) == 2) and (sys.argv[1] == "run-in-tray"):
+    main_window = gtk.Window(gtk.WINDOW_TOPLEVEL)
+    main_window.set_title("Python Applet")
+    main_window.connect("destroy", gtk.main_quit)
+    add_systray_icon(main_window)
+    main_window.iconify()
     main_window.show_all()
     gtk.main()
     sys.exit()
