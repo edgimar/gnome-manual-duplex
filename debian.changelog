@@ -1,5 +1,11 @@
 gnome-manual-duplex (0.31) stable; urgency=low
 
+  *  Translations: tr.
+
+ -- Rick Richardson <rickrich@gmail.com>  Fri, 29 Oct 2010 08:21:03 -0500
+
+gnome-manual-duplex (0.31) stable; urgency=low
+
   *  Add run-in-tray to gmd-applet-py.in
 
  -- Mark Edgington <edgimar@gmail.com>  Wed, 20 Oct 2010 08:21:03 -0500
