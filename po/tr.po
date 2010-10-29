@@ -163,7 +163,7 @@ msgstr "<b>Çift Sayılı Kısa Kenar</b>"
 
 #: gnome-manual-duplex.glade:512
 msgid "gtk-save"
-msgid "gtk-save"
+msgstr "gtk-save"
 
 #: gnome-manual-duplex.glade:531
 msgid "About Glade"
