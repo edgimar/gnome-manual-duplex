@@ -1,0 +1,182 @@
+# translation of gnome-manual-duplex-0.30.po to Turkish
+# Copyright (C) 2010 Rick Richardson
+# This file is distributed under the same license as the gnome-manual-duplex package.
+# Server Acim <serveracim@gmail.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-manual-duplex 0.30\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-10-13 14:29-0500\n"
+"PO-Revision-Date: 2010-10-16 15:25+0200\n"
+"Last-Translator: Server Acim <serveracim@gmail.com>\n"
+"Language-Team: Turkish <gnu-tr-u12a@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: gnome-manual-duplex.py:122
+msgid "(default)"
+msgstr "(varsayılan)"
+
+#: gnome-manual-duplex.glade:32
+msgid "<b>Job Name</b>"
+msgstr "<b>İşyeri Adı</b>"
+
+#: gnome-manual-duplex.glade:59
+msgid "Manual Long Edge"
+msgstr "Uzun Kenar"
+
+#: gnome-manual-duplex.glade:70
+msgid "Manual Short Edge"
+msgstr "Kısa Kenar"
+
+#: gnome-manual-duplex.glade:110
+msgid "<b>Output Format</b>"
+msgstr "<b>Çıktı Formatı</b>"
+
+#: gnome-manual-duplex.glade:135
+msgid "Skip Odd Pages"
+msgstr "Tek Sayfaları Atlayınız"
+
+#: gnome-manual-duplex.glade:146
+msgid "<b>Print</b>"
+msgstr "<b>Yazdır</b>"
+
+#: gnome-manual-duplex.glade:166
+msgid "gtk-about"
+msgstr "gtk-about"
+
+#: gnome-manual-duplex.glade:177
+msgid "gtk-preferences"
+msgstr "gtk-preferences"
+
+#: gnome-manual-duplex.glade:191 gnome-manual-duplex.glade:303
+#: gnome-manual-duplex.glade:501
+msgid "gtk-cancel"
+msgstr "gtk-cancel"
+
+#: gnome-manual-duplex.glade:205
+msgid "gtk-print"
+msgstr "gtk-print"
+
+#: gnome-manual-duplex.glade:263
+msgid ""
+"<big><b>1.</b></big>\n"
+"\n"
+"Without changing the orientation,\n"
+"remove the paper stack from the\n"
+"Output Bin.  Do not discard blank\n"
+"sheets."
+msgstr ""
+"<big><b>1.</b></big>\n"
+"\n"
+"Yönlendirmeyi değiştirmeden,\n"
+"kağıt yığınını Çıktı Bölmesinden\n"
+"çıkarınız.  Boş kağıtları\n"
+"atmayınız."
+
+#: gnome-manual-duplex.glade:277
+msgid ""
+"<big><b>2.</b></big>\n"
+"\n"
+"Maintaining the same orientation,\n"
+"insert the paper stack into Tray 1\n"
+"printed side down."
+msgstr ""
+"<big><b>2.</b></big>\n"
+"\n"
+"Aynı yönlendirmeye sadık kalarak,\n"
+"Kağıt yığınını Tepsi 1'e yerleştirin\n"
+"baskılı kısım aşağıya gelsin."
+
+#: gnome-manual-duplex.glade:314
+msgid "gtk-ok"
+msgstr "gtk-ok"
+
+#: gnome-manual-duplex.glade:356
+msgid "<b>Printer</b>"
+msgstr "<b>Yazıcı</b>"
+
+#: gnome-manual-duplex.glade:381 gnome-manual-duplex.glade:445
+msgid ""
+"HP LJ 1005/1018/1020: reverse pages\n"
+"HP LJ P1005/P1006/P1505: reverse pages\n"
+"HP LJ Pro P1102, P1566: reverse pages\n"
+"HP CLJ 1600/2600/CP1215: reverse pages\n"
+"Minolta/QMS 2300 DL: reverse pages\n"
+"Others: depends"
+msgstr ""
+"HP LJ 1005/1018/1020: ters sayfalar\n"
+"HP LJ P1005/P1006/P1505: ters sayfalar\n"
+"HP LJ Pro P1102, P1566: ters sayfalar\n"
+"HP CLJ 1600/2600/CP1215: ters sayfalar\n"
+"Minolta/QMS 2300 DL: ters sayfalar\n"
+"Diğerleri: duruma göre değişir"
+
+#: gnome-manual-duplex.glade:387 gnome-manual-duplex.glade:451
+msgid "Reverse Pages"
+msgstr "Ters Sayfalar"
+
+#: gnome-manual-duplex.glade:396
+msgid ""
+"HP LJ 1005/1018/1020: invert pages\n"
+"HP LJ P1005/P1006/P1505: invert pages\n"
+"HP LJ Pro P1102, P1566: invert pages\n"
+"HP CLJ 1600/2600/CP1215: invert pages\n"
+"Minolta/QMS 2300 DL: invert pages\n"
+"Others: depends"
+msgstr ""
+"HP LJ 1005/1018/1020: sayfaları evir\n"
+"HP LJ P1005/P1006/P1505: sayfaları evir\n"
+"HP LJ Pro P1102, P1566: sayfaları evir\n"
+"HP CLJ 1600/2600/CP1215: sayfaları evir\n"
+"Minolta/QMS 2300 DL: sayfaları evir\n"
+"Diğerleri: duruma göre değişir"
+
+#: gnome-manual-duplex.glade:402 gnome-manual-duplex.glade:466
+msgid "Invert (rotate 180 degrees) Pages"
+msgstr "Sayfaları (180 derece açıyla) Evir"
+
+#: gnome-manual-duplex.glade:417
+msgid "<b>Even Long Edge</b>"
+msgstr "<b>Çift Sayılı Uzun Kenar</b>"
+
+#: gnome-manual-duplex.glade:460
+msgid ""
+"HP LJ 1005/1018/1020: no invert pages\n"
+"HP LJ P1005/P1006: no invert pages\n"
+"HP LJ Pro P1102, P1566: no invert pages\n"
+"HP CLJ 1600/2600/CP1215: no invert pages\n"
+"Minolta/QMS 2300 DL: no invert pages\n"
+"Others: depends"
+msgstr ""
+"HP LJ 1005/1018/1020: sayfa evirmesi yok\n"
+"HP LJ P1005/P1006: sayfa evirmesi yok\n"
+"HP LJ Pro P1102, P1566: sayfa evirmesi yok\n"
+"HP CLJ 1600/2600/CP1215: sayfa evirmesi yok\n"
+"Minolta/QMS 2300 DL: sayfa evirmesi yok\n"
+"Diğerleri: duruma göre değişir"
+
+#: gnome-manual-duplex.glade:481
+msgid "<b>Even Short Edge</b>"
+msgstr "<b>Çift Sayılı Kısa Kenar</b>"
+
+#: gnome-manual-duplex.glade:512
+msgid "gtk-save"
+msgid "gtk-save"
+
+#: gnome-manual-duplex.glade:531
+msgid "About Glade"
+msgstr "Glade Hakkında"
+
+#: gnome-manual-duplex.glade:538
+msgid "Copyright 2009-2010 Rick Richardson.  All Rights Reserved."
+msgstr "Telif Hakkı2009-2010 Rick Richardson.  Tüm Hakları Saklıdır."
+
+#: gnome-manual-duplex.glade:540
+msgid "Home Page"
+msgstr "Ana Sayfa"
+
+#: gnome-manual-duplex.glade:541
+msgid "GPL"
+msgstr "GPL"
