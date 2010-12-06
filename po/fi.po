@@ -143,7 +143,7 @@ msgstr "Käännä (pyöritä 180 astetta) sivut"
 
 #: gnome-manual-duplex.glade:417
 msgid "<b>Even Long Edge</b>"
-msgstr "<b>Parillinen pitkä sivu</b"
+msgstr "<b>Parillinen pitkä sivu</b>"
 
 #: gnome-manual-duplex.glade:460
 msgid ""
