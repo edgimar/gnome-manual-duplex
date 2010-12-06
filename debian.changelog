@@ -1,3 +1,9 @@
+gnome-manual-duplex (0.32) stable; urgency=low
+
+  *  Translations: fi.
+
+ -- Rick Richardson <rickrich@gmail.com>  Mon, 6 Dec 2010 08:21:03 -0500
+
 gnome-manual-duplex (0.31) stable; urgency=low
 
   *  Translations: tr.
