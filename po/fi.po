@@ -1,20 +1,21 @@
 # gmd translation template.
-# Copyright (C) 2010 Rick Richardson
+# Copyright © 2010 Free Software Foundation, Inc.
+# Copyright © 2010 Rick Richardson
 # This file is distributed under the same license as the gnome-manual-duplex package.
-# Rick Richardson <rickrich@gmail.com>, 2010.
+# Jorma Karvonen <karvonen.jorma@gmail.com>, 2010.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-manual-duplex 0.20\n"
+"Project-Id-Version: gnome-manual-duplex 0.30\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-10-13 13:20-0500\n"
-"PO-Revision-Date: 2010-07-26 23:58+0200\n"
-"Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
-"Language-Team: English\n"
-"Language: \n"
+"POT-Creation-Date: 2010-10-13 14:29-0500\n"
+"PO-Revision-Date: 2010-12-06 14:00+0200\n"
+"Last-Translator: Jorma Karvonen <karvonen.jorma@gmail.com>\n"
+"Language-Team: Finnish <translation-team-fi@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: fi\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: gnome-manual-duplex.py:122
@@ -23,27 +24,27 @@ msgstr "(oletus)"
 
 #: gnome-manual-duplex.glade:32
 msgid "<b>Job Name</b>"
-msgstr "<b>Työn nimi</b>"
+msgstr "<b>Työnimi</b>"
 
 #: gnome-manual-duplex.glade:59
 msgid "Manual Long Edge"
-msgstr ""
+msgstr "Manuaalinen pitkä reuna"
 
 #: gnome-manual-duplex.glade:70
 msgid "Manual Short Edge"
-msgstr ""
+msgstr "Manuaalinen lyhyt reuna"
 
 #: gnome-manual-duplex.glade:110
 msgid "<b>Output Format</b>"
-msgstr "<b>Tulostemuotoilu</b>"
+msgstr "<b>Tulostemuoto</b>"
 
 #: gnome-manual-duplex.glade:135
 msgid "Skip Odd Pages"
-msgstr "Sivuuta parittomat sivut"
+msgstr "Ohita parittomat sivut"
 
 #: gnome-manual-duplex.glade:146
 msgid "<b>Print</b>"
-msgstr "<b>Tulostus</b>"
+msgstr "<b>Tulosta</b>"
 
 #: gnome-manual-duplex.glade:166
 msgid "gtk-about"
@@ -71,6 +72,12 @@ msgid ""
 "Output Bin.  Do not discard blank\n"
 "sheets."
 msgstr ""
+"<big><b>1.</b></big>\n"
+"\n"
+"Muuttamatta suuntausta\n"
+"poista paperipino tuloste-\n"
+"laatikosta.  Älä hylkää tyhjiä\n"
+"sivuja."
 
 #: gnome-manual-duplex.glade:277
 msgid ""
@@ -80,6 +87,11 @@ msgid ""
 "insert the paper stack into Tray 1\n"
 "printed side down."
 msgstr ""
+"<big><b>2.</b></big>\n"
+"\n"
+"Ylläpidetään samaa suuntausta,\n"
+"lisää paperipino Kelkkaan 1\n"
+"tulostettava puoli alaspäin."
 
 #: gnome-manual-duplex.glade:314
 msgid "gtk-ok"
@@ -98,10 +110,16 @@ msgid ""
 "Minolta/QMS 2300 DL: reverse pages\n"
 "Others: depends"
 msgstr ""
+"HP LJ 1005/1018/1020: käännä sivut\n"
+"HP LJ P1005/P1006/P1505: käännä sivut\n"
+"HP LJ Pro P1102, P1566: käännä sivut\n"
+"HP CLJ 1600/2600/CP1215: käännä sivut\n"
+"Minolta/QMS 2300 DL: käännä sivut\n"
+"Muut: riippuu"
 
 #: gnome-manual-duplex.glade:387 gnome-manual-duplex.glade:451
 msgid "Reverse Pages"
-msgstr "Käänteiset sivut"
+msgstr "Käännä sivut"
 
 #: gnome-manual-duplex.glade:396
 msgid ""
@@ -112,14 +130,20 @@ msgid ""
 "Minolta/QMS 2300 DL: invert pages\n"
 "Others: depends"
 msgstr ""
+"HP LJ 1005/1018/1020: pyöritä sivut\n"
+"HP LJ P1005/P1006/P1505: pyöritä sivut\n"
+"HP LJ Pro P1102, P1566: pyöritä sivut\n"
+"HP CLJ 1600/2600/CP1215: pyöritä sivut\n"
+"Minolta/QMS 2300 DL: pyöritä sivut\n"
+"Muut: riippuu"
 
 #: gnome-manual-duplex.glade:402 gnome-manual-duplex.glade:466
 msgid "Invert (rotate 180 degrees) Pages"
-msgstr "Peilaa sivut (käännä 180 astetta)"
+msgstr "Käännä (pyöritä 180 astetta) sivut"
 
 #: gnome-manual-duplex.glade:417
 msgid "<b>Even Long Edge</b>"
-msgstr ""
+msgstr "<b>Parillinen pitkä sivu</b"
 
 #: gnome-manual-duplex.glade:460
 msgid ""
@@ -130,10 +154,16 @@ msgid ""
 "Minolta/QMS 2300 DL: no invert pages\n"
 "Others: depends"
 msgstr ""
+"HP LJ 1005/1018/1020: ei pyöritetä sivuja\n"
+"HP LJ P1005/P1006: ei pyöritetä sivuja\n"
+"HP LJ Pro P1102, P1566: ei pyöritetä sivuja\n"
+"HP CLJ 1600/2600/CP1215: ei pyöritetä sivuja\n"
+"Minolta/QMS 2300 DL: ei pyöritetä sivuja\n"
+"Muut: riippuu"
 
 #: gnome-manual-duplex.glade:481
 msgid "<b>Even Short Edge</b>"
-msgstr ""
+msgstr "<b>Parillinen lyhyt sivu</b>"
 
 #: gnome-manual-duplex.glade:512
 msgid "gtk-save"
@@ -141,12 +171,11 @@ msgstr "gtk-save"
 
 #: gnome-manual-duplex.glade:531
 msgid "About Glade"
-msgstr "Tietoja Gladesta"
+msgstr "Glade-ohjelmasta"
 
 #: gnome-manual-duplex.glade:538
 msgid "Copyright 2009-2010 Rick Richardson.  All Rights Reserved."
-msgstr ""
-"Tekijänoikeus 2009-2010 Rick Richardson.  Oikeudet muutoksiin pidätetään."
+msgstr "Copyright 2009-2010 Rick Richardson.  All Rights Reserved."
 
 #: gnome-manual-duplex.glade:540
 msgid "Home Page"
