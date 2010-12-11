@@ -50,6 +50,7 @@ FILES=\
 	po/es.po \
 	po/fi.po \
 	po/fr.po \
+	po/he.po \
 	po/it.po \
 	po/pt.po \
 	po/pt_BR.po \
