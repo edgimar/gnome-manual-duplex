@@ -1,7 +1,8 @@
 
 Use Gnome Manual Duplex - https://sourceforge.net/projects/g-manual-duplex/
 
-https://build.opensuse.org/home/list_my
+https://build.opensuse.org/package/show?package=gnome-manual-duplex&project=home%3Arickrich%3Agnome-manual-duplex
+
 http://freshmeat.net/projects/gnome-manual-duplex
 
 http://translationproject.org/
@@ -20,4 +21,4 @@ LANG=tr_TR.utf-8 ./gnome-manual-duplex
 
 #
 put-rkkda  foo2zjs/tmp gnome-manual-duplex.tar.gz 
-mutt -s  "gnome-manual-duplex 0.31 pot file" coordinator@translationproject.org -a messages.pot
+mutt -s  "gnome-manual-duplex 0.33 pot file" coordinator@translationproject.org -a messages.pot </dev/null
