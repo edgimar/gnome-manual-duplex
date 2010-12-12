@@ -244,4 +244,5 @@ w:	all
 	$(MAKE) tar
 
 web:
+	put-rkkda rkkda/tmp gnome-manual-duplex.tar.gz 
 	scp index.php rickrich,g-manual-duplex@web.sourceforge.net:htdocs
