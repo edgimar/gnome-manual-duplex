@@ -1,49 +1,49 @@
-# Brazilian Portuguese translation of gmd.
+# gmd translation template for Esperanto.
+# Copyright (C) 2010 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-manual-duplex package.
-# Copyright (C) 2010-2011 Rick Richardson
-# Fabrício Godoy <skarllot@gmail.com>, 2010-2011.
+# Rick Richardson <rickrich@gmail.com>, 2010.
+# Felipe Castro <fefcas@gmail.com>, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-manual-duplex 0.33\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-11 20:43-0600\n"
-"PO-Revision-Date: 2011-01-08 01:41-0300\n"
-"Last-Translator: Fabrício Godoy <skarllot@gmail.com>\n"
-"Language-Team: Brazilian Portuguese <ldp-br@bazar.conectiva.com.br>\n"
-"Language: pt_BR\n"
+"POT-Creation-Date: 2010-12-10 20:25-0600\n"
+"PO-Revision-Date: 2011-03-11 21:34-0300\n"
+"Last-Translator: Felipe Castro <fefcas@gmail.com>\n"
+"Language-Team: Esperanto <translation-team-eo@lists.sourceforge.net>\n"
+"Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: gnome-manual-duplex.py:122
 msgid "(default)"
-msgstr "(predefinido)"
+msgstr "(apriora)"
 
 #: gnome-manual-duplex.glade:32
 msgid "<b>Job Name</b>"
-msgstr "<b>Nome do trabalho</b>"
+msgstr "<b>Labor-Nomo</b>"
 
 #: gnome-manual-duplex.glade:59
 msgid "Manual Long Edge"
-msgstr "Borda maior manual"
+msgstr "Permana Longa Bordo"
 
 #: gnome-manual-duplex.glade:70
 msgid "Manual Short Edge"
-msgstr "Borda menor manual"
+msgstr "Permana Mallonga Bordo"
 
 #: gnome-manual-duplex.glade:110
 msgid "<b>Output Format</b>"
-msgstr "<b>Formato de saída</b>"
+msgstr "<b>Eliga Formo</b>"
 
 #: gnome-manual-duplex.glade:135
 msgid "Skip Odd Pages"
-msgstr "Ignorar página ímpares"
+msgstr "Salti Malpar-Paĝojn"
 
 #: gnome-manual-duplex.glade:146
 msgid "<b>Print</b>"
-msgstr "<b>Imprimir</b>"
+msgstr "<b>Printi</b>"
 
 #: gnome-manual-duplex.glade:166
 msgid "gtk-about"
@@ -73,10 +73,10 @@ msgid ""
 msgstr ""
 "<big><b>1.</b></big>\n"
 "\n"
-"Sem alterar a orientação remova a\n"
-"pilha de papéis do compartimento\n"
-"de saída. Não descarte as folhas\n"
-"em branco."
+"Sen ŝanĝi la orientiĝon,\n"
+"demetu la paperan stakon el la\n"
+"Eligujo. Ne forĵetu blankajn\n"
+"foliojn."
 
 #: gnome-manual-duplex.glade:277
 msgid ""
@@ -88,9 +88,9 @@ msgid ""
 msgstr ""
 "<big><b>2.</b></big>\n"
 "\n"
-"Mantendo a mesma orientação insira\n"
-"a pilha de papéis na bandeja 1\n"
-"com o lado impresso para baixo."
+"Tenante la saman orientiĝon,\n"
+"enmetu la paperan stakon en la Pleto 1\n"
+"kun la printita flanko malsupren."
 
 #: gnome-manual-duplex.glade:314
 msgid "gtk-ok"
@@ -98,7 +98,7 @@ msgstr "gtk-ok"
 
 #: gnome-manual-duplex.glade:356
 msgid "<b>Printer</b>"
-msgstr "<b>Impressora</b>"
+msgstr "<b>Printilo</b>"
 
 #: gnome-manual-duplex.glade:381 gnome-manual-duplex.glade:445
 msgid ""
@@ -109,16 +109,16 @@ msgid ""
 "Minolta/QMS 2300 DL: reverse pages\n"
 "Others: depends"
 msgstr ""
-"HP LJ 1005/1018/1020: páginas reversas\n"
-"HP LJ P1005/P1006/P1505: páginas reversas\n"
-"HP LJ Pro P1102, P1566: páginas reversas\n"
-"HP CLJ 1600/2600/CP1215: páginas reversas\n"
-"Minolta/QMS 2300 DL: páginas reversas\n"
-"Outras: depende"
+"HP LJ 1005/1018/1020: interŝanĝi paĝojn\n"
+"HP LJ P1005/P1006/P1505: interŝanĝi paĝojn\n"
+"HP LJ Pro P1102, P1566: interŝanĝi paĝojn\n"
+"HP CLJ 1600/2600/CP1215: interŝanĝi paĝojn\n"
+"Minolta/QMS 2300 DL: interŝanĝi paĝojn\n"
+"Aliaj: dependas"
 
 #: gnome-manual-duplex.glade:387 gnome-manual-duplex.glade:451
 msgid "Reverse Pages"
-msgstr "Páginas reversas"
+msgstr "Interŝanĝi Paĝojn"
 
 #: gnome-manual-duplex.glade:396
 msgid ""
@@ -129,20 +129,20 @@ msgid ""
 "Minolta/QMS 2300 DL: invert pages\n"
 "Others: depends"
 msgstr ""
-"HP LJ 1005/1018/1020: páginas inversas\n"
-"HP LJ P1005/P1006/P1505: páginas inversas\n"
-"HP LJ Pro P1102, P1566: páginas inversas\n"
-"HP CLJ 1600/2600/CP1215: páginas inversas\n"
-"Minolta/QMS 2300 DL: páginas inversas\n"
-"Outras: depende"
+"HP LJ 1005/1018/1020: inverti paĝojn\n"
+"HP LJ P1005/P1006/P1505: inverti paĝojn\n"
+"HP LJ Pro P1102, P1566: inverti paĝojn\n"
+"HP CLJ 1600/2600/CP1215: inverti paĝojn\n"
+"Minolta/QMS 2300 DL: inverti paĝojn\n"
+"Aliaj: dependas"
 
 #: gnome-manual-duplex.glade:402 gnome-manual-duplex.glade:466
 msgid "Invert (rotate 180 degrees) Pages"
-msgstr "Inverter páginas (girar 180 graus)"
+msgstr "Inverti (turni 180 gradojn) Paĝojn"
 
 #: gnome-manual-duplex.glade:417
 msgid "<b>Even Long Edge</b>"
-msgstr "<b>Borda maior regular</b>"
+msgstr "<b>Para Longa Bordo</b>"
 
 #: gnome-manual-duplex.glade:460
 msgid ""
@@ -153,16 +153,16 @@ msgid ""
 "Minolta/QMS 2300 DL: no invert pages\n"
 "Others: depends"
 msgstr ""
-"HP LJ 1005/1018/1020: sem inversão de páginas\n"
-"HP LJ P1005/P1006: sem inversão de páginas\n"
-"HP LJ Pro P1102, P1566: sem inversão de páginas\n"
-"HP CLJ 1600/2600/CP1215: sem inversão de páginas\n"
-"Minolta/QMS 2300 DL: sem inversão de páginas\n"
-"Outras: depende"
+"HP LJ 1005/1018/1020: sen inverti paĝojn\n"
+"HP LJ P1005/P1006/P1505: sen inverti paĝojn\n"
+"HP LJ Pro P1102, P1566: sen inverti paĝojn\n"
+"HP CLJ 1600/2600/CP1215: sen inverti paĝojn\n"
+"Minolta/QMS 2300 DL: sen inverti paĝojn\n"
+"Aliaj: dependas"
 
 #: gnome-manual-duplex.glade:481
 msgid "<b>Even Short Edge</b>"
-msgstr "<b>Borda menor regular</b>"
+msgstr "<b>Para Mallonga Bordo</b>"
 
 #: gnome-manual-duplex.glade:512
 msgid "gtk-save"
@@ -170,15 +170,15 @@ msgstr "gtk-save"
 
 #: gnome-manual-duplex.glade:531
 msgid "About Glade"
-msgstr "Sobre Glade"
+msgstr "Pri Glade"
 
 #: gnome-manual-duplex.glade:538
 msgid "Copyright 2009-2010 Rick Richardson.  All Rights Reserved."
-msgstr "Copyright 2009-2010 Rick Richardson. Todos os direitos reservados."
+msgstr "Kopirajto 2009-2011 Rick Richardson. Ĉiuj Rajtoj Rezervitaj."
 
 #: gnome-manual-duplex.glade:540
 msgid "Home Page"
-msgstr "Página inicial"
+msgstr "Hejm-Paĝo"
 
 #: gnome-manual-duplex.glade:541
 msgid "GPL"
