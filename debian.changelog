@@ -1,3 +1,9 @@
+gnome-manual-duplex (0.37) stable; urgency=low
+
+  * Add dependancy python-gnomeapplet for Ubuntu 11.04.
+
+ -- Rick Richardson <rickrich@gmail.com>  Web, 27 Apr 2011 08:21:03 -0500
+
 gnome-manual-duplex (0.36) stable; urgency=low
 
   *  Translations: ru (Russian).

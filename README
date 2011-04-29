@@ -14,6 +14,8 @@ Install:
     $ make
     $ su
     # make install		-OR-	$ sudo make install
+    [logout]
+    [login]
 
 Then using the GUI:
     1)	System Tools -> Gnome Manual Duplex
