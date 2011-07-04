@@ -1,6 +1,6 @@
 
 PROG=gnome-manual-duplex
-VERSION=0.37
+VERSION=0.38
 
 INSTALL=install
 LPADMIN=/usr/sbin/lpadmin
@@ -53,6 +53,7 @@ FILES=\
 	po/fr.po \
 	po/he.po \
 	po/it.po \
+	po/pl.po \
 	po/pt.po \
 	po/pt_BR.po \
 	po/ru.po \
