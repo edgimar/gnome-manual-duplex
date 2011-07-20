@@ -208,6 +208,7 @@ install: all
 	# For Gnome 3.0 (Fedora 15+)...
 	#
 	if test -d no-$(APPLETS); then \
+	    $(INSTALL) -m755 gmd-applet-3.py $(SHARE)/$(PROG)/gmd-applet.py; \
 	    $(INSTALL) -d $(SERVICES); \
 	    $(INSTALL) -m644 \
 		org.gnome.panel.applet.GnomeManualDuplexAppletFactory.service \

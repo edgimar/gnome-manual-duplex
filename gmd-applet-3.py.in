@@ -19,8 +19,8 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-import pygtk
-pygtk.require('2.0')
+#import pygtk
+#pyGtk.require('2.0')
 
 import os
 import time
@@ -38,19 +38,19 @@ except :
 
 if False:
 	try:
-	    import gtk
+	    from gi.repository import Gtk
 	except:
 	    needed += "python-gtk2\n"
 
-try:
-    import gnomeapplet
-except:
-    needed += "python-gnome2-desktop\n"
+	try:
+	    import gnomeapplet
+	except:
+	    needed += "python-gnome2-desktop\n"
 	
-try:
-    import gobject
-except:
-    needed += "python-gobject\n"
+	try:
+	    from gi.repository import GObject
+	except:
+	    needed += "python-gobject\n"
 
 if True:
     from gi.repository import GObject, Gtk, PanelApplet
@@ -138,7 +138,7 @@ def init_scan():
 	directory = "/var/tmp/gmd/" + str(pwd.getpwuid(os.getuid())[0])
     except :
 	send_error("Failed to get the UID")
-	return gtk.FALSE
+	return Gtk.FALSE
 
     # erase the directory to ensure that there are no spare works
     p = subprocess.Popen("rm -rf " + directory, shell=True, bufsize=32768)
@@ -169,7 +169,7 @@ def init_scan():
 	send_error("Failed to create a GAMIN request. "
 		    + "Check that the GAMIN daemon is running\n")
 
-    event0 = gobject.io_add_watch(fc.get_fd(), gobject.IO_IN, read_event)
+    event0 = GObject.io_add_watch(fc.get_fd(), GObject.IO_IN, read_event)
     
     if (event0 == None):
 	send_error("Failed to create a FAM event. "
@@ -183,20 +183,20 @@ def wdestroy(widget, data=None):
     sys.exit(0)
 
 def factory(applet, iid):
-    event_box = gtk.EventBox()
+    event_box = Gtk.EventBox()
     applet.add(event_box)
     event_box.show()
 
-    image = gtk.Image()
-    pixbuf = gtk.gdk.pixbuf_new_from_file(
+    image = Gtk.Image()
+    pixbuf = GdkPixbuf.Pixbuf.new_from_file(
 	"/usr/share/pixmaps/gnome-manual-duplex.png")
-    w,h = gtk.icon_size_lookup(gtk.ICON_SIZE_BUTTON)
-    scaled = pixbuf.scale_simple(w, h, gtk.gdk.INTERP_BILINEAR)
+    w,h = Gtk.icon_size_lookup(Gtk.IconSize.BUTTON)
+    scaled = pixbuf.scale_simple(w, h, GdkPixbuf.InterpType.BILINEAR)
     image.set_from_pixbuf(scaled)
     event_box.add(image)
     image.show()
     event_box.connect("button-press-event", show_menu, applet)
-    tooltips = gtk.Tooltips()
+    tooltips = Gtk.Tooltips()
     tooltips.set_tip(image, "Gnome Manual Duplex Applet")
     applet.show_all()
     check_needed()
@@ -205,11 +205,11 @@ def applet_factory(applet, iid, data):
     factory(applet, iid)
 
 def add_systray_icon(main_window):
-    assert(gtk.gtk_version > (2, 10))
+    #assert(Gtk.gtk_version > (2, 10))
 
-    class GmdStatusIcon(gtk.StatusIcon):
+    class GmdStatusIcon(Gtk.StatusIcon):
         def __init__(self):
-                gtk.StatusIcon.__init__(self)
+                GObject.GObject.__init__(self)
                 menu = '''
                     <ui>
                      <menubar name="Menubar">
@@ -222,18 +222,18 @@ def add_systray_icon(main_window):
                 '''
                 self.mainwindow = main_window
                 actions = [ ('Menu',  None, 'Menu'),
-                            ('About', gtk.STOCK_ABOUT,
+                            ('About', Gtk.STOCK_ABOUT,
                               '_About...', None, 'About Manual Duplex Applet', self.on_about),
-                            ('Quit', gtk.STOCK_QUIT,
+                            ('Quit', Gtk.STOCK_QUIT,
                               '_Quit', None, '', self.on_quit)]
-                ag = gtk.ActionGroup('Actions')
+                ag = Gtk.ActionGroup('Actions')
                 ag.add_actions(actions)
-                self.manager = gtk.UIManager()
+                self.manager = Gtk.UIManager()
                 self.manager.insert_action_group(ag, 0)
                 self.manager.add_ui_from_string(menu)
                 self.menu = self.manager.get_widget('/Menubar/Menu/About').props.parent
                 self.set_from_file("/usr/share/pixmaps/gnome-manual-duplex.png")
-                self.set_tooltip("Manual Duplex Applet")
+                #self.set_tooltip("Manual Duplex Applet")
                 self.set_visible(True)
                 self.connect('activate', self.on_activate)
                 self.connect('popup-menu', self.on_popup_menu)
@@ -248,7 +248,7 @@ def add_systray_icon(main_window):
             showAboutDialog(data)
             
         def on_quit(self, data):
-            gtk.main_quit()
+            Gtk.main_quit()
  
     GmdStatusIcon()
     check_needed()
@@ -265,7 +265,7 @@ def create_menu (applet):
     applet.setup_menu(propxml, verbs, None)
 
 def showAboutDialog(self, *arguments, **keywords):
-    about = gtk.AboutDialog()
+    about = Gtk.AboutDialog()
     about.set_name("GMD")
     about.set_program_name("gmd-applet.py")
     about.set_version("v${VERSION}")
@@ -279,10 +279,10 @@ def showAboutDialog(self, *arguments, **keywords):
     about.destroy()
 
 def show_menu(widget, event, applet):
-    if event.type == gtk.gdk.BUTTON_PRESS and event.button == 3:
+    if event.type == Gdk.EventType.BUTTON_PRESS and event.button == 3:
 	widget.emit_stop_by_name("button_press_event")
 	create_menu(applet)
-    if event.type == gtk.gdk.BUTTON_PRESS and event.button == 1:
+    if event.type == Gdk.EventType.BUTTON_PRESS and event.button == 1:
 	os.system("gnome-manual-duplex")
 
 def check_needed():
@@ -294,15 +294,15 @@ def check_needed():
     if needed == "":
 	init_scan()
     else:
-	window = gtk.Window(gtk.WINDOW_TOPLEVEL)
+	window = Gtk.Window(type=Gtk.WindowType.TOPLEVEL)
 	window.set_title("Error, module not found")
 	window.connect("delete_event", wdelete_event)
 	window.connect("destroy", wdestroy)
 	window.set_border_width(10)
-	button = gtk.Button("Ok")
+	button = Gtk.Button("Ok")
 	button.connect("clicked", wdestroy, None)
-	label = gtk.Label("You need to install the following python modules in order to use GMD:\n\n" + needed)
-	box = gtk.VBox()
+	label = Gtk.Label(label="You need to install the following python modules in order to use GMD:\n\n" + needed)
+	box = Gtk.VBox()
 	window.add(box)
 	box.add(label)
 	box.add(button)
@@ -311,7 +311,7 @@ def check_needed():
 	box.show()
 	window.show()
     
-    return gtk.TRUE
+    return True
 
 fc = None
 request = None
@@ -321,25 +321,25 @@ window = None
 
 if (len(sys.argv) == 2) and (sys.argv[1] == "standalone"):
     check_needed()
-    gtk.main()
+    Gtk.main()
 elif (len(sys.argv) == 2) and (sys.argv[1] == "run-in-window"):
-    main_window = gtk.Window(gtk.WINDOW_TOPLEVEL)
+    main_window = Gtk.Window(type=Gtk.WindowType.TOPLEVEL)
     main_window.set_title("Python Applet")
-    main_window.connect("destroy", gtk.main_quit)
+    main_window.connect("destroy", Gtk.main_quit)
     app = gnomeapplet.Applet()
     factory(app, None)
     app.reparent(main_window)
     main_window.show_all()
-    gtk.main()
+    Gtk.main()
     sys.exit()
 elif (len(sys.argv) == 2) and (sys.argv[1] == "run-in-tray"):
-    main_window = gtk.Window(gtk.WINDOW_TOPLEVEL)
+    main_window = Gtk.Window(type=Gtk.WindowType.TOPLEVEL)
     main_window.set_title("Python Applet")
-    main_window.connect("destroy", gtk.main_quit)
+    main_window.connect("destroy", Gtk.main_quit)
     add_systray_icon(main_window)
     main_window.iconify()
     main_window.show_all()
-    gtk.main()
+    Gtk.main()
     sys.exit()
 elif True:
     PanelApplet.Applet.factory_main(
