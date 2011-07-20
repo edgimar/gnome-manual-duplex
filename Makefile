@@ -12,6 +12,8 @@ PIXMAPS=$(DESTDIR)/usr/share/pixmaps
 LIBCUPS=$(DESTDIR)/usr/lib/cups
 LIBBONOBO=$(DESTDIR)/usr/lib/bonobo
 MANDIR=$(DESTDIR)/usr/share/man
+SERVICES=$(DESTDIR)/usr/share/dbus-1/services/
+APPLETS=$(DESTDIR)/usr/share/gnome-panel/4.0/applets/
 
 UNAME := $(shell uname)
 GSED=sed
@@ -202,6 +204,21 @@ install: all
 	$(INSTALL) -d $(LIBBONOBO)
 	$(INSTALL) -d $(LIBBONOBO)/servers
 	$(INSTALL) -m644 gmd.server $(LIBBONOBO)/servers/
+	#
+	# For Gnome 3.0 (Fedora 15+)...
+	#
+	if test -d $(APPLETS); then \
+	    $(INSTALL) -d $(SERVICES); \
+	    $(INSTALL) -m644 \
+		org.gnome.panel.applet.GnomeManualDuplexAppletFactory.service \
+		$(SERVICES); \
+	    $(INSTALL) -d $(APPLETS); \
+	    $(INSTALL) -m644 \
+		org.gnome.panel.GnomeManualDuplex.panel-applet \
+		$(APPLETS); \
+	fi
+	#
+	# Doc...
 	#
 	$(INSTALL) -d $(SHARE)/doc/$(PROG)
 	$(INSTALL) -m644 README $(SHARE)/doc/$(PROG)
