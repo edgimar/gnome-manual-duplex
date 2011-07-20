@@ -6,9 +6,9 @@ Description=Factory for creating the GnomeManualDuplex applet.
 
 [GnomeManualDuplexApplet]
 Name=GnomeManualDuplex
-Description=Track your invested money.
-Icon=invest-applet
-BonoboId=OAFIID:Invest_Applet_Factory
+Description=Applet for CUPS integration of Gnome Manual Duplex
+Icon=gmd.svg
+BonoboId=OAFIID:GNOME_GMD_applet_Factory
 #X-GNOME-Bugzilla-Bugzilla=GNOME
 #X-GNOME-Bugzilla-Product=gnome-applets
 #X-GNOME-Bugzilla-Component=invest
