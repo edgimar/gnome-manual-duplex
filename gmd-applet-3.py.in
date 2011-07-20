@@ -38,7 +38,7 @@ except :
 
 if False:
 	try:
-	    from gi.repository import Gtk
+	    from gi.repository import Gtk, Gdk, GdkPixbuf
 	except:
 	    needed += "python-gtk2\n"
 
@@ -53,7 +53,7 @@ if False:
 	    needed += "python-gobject\n"
 
 if True:
-    from gi.repository import GObject, Gtk, PanelApplet
+    from gi.repository import GObject, Gtk, PanelApplet, GdkPixbuf, Gdk
 
 def send_error(message):
     try:
@@ -190,14 +190,15 @@ def factory(applet, iid):
     image = Gtk.Image()
     pixbuf = GdkPixbuf.Pixbuf.new_from_file(
 	"/usr/share/pixmaps/gnome-manual-duplex.png")
-    w,h = Gtk.icon_size_lookup(Gtk.IconSize.BUTTON)
+    #w,h = Gtk.icon_size_lookup(Gtk.IconSize.BUTTON)
+    w = 48; h = 48
     scaled = pixbuf.scale_simple(w, h, GdkPixbuf.InterpType.BILINEAR)
     image.set_from_pixbuf(scaled)
     event_box.add(image)
     image.show()
     event_box.connect("button-press-event", show_menu, applet)
-    tooltips = Gtk.Tooltips()
-    tooltips.set_tip(image, "Gnome Manual Duplex Applet")
+    #tooltips = Gtk.Tooltips()
+    #tooltips.set_tip(image, "Gnome Manual Duplex Applet")
     applet.show_all()
     check_needed()
 
