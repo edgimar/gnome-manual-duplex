@@ -207,7 +207,7 @@ install: all
 	#
 	# For Gnome 3.0 (Fedora 15+)...
 	#
-	if test -d $(APPLETS); then \
+	if test -d no-$(APPLETS); then \
 	    $(INSTALL) -d $(SERVICES); \
 	    $(INSTALL) -m644 \
 		org.gnome.panel.applet.GnomeManualDuplexAppletFactory.service \
