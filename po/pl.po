@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-manual-duplex 0.38\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-04 08:41-0500\n"
+"POT-Creation-Date: 2011-08-04 05:53-0500\n"
 "PO-Revision-Date: 2011-07-04 15:12+0100\n"
 "Last-Translator: Michał Trzebiatowski <hippie_1968@hotmail.com>\n"
 "Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
@@ -173,7 +173,8 @@ msgid "About Glade"
 msgstr "O Glade"
 
 #: gnome-manual-duplex.glade:538
-msgid "Copyright 2009-2010 Rick Richardson.  All Rights Reserved."
+#, fuzzy
+msgid "Copyright 2009-2011 Rick Richardson.  All Rights Reserved."
 msgstr "Copyright 2009-2010 Rick Richardson.  Wszelkie prawa zastrzeżone."
 
 #: gnome-manual-duplex.glade:540
