@@ -1,6 +1,6 @@
 [Applet Factory]
 Id=GnomeManualDuplexFactory
-Location=/usr/libexec/invest-applet
+Location=/usr/share/gnome-manual-duplex/gmd-applet.py
 Name=Invest Applet Factory
 Description=Factory for creating the GnomeManualDuplex applet.
 

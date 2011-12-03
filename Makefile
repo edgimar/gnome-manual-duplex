@@ -93,6 +93,8 @@ FILES=\
 all: all-test $(PROG) $(PROG).xml $(PROG).spec $(PROG).dsc messages \
 	long_edge.xpm short_edge.xpm gmd-applet.py
 
+FINDGAMIN=/usr/lib*/python*/site-packages/_gamin.so \
+
 all-test:
 	#
 	# Dependencies...
@@ -127,6 +129,14 @@ all-test:
 	    echo "      ***"; \
 	    echo "      *** Install gtk2-devel package (yum install gtk2-devel)"; \
 	    echo "      *** (apt-get install libgtk2.0-dev)"; \
+	    echo "      ***"; \
+	    exit 1; \
+	fi
+	@if ! find $(FINDGAMIN) -quit 2>/dev/null; then \
+	    echo "      ***"; \
+	    echo "      *** Error: gamin-python is not installed!"; \
+	    echo "      ***"; \
+	    echo "      *** Install gamin-python package (yum install gamin-python)"; \
 	    echo "      ***"; \
 	    exit 1; \
 	fi
@@ -215,7 +225,7 @@ install: all
 	#
 	# For Gnome 3.0 (Fedora 15+)...
 	#
-	if test -d no-$(APPLETS); then \
+	if test -d $(APPLETS); then \
 	    $(INSTALL) -m755 gmd-applet-3.py $(SHARE)/$(PROG)/gmd-applet.py; \
 	    $(INSTALL) -d $(SERVICES); \
 	    $(INSTALL) -m644 \
