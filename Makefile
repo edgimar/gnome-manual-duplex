@@ -105,6 +105,14 @@ all-test:
 	    echo "      ***"; \
 	    exit 1; \
 	fi
+	@if ! type ppmquant >/dev/null 2>&1; then \
+	    echo "      ***"; \
+	    echo "      *** Error: ppmquant is not installed!"; \
+	    echo "      ***"; \
+	    echo "      *** Install netpbm-progs package (yum install netpbm-progs)"; \
+	    echo "      ***"; \
+	    exit 1; \
+	fi
 	@if ! type xgettext >/dev/null 2>&1; then \
 	    echo "      ***"; \
 	    echo "      *** Error: xgettext is not installed!"; \
