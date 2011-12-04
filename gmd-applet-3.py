@@ -243,7 +243,7 @@ def add_systray_icon(main_window):
             os.system("gnome-manual-duplex")
 
         def on_popup_menu(self, status, button, time):
-                self.menu.popup(None, None, None, button, time)
+                self.menu.popup(None, None, None, None, button, time)
 
         def on_about(self, data):
             showAboutDialog(data)
