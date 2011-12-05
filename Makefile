@@ -97,6 +97,7 @@ all: all-test $(PROG) $(PROG).xml $(PROG).spec $(PROG).dsc messages \
 	long_edge.xpm short_edge.xpm gmd-applet.py gmd-applet-3.py
 
 FINDGAMIN=/usr/lib*/python*/site-packages/_gamin.so \
+	/usr/lib/pymodules/python*/_gamin.so
 
 all-test:
 	#
