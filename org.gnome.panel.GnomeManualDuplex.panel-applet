@@ -1,5 +1,5 @@
 [Applet Factory]
-Id=GnomeManualDuplexFactory
+Id=GnomeManualDuplexAppletFactory
 Location=/usr/share/gnome-manual-duplex/gmd-applet.py
 Name=Gnome Manual Duplex
 Description=Factory for creating the GnomeManualDuplex applet.

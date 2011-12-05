@@ -29,6 +29,9 @@ import select
 import subprocess
 import pwd
 
+#log = open('/tmp/gmd.out', 'w', 0)
+#print >>log, "Initted"
+
 needed = ""
 
 try:
@@ -344,7 +347,7 @@ elif (len(sys.argv) == 2) and (sys.argv[1] == "run-in-tray"):
     sys.exit()
 elif True:
     PanelApplet.Applet.factory_main(
-                "GnomeManualDuplexFactory",  # id
+                "GnomeManualDuplexAppletFactory",  # id
                 PanelApplet.Applet.__gtype__,   # gtype
                 applet_factory,                 # factory callback
                 None)                           # factory data pointer
