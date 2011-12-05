@@ -1,6 +1,6 @@
 
 PROG=gnome-manual-duplex
-VERSION=0.38
+VERSION=0.40
 
 INSTALL=install
 LPADMIN=/usr/sbin/lpadmin
@@ -30,6 +30,7 @@ FILES=\
 	debian.control \
 	debian.rules \
 	gmd-applet.py.in \
+	gmd-applet-3.py.in \
 	gmd-backend.sh \
 	gmd.server \
 	gmd.svg \
@@ -91,7 +92,7 @@ FILES=\
 #	All
 #
 all: all-test $(PROG) $(PROG).xml $(PROG).spec $(PROG).dsc messages \
-	long_edge.xpm short_edge.xpm gmd-applet.py
+	long_edge.xpm short_edge.xpm gmd-applet.py gmd-applet-3.py
 
 FINDGAMIN=/usr/lib*/python*/site-packages/_gamin.so \
 
@@ -142,6 +143,7 @@ all-test:
 	fi
 
 gmd-applet.py: Makefile gmd-applet.py.in
+gmd-applet-3.py: Makefile gmd-applet-3.py.in
 
 $(PROG).xml: Makefile
 
@@ -180,8 +182,9 @@ po/%.po: messages.pot
 
 messages: messages.pot $(POFILES) $(MOFILES)
 
-messages.pot: $(PROG).py $(PROG).glade gmd-applet.py Makefile
-	xgettext -k_ -kN_ -o $@ $(PROG).py $(PROG).glade gmd-applet.py
+messages.pot: $(PROG).py $(PROG).glade gmd-applet.py gmd-applet-3.py Makefile
+	xgettext -k_ -kN_ -o $@ \
+	    $(PROG).py $(PROG).glade gmd-applet.py gmd-applet-3.py
 	$(GSED) -i -e 's/SOME .* TITLE/gmd translation template/g' \
 	    -e 's/YEAR THE .* HOLDER/2010 Rick Richardson/g' \
 	    -e 's/FIRST .*, YEAR/Rick Richardson <rickrich@gmail.com>, 2010/g' \
@@ -257,7 +260,7 @@ install: all
 clean:
 	rm -f $(PROG) $(PROG).xml *.tar.gz *.spec *.dsc
 	rm -f long_edge.xpm short_edge.xpm
-	rm -f gmd-applet.py
+	rm -f gmd-applet.py gmd-applet-3.py
 	rm -f messages.pot*
 	rm -rf locale
 
