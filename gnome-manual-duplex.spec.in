@@ -52,3 +52,5 @@ make DESTDIR=$RPM_BUILD_ROOT install
 /usr/share/pixmaps/gmd.svg
 /usr/share/pixmaps/gnome-manual-duplex.png
 /usr/share/locale/*
+/usr/share/dbus-1/services/org.gnome.panel.applet.GnomeManualDuplexAppletFactory.service
+/usr/share/gnome-panel/4.0/applets/org.gnome.panel.GnomeManualDuplex.panel-applet
