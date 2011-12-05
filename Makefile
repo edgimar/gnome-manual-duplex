@@ -96,9 +96,6 @@ FILES=\
 all: all-test $(PROG) $(PROG).xml $(PROG).spec $(PROG).dsc messages \
 	long_edge.xpm short_edge.xpm gmd-applet.py gmd-applet-3.py
 
-FINDGAMIN=/usr/lib*/python*/site-packages/_gamin.so \
-	/usr/lib/pymodules/python*/_gamin.so
-
 all-test:
 	#
 	# Dependencies...
@@ -115,7 +112,9 @@ all-test:
 	    echo "      ***"; \
 	    echo "      *** Error: ppmquant is not installed!"; \
 	    echo "      ***"; \
-	    echo "      *** Install netpbm-progs package (yum install netpbm-progs)"; \
+	    echo "      *** Install netpbm-progs package:"; \
+	    echo "	***	# yum install netpbm-progs"; \
+	    echo "	***	# apt-get install netpbm-progs"; \
 	    echo "      ***"; \
 	    exit 1; \
 	fi
@@ -131,16 +130,23 @@ all-test:
 	    echo "      ***"; \
 	    echo "      *** Error: gtk-builder-convert is not installed!"; \
 	    echo "      ***"; \
-	    echo "      *** Install gtk2-devel package (yum install gtk2-devel)"; \
-	    echo "      *** (apt-get install libgtk2.0-dev)"; \
+	    echo "      *** Install gtk2-devel package:"; \
+	    echo "	***	# yum install gtk2-devel"; \
+	    echo "      ***	# apt-get install libgtk2.0-dev"; \
 	    echo "      ***"; \
 	    exit 1; \
 	fi
-	@if ! find $(FINDGAMIN) -quit 2>/dev/null; then \
+	@if find /usr/lib*/python*/site-*/_gamin.so -quit 2>/dev/null; then \
+	    exit 0; \
+	elif find /usr/lib/pymodules/python*/_gamin.so quit 2>/dev/null; then \
+	    exit 0; \
+	else \
 	    echo "      ***"; \
 	    echo "      *** Error: gamin-python is not installed!"; \
 	    echo "      ***"; \
-	    echo "      *** Install gamin-python package (yum install gamin-python)"; \
+	    echo "      *** Install gamin-python package:"; \
+	    echo "	***	# yum install gamin-python"; \
+	    echo "      ***	# apt-get install python-gamin"; \
 	    echo "      ***"; \
 	    exit 1; \
 	fi
