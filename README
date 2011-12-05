@@ -24,6 +24,7 @@ Then using the GUI:
             ...Do it at least once, then...
         Print -> GnomeManualDuplex (Virtual Printer) -> Print
     Works with *.ps and *.pdf files.
+    Works with Gnome-2 or Gnome-3 in the fallback mode.
 
 Works with:
     HP LaserJet 1000/1005/1018/1020/1022
