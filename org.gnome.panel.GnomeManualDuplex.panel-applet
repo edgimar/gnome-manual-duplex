@@ -1,13 +1,13 @@
 [Applet Factory]
 Id=GnomeManualDuplexFactory
 Location=/usr/share/gnome-manual-duplex/gmd-applet.py
-Name=Invest Applet Factory
+Name=Gnome Manual Duplex
 Description=Factory for creating the GnomeManualDuplex applet.
 
 [GnomeManualDuplexApplet]
 Name=GnomeManualDuplex
 Description=Applet for CUPS integration of Gnome Manual Duplex
-Icon=gmd.svg
+Icon=gmd
 BonoboId=OAFIID:GNOME_GMD_applet_Factory
 #X-GNOME-Bugzilla-Bugzilla=GNOME
 #X-GNOME-Bugzilla-Product=gnome-applets
