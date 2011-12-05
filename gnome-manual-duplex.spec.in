@@ -1,6 +1,6 @@
 Name:           gnome-manual-duplex
 # List of additional build dependencies
-BuildRequires: gtk2-devel cups netpbm-progs transfig gettext
+BuildRequires: gtk2-devel cups netpbm-progs transfig gettext gamin-python
 Requires:	psutils file
 Version:        ${VERSION}
 Release:        1
