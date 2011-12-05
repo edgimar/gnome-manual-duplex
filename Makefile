@@ -46,6 +46,8 @@ FILES=\
 	Makefile \
 	README \
 	short_edge.fig \
+	org.gnome.panel.applet.GnomeManualDuplexAppletFactory.service \
+	org.gnome.panel.GnomeManualDuplex.panel-applet \
 	messages.pot \
 	po/da.po \
 	po/de.po \
