@@ -33,6 +33,7 @@ FILES=\
 	gmd-applet-3.py.in \
 	gmd-backend.sh \
 	gmd.server \
+	gmd.fig \
 	gmd.svg \
 	$(PROG).desktop \
 	$(PROG).dsc.in \
@@ -67,7 +68,7 @@ FILES=\
 	po/uk.po \
 	$(NULL)
 
-.SUFFIXES: .glade .xml .fig .xpm .py.in .py .mo .po .pot
+.SUFFIXES: .glade .xml .fig .xpm .py.in .py .mo .po .pot .svg
 
 .glade.xml:
 	gtk-builder-convert $*.glade - \
@@ -90,6 +91,9 @@ FILES=\
 	fig2dev -m 0.50 -L xpm $*.fig \
 	    | sed -e 's/White/None/' -e 's/#FFFFFF/None/' \
 	    > $*.xpm
+.fig.svg:
+	fig2dev -L svg $*.fig $*.svg
+
 #
 #	All
 #
