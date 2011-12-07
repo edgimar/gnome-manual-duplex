@@ -2,9 +2,10 @@
 # -*- coding: UTF-8 -*-
 
 # Copyright 2006-2007 (C) Raster Software Vigo (Sergio Costas)
-# Copyright 2009 (C) Rick Richardson
+# Copyright 2009-2011 (C) Rick Richardson
 #
-# This file is part of Gnome Manual Duplex (GMD)
+# gmd-applet-3:
+#	This file is part of Gnome Manual Duplex (GMD).  It is for gnome-3.
 #
 # GMD is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -19,18 +20,12 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-#import pygtk
-#pyGtk.require('2.0')
-
 import os
 import time
 import sys
 import select
 import subprocess
 import pwd
-
-#log = open('/tmp/gmd.out', 'w', 0)
-#print >>log, "Initted"
 
 needed = ""
 
@@ -39,24 +34,7 @@ try:
 except :
     needed += "python-gamin\n"
 
-if False:
-	try:
-	    from gi.repository import Gtk, Gdk, GdkPixbuf
-	except:
-	    needed += "python-gtk2\n"
-
-	try:
-	    import gnomeapplet
-	except:
-	    needed += "python-gnome2-desktop\n"
-	
-	try:
-	    from gi.repository import GObject
-	except:
-	    needed += "python-gobject\n"
-
-if True:
-    from gi.repository import GObject, Gtk, PanelApplet, GdkPixbuf, Gdk
+from gi.repository import GObject, Gtk, PanelApplet, GdkPixbuf, Gdk
 
 def send_error(message):
     try:
@@ -271,7 +249,8 @@ def showAboutDialog(self, *arguments, **keywords):
     about.set_name("GMD")
     about.set_program_name("gmd-applet.py")
     about.set_version("v${VERSION}")
-    about.set_copyright("Copyright 2009 Rick Richardson. All Rights Reserved.")
+    about.set_copyright(
+	"Copyright 2009-2011 Rick Richardson. All Rights Reserved.")
     about.set_license("GPL v2")
     about.set_website("http://sourceforge.net/projects/g-manual-duplex")
     about.set_authors( ["Rick Richardson", "Sergio Costas"] )
