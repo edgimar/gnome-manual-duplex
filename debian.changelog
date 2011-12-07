@@ -1,6 +1,12 @@
+gnome-manual-duplex (0.41) stable; urgency=low
+
+  * gmd-applet-3.py.in: Port "About" menu.
+
+ -- Rick Richardson <rickrich@gmail.com>  Mon, 05 Dec 2011 08:21:03 -0500
+
 gnome-manual-duplex (0.40) stable; urgency=low
 
-  *  Port to gnome-3 in Classic (fallback) mode.  Note: gnome-shell != unity
+  * Port to gnome-3 in Classic (fallback) mode.  Note: gnome-shell != unity
 	$ sudo apt-get install gnome-shell gnome-tweak-tool
 
  -- Rick Richardson <rickrich@gmail.com>  Mon, 05 Dec 2011 08:21:03 -0500
