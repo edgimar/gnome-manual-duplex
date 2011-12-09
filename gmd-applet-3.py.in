@@ -235,7 +235,7 @@ def add_systray_icon(main_window):
     check_needed()
 
 def create_menu (applet):
-    actions = [("About", Gtk.STOCK_ABOUT, "About", None, None, showAboutDialog)]
+    actions = [("About", Gtk.STOCK_ABOUT, "_About", None, None, showAboutDialog)]
     actiongroup = Gtk.ActionGroup.new("GMDAppletActions")
     actiongroup.add_actions(actions, None)
     xml = """
