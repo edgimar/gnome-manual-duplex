@@ -66,6 +66,7 @@ FILES=\
 	po/sv.po \
 	po/tr.po \
 	po/uk.po \
+	po/zh_CN.po \
 	$(NULL)
 
 .SUFFIXES: .glade .xml .fig .xpm .py.in .py .mo .po .pot .svg

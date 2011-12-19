@@ -1,3 +1,9 @@
+gnome-manual-duplex (0.42) stable; urgency=low
+
+  *  Translations: zh_CN (Chinese).
+
+ -- Rick Richardson <rickrich@gmail.com>  Mon, 05 Dec 2011 08:21:03 -0500
+
 gnome-manual-duplex (0.41) stable; urgency=low
 
   * gmd-applet-3.py.in: Port "About" menu.
