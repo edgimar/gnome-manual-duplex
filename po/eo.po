@@ -1,15 +1,15 @@
 # gmd translation template for Esperanto.
-# Copyright (C) 2010 Free Software Foundation, Inc.
+# Copyright (C) 2010, 2011 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-manual-duplex package.
 # Rick Richardson <rickrich@gmail.com>, 2010.
 # Felipe Castro <fefcas@gmail.com>, 2011.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-manual-duplex 0.33\n"
+"Project-Id-Version: gnome-manual-duplex 0.42\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-04 05:53-0500\n"
-"PO-Revision-Date: 2011-03-11 21:34-0300\n"
+"POT-Creation-Date: 2011-12-19 08:35-0600\n"
+"PO-Revision-Date: 2011-12-21 21:30-0300\n"
 "Last-Translator: Felipe Castro <fefcas@gmail.com>\n"
 "Language-Team: Esperanto <translation-team-eo@lists.sourceforge.net>\n"
 "Language: eo\n"
@@ -173,9 +173,8 @@ msgid "About Glade"
 msgstr "Pri Glade"
 
 #: gnome-manual-duplex.glade:538
-#, fuzzy
 msgid "Copyright 2009-2011 Rick Richardson.  All Rights Reserved."
-msgstr "Kopirajto 2009-2011 Rick Richardson. Ĉiuj Rajtoj Rezervitaj."
+msgstr "Kopirajto 2009-2011 Rick Richardson.  Ĉiuj Rajtoj Rezervitaj."
 
 #: gnome-manual-duplex.glade:540
 msgid "Home Page"
