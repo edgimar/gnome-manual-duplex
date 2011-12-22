@@ -2,14 +2,14 @@
 # Copyright © 2010 Free Software Foundation, Inc.
 # Copyright © 2010 Rick Richardson
 # This file is distributed under the same license as the gnome-manual-duplex package.
-# Jorma Karvonen <karvonen.jorma@gmail.com>, 2010.
+# Jorma Karvonen <karvonen.jorma@gmail.com>, 2010-2011.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-manual-duplex 0.30\n"
+"Project-Id-Version: gnome-manual-duplex 0.42\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-04 05:53-0500\n"
-"PO-Revision-Date: 2010-12-06 14:00+0200\n"
+"POT-Creation-Date: 2011-12-19 08:35-0600\n"
+"PO-Revision-Date: 2011-12-22 23:58+0200\n"
 "Last-Translator: Jorma Karvonen <karvonen.jorma@gmail.com>\n"
 "Language-Team: Finnish <translation-team-fi@lists.sourceforge.net>\n"
 "Language: fi\n"
@@ -174,9 +174,8 @@ msgid "About Glade"
 msgstr "Glade-ohjelmasta"
 
 #: gnome-manual-duplex.glade:538
-#, fuzzy
 msgid "Copyright 2009-2011 Rick Richardson.  All Rights Reserved."
-msgstr "Copyright 2009-2010 Rick Richardson.  All Rights Reserved."
+msgstr "Copyright 2009-2011 Rick Richardson.  All Rights Reserved."
 
 #: gnome-manual-duplex.glade:540
 msgid "Home Page"
