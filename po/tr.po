@@ -1,13 +1,13 @@
-# translation of gnome-manual-duplex-0.30.po to Turkish
-# Copyright (C) 2010 Rick Richardson
+# translation of gnome-manual-duplex-0.42.po to Turkish
+# Copyright (C) 2011 Rick Richardson
 # This file is distributed under the same license as the gnome-manual-duplex package.
-# Server Acim <serveracim@gmail.com>, 2010.
+# Server Acim <serveracim@gmail.com>, 2011.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-manual-duplex 0.30\n"
+"Project-Id-Version: gnome-manual-duplex 0.42\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-04 05:53-0500\n"
-"PO-Revision-Date: 2010-10-29 08:48-0500\n"
+"POT-Creation-Date: 2011-12-19 08:35-0600\n"
+"PO-Revision-Date: 2011-12-22 21:59+0200\n"
 "Last-Translator: Server Acim <serveracim@gmail.com>\n"
 "Language-Team: Turkish <gnu-tr-u12a@lists.sourceforge.net>\n"
 "Language: tr\n"
@@ -136,7 +136,7 @@ msgstr ""
 
 #: gnome-manual-duplex.glade:402 gnome-manual-duplex.glade:466
 msgid "Invert (rotate 180 degrees) Pages"
-msgstr "Sayfaları (180 derece açıyla) Evir"
+msgstr "Sayfaları (180 derece açıyla) Çevir"
 
 #: gnome-manual-duplex.glade:417
 msgid "<b>Even Long Edge</b>"
@@ -171,9 +171,8 @@ msgid "About Glade"
 msgstr "Glade Hakkında"
 
 #: gnome-manual-duplex.glade:538
-#, fuzzy
 msgid "Copyright 2009-2011 Rick Richardson.  All Rights Reserved."
-msgstr "Telif Hakkı2009-2010 Rick Richardson.  Tüm Hakları Saklıdır."
+msgstr "Telif Hakkı 2009-2011 Rick Richardson.  Tüm Hakları Saklıdır."
 
 #: gnome-manual-duplex.glade:540
 msgid "Home Page"
