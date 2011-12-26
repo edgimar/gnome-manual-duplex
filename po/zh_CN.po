@@ -25,12 +25,10 @@ msgid "<b>Job Name</b>"
 msgstr "<b>任务名</b>"
 
 #: gnome-manual-duplex.glade:59
-#, fuzzy
 msgid "Manual Long Edge"
 msgstr "手册长边"
 
 #: gnome-manual-duplex.glade:70
-#, fuzzy
 msgid "Manual Short Edge"
 msgstr "手册短边"
 
@@ -153,7 +151,6 @@ msgid "About Glade"
 msgstr "关于 Glade"
 
 #: gnome-manual-duplex.glade:538
-#, fuzzy
 msgid "Copyright 2009-2011 Rick Richardson.  All Rights Reserved."
 msgstr "版权所有 2009-2011 Rick Richardson. 保留所有权利。"
 
