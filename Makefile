@@ -63,6 +63,7 @@ FILES=\
 	po/pt.po \
 	po/pt_BR.po \
 	po/ru.po \
+	po/sr.po \
 	po/sv.po \
 	po/tr.po \
 	po/uk.po \
