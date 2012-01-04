@@ -2,7 +2,7 @@
 # -*- coding: UTF-8 -*-
 
 # Copyright 2006-2007 (C) Raster Software Vigo (Sergio Costas)
-# Copyright 2009-2011 (C) Rick Richardson
+# Copyright 2009-2012 (C) Rick Richardson
 #
 # gmd-applet-3:
 #	This file is part of Gnome Manual Duplex (GMD).  It is for gnome-3.
@@ -249,7 +249,7 @@ def showAboutDialog(self, *arguments, **keywords):
     about.set_program_name("gmd-applet.py")
     about.set_version("v${VERSION}")
     about.set_copyright(
-	"Copyright 2009-2011 Rick Richardson. All Rights Reserved.")
+	"Copyright 2009-2012 Rick Richardson. All Rights Reserved.")
     about.set_license("GPL v2")
     about.set_website("http://sourceforge.net/projects/g-manual-duplex")
     about.set_authors( ["Rick Richardson", "Sergio Costas"] )

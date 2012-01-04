@@ -203,8 +203,8 @@ messages.pot: $(PROG).py $(PROG).glade gmd-applet.py gmd-applet-3.py Makefile
 	xgettext -k_ -kN_ -o $@ \
 	    $(PROG).py $(PROG).glade gmd-applet.py gmd-applet-3.py
 	$(GSED) -i -e 's/SOME .* TITLE/gmd translation template/g' \
-	    -e 's/YEAR THE .* HOLDER/2011 Rick Richardson/g' \
-	    -e 's/FIRST .*, YEAR/Rick Richardson <rickrich@gmail.com>, 2011/g' \
+	    -e 's/YEAR THE .* HOLDER/2012 Rick Richardson/g' \
+	    -e 's/FIRST .*, YEAR/Rick Richardson <rickrich@gmail.com>, 2012/g' \
 	    -e 's/PACKAGE VERSION/$(PROG) '$(VERSION)'/g' \
 	    -e 's/CHARSET/UTF-8/g' \
 	    -e 's/PACKAGE/$(PROG)/g' $@
