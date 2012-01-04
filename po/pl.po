@@ -1,5 +1,5 @@
 # Polish translation of gnome-manual-duplex.
-# Copyright (C) 2010 Rick Richardson
+# Copyright (C) 2012 Rick Richardson
 # This file is distributed under the same license as the gnome-manual-duplex package.
 # Michał Trzebiatowski <hippie_1968@hotmail.com>, 2011.
 #
@@ -173,8 +173,8 @@ msgid "About Glade"
 msgstr "O Glade"
 
 #: gnome-manual-duplex.glade:538
-msgid "Copyright 2009-2011 Rick Richardson.  All Rights Reserved."
-msgstr "Copyright 2009-2011 Rick Richardson.  Wszelkie prawa zastrzeżone."
+msgid "Copyright 2009-2012 Rick Richardson.  All Rights Reserved."
+msgstr "Copyright 2009-2012 Rick Richardson.  Wszelkie prawa zastrzeżone."
 
 #: gnome-manual-duplex.glade:540
 msgid "Home Page"

@@ -1,5 +1,5 @@
 # translation of gnome-manual-duplex-0.42.po to Turkish
-# Copyright (C) 2011 Rick Richardson
+# Copyright (C) 2012 Rick Richardson
 # This file is distributed under the same license as the gnome-manual-duplex package.
 # Server Acim <serveracim@gmail.com>, 2011.
 msgid ""
@@ -171,8 +171,8 @@ msgid "About Glade"
 msgstr "Glade Hakkında"
 
 #: gnome-manual-duplex.glade:538
-msgid "Copyright 2009-2011 Rick Richardson.  All Rights Reserved."
-msgstr "Telif Hakkı 2009-2011 Rick Richardson.  Tüm Hakları Saklıdır."
+msgid "Copyright 2009-2012 Rick Richardson.  All Rights Reserved."
+msgstr "Telif Hakkı 2009-2012 Rick Richardson.  Tüm Hakları Saklıdır."
 
 #: gnome-manual-duplex.glade:540
 msgid "Home Page"

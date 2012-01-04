@@ -1,6 +1,6 @@
 # gmd translation template.
-# Copyright © 2010 Free Software Foundation, Inc.
-# Copyright © 2010 Rick Richardson
+# Copyright © 2012 Free Software Foundation, Inc.
+# Copyright © 2012 Rick Richardson
 # This file is distributed under the same license as the gnome-manual-duplex package.
 # Jorma Karvonen <karvonen.jorma@gmail.com>, 2010-2011.
 #
@@ -174,8 +174,8 @@ msgid "About Glade"
 msgstr "Glade-ohjelmasta"
 
 #: gnome-manual-duplex.glade:538
-msgid "Copyright 2009-2011 Rick Richardson.  All Rights Reserved."
-msgstr "Copyright 2009-2011 Rick Richardson.  All Rights Reserved."
+msgid "Copyright 2009-2012 Rick Richardson.  All Rights Reserved."
+msgstr "Copyright 2009-2012 Rick Richardson.  All Rights Reserved."
 
 #: gnome-manual-duplex.glade:540
 msgid "Home Page"

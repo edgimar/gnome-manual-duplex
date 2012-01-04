@@ -1,5 +1,5 @@
 # Danish translation gnome-manual-duplex.
-# Copyright (C) 2011 Rick Richardson & nedenstående oversættere.
+# Copyright (C) 2012 Rick Richardson & nedenstående oversættere.
 # This file is distributed under the same license as the gnome-manual-duplex package.
 # Joe Hansen <joedalton2@yahoo.dk>, 2010, 2011.
 #
@@ -172,8 +172,8 @@ msgid "About Glade"
 msgstr "Om Glade"
 
 #: gnome-manual-duplex.glade:538
-msgid "Copyright 2009-2011 Rick Richardson.  All Rights Reserved."
-msgstr "Ophavsret 2009-2011 Rick Richardson. Alle rettigheder forbeholdes."
+msgid "Copyright 2009-2012 Rick Richardson.  All Rights Reserved."
+msgstr "Ophavsret 2009-2012 Rick Richardson. Alle rettigheder forbeholdes."
 
 #: gnome-manual-duplex.glade:540
 msgid "Home Page"

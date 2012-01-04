@@ -1,6 +1,6 @@
 # Brazilian Portuguese translation of gmd.
 # This file is distributed under the same license as the gnome-manual-duplex package.
-# Copyright (C) 2010 Rick Richardson
+# Copyright (C) 2012 Rick Richardson
 # Fabrício Godoy <skarllot@gmail.com>, 2010.
 #
 msgid ""
@@ -173,8 +173,8 @@ msgid "About Glade"
 msgstr "Sobre Glade"
 
 #: gnome-manual-duplex.glade:538
-msgid "Copyright 2009-2011 Rick Richardson.  All Rights Reserved."
-msgstr "Copyright 2009-2011 Rick Richardson. Todos os direitos reservados."
+msgid "Copyright 2009-2012 Rick Richardson.  All Rights Reserved."
+msgstr "Copyright 2009-2012 Rick Richardson. Todos os direitos reservados."
 
 #: gnome-manual-duplex.glade:540
 msgid "Home Page"

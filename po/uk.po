@@ -1,8 +1,8 @@
 # gmd translation template.
-# Copyright (C) 2010 Rick Richardson
+# Copyright (C) 2012 Rick Richardson
 # This file is distributed under the same license as the gnome-manual-duplex package.
 #
-# Rick Richardson <rickrich@gmail.com>, 2010.
+# Rick Richardson <rickrich@gmail.com>, 2012.
 # Yuri Chornoivan <yurchor@ukr.net>, 2010, 2011.
 msgid ""
 msgstr ""
@@ -175,8 +175,8 @@ msgid "About Glade"
 msgstr "Про Glade"
 
 #: gnome-manual-duplex.glade:538
-msgid "Copyright 2009-2011 Rick Richardson.  All Rights Reserved."
-msgstr "© Rick Richardson, 2009–2011. Всі права захищено."
+msgid "Copyright 2009-2012 Rick Richardson.  All Rights Reserved."
+msgstr "© Rick Richardson, 2009–2012. Всі права захищено."
 
 #: gnome-manual-duplex.glade:540
 msgid "Home Page"
