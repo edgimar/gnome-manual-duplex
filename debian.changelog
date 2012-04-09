@@ -1,3 +1,9 @@
+gnome-manual-duplex (0.44) stable; urgency=low
+
+  *  Translations: hr (Croatia).
+
+ -- Rick Richardson <rickrich@gmail.com>  Mon, 09 Apr 2012 08:21:03 -0500
+
 gnome-manual-duplex (0.43) stable; urgency=low
 
   *  Translations: sr (Serbia).
