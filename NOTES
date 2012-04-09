@@ -26,4 +26,4 @@ LANGUAGE=eo:fi:en LC_ALL=fi_FI.UTF-8 ./gnome-manual-duplex
 
 #
 put-rkkda  foo2zjs/tmp gnome-manual-duplex.tar.gz 
-mutt -s  "gnome-manual-duplex 0.43 pot file" coordinator@translationproject.org -a messages.pot </dev/null
+mutt -s  "gnome-manual-duplex 0.44 pot file" coordinator@translationproject.org -a messages.pot </dev/null
