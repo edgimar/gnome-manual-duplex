@@ -1,14 +1,14 @@
 # Polish translation of gnome-manual-duplex.
-# Copyright (C) 2012 Rick Richardson
+# Copyright (C) 2010 Rick Richardson
 # This file is distributed under the same license as the gnome-manual-duplex package.
-# Michał Trzebiatowski <hippie_1968@hotmail.com>, 2011.
+# Michał Trzebiatowski <hippie_1968@hotmail.com>, 2011, 2012.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-manual-duplex 0.38\n"
+"Project-Id-Version: gnome-manual-duplex 0.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-04 05:53-0500\n"
-"PO-Revision-Date: 2011-07-04 15:12+0100\n"
+"POT-Creation-Date: 2012-04-09 18:02-0500\n"
+"PO-Revision-Date: 2012-04-10 10:14+0100\n"
 "Last-Translator: Michał Trzebiatowski <hippie_1968@hotmail.com>\n"
 "Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
 "Language: pl\n"
