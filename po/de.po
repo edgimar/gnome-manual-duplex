@@ -1,16 +1,16 @@
-# gmd translation template.
-# Copyright (C) 2012 Rick Richardson
+# German gmd translation.
+# Copyright (C) 2010 Rick Richardson
 # This file is distributed under the same license as the gnome-manual-duplex package.
-# Rick Richardson <rickrich@gmail.com>, 2012.
-# Mario Blättermann <mariobl@gnome.org>, 2010.
+# Rick Richardson <rickrich@gmail.com>, 2010.
+# Mario Blättermann <mario.blaettermann@gmail.com>, 2010, 2012.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-manual-duplex 0.26\n"
+"Project-Id-Version: gnome-manual-duplex 0.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-04 05:53-0500\n"
-"PO-Revision-Date: 2010-09-16 12:40+0100\n"
-"Last-Translator: Mario Blättermann <mariobl@gnome.org>\n"
+"POT-Creation-Date: 2012-04-09 18:02-0500\n"
+"PO-Revision-Date: 2012-04-10 21:02+0100\n"
+"Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
 "Language-Team: German <translation-team-de@lists.sourceforge.net>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -91,8 +91,8 @@ msgid ""
 msgstr ""
 "<big><b>2.</b></big>\n"
 "\n"
-"Legen Sie den Papierstapel in\n"
-"unter Beibehaltung der Ausrichtung\n"
+"Legen Sie den Papierstapel unter\n"
+"Beibehaltung der Ausrichtung\n"
 "in Fach 1 ein, um die Rückseite zu\n"
 "bedrucken."
 
