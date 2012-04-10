@@ -1,15 +1,15 @@
-# gmd translation template.
-# Copyright (C) 2012 Rick Richardson
+# Ukrainian translation of gmd.
+# Copyright (C) 2010 Rick Richardson
 # This file is distributed under the same license as the gnome-manual-duplex package.
 #
-# Rick Richardson <rickrich@gmail.com>, 2012.
-# Yuri Chornoivan <yurchor@ukr.net>, 2010, 2011.
+# Rick Richardson <rickrich@gmail.com>, 2010.
+# Yuri Chornoivan <yurchor@ukr.net>, 2010, 2011, 2012.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-manual-duplex 0.42\n"
+"Project-Id-Version: gnome-manual-duplex 0.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-12-19 08:35-0600\n"
-"PO-Revision-Date: 2011-12-22 06:56+0200\n"
+"POT-Creation-Date: 2012-04-09 18:02-0500\n"
+"PO-Revision-Date: 2012-04-10 06:56+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <translation-team-uk@lists.sourceforge.net>\n"
 "Language: \n"
