@@ -1,15 +1,15 @@
 # gmd translation template for Esperanto.
-# Copyright (C) 2010, 2012 Free Software Foundation, Inc.
+# Copyright (C) 2010, 2011, 2012 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-manual-duplex package.
-# Rick Richardson <rickrich@gmail.com>, 2012.
-# Felipe Castro <fefcas@gmail.com>, 2011.
+# Rick Richardson <rickrich@gmail.com>, 2010.
+# Felipe Castro <fefcas@gmail.com>, 2011, 2012.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-manual-duplex 0.42\n"
+"Project-Id-Version: gnome-manual-duplex 0.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-12-19 08:35-0600\n"
-"PO-Revision-Date: 2011-12-21 21:30-0300\n"
+"POT-Creation-Date: 2012-04-09 18:02-0500\n"
+"PO-Revision-Date: 2012-04-11 14:30-0300\n"
 "Last-Translator: Felipe Castro <fefcas@gmail.com>\n"
 "Language-Team: Esperanto <translation-team-eo@lists.sourceforge.net>\n"
 "Language: eo\n"
@@ -23,23 +23,23 @@ msgstr "(apriora)"
 
 #: gnome-manual-duplex.glade:32
 msgid "<b>Job Name</b>"
-msgstr "<b>Labor-Nomo</b>"
+msgstr "<b>Labor-nomo</b>"
 
 #: gnome-manual-duplex.glade:59
 msgid "Manual Long Edge"
-msgstr "Permana Longa Bordo"
+msgstr "Permana longa bordo"
 
 #: gnome-manual-duplex.glade:70
 msgid "Manual Short Edge"
-msgstr "Permana Mallonga Bordo"
+msgstr "Permana mallonga bordo"
 
 #: gnome-manual-duplex.glade:110
 msgid "<b>Output Format</b>"
-msgstr "<b>Eliga Formo</b>"
+msgstr "<b>Eliga formo</b>"
 
 #: gnome-manual-duplex.glade:135
 msgid "Skip Odd Pages"
-msgstr "Salti Malpar-Paĝojn"
+msgstr "Salti malparajn paĝojn"
 
 #: gnome-manual-duplex.glade:146
 msgid "<b>Print</b>"
@@ -118,7 +118,7 @@ msgstr ""
 
 #: gnome-manual-duplex.glade:387 gnome-manual-duplex.glade:451
 msgid "Reverse Pages"
-msgstr "Interŝanĝi Paĝojn"
+msgstr "Interŝanĝi paĝojn"
 
 #: gnome-manual-duplex.glade:396
 msgid ""
@@ -138,11 +138,11 @@ msgstr ""
 
 #: gnome-manual-duplex.glade:402 gnome-manual-duplex.glade:466
 msgid "Invert (rotate 180 degrees) Pages"
-msgstr "Inverti (turni 180 gradojn) Paĝojn"
+msgstr "Inverti (turni 180 gradojn) paĝojn"
 
 #: gnome-manual-duplex.glade:417
 msgid "<b>Even Long Edge</b>"
-msgstr "<b>Para Longa Bordo</b>"
+msgstr "<b>Para longa bordo</b>"
 
 #: gnome-manual-duplex.glade:460
 msgid ""
@@ -162,7 +162,7 @@ msgstr ""
 
 #: gnome-manual-duplex.glade:481
 msgid "<b>Even Short Edge</b>"
-msgstr "<b>Para Mallonga Bordo</b>"
+msgstr "<b>Para mallonga bordo</b>"
 
 #: gnome-manual-duplex.glade:512
 msgid "gtk-save"
@@ -174,11 +174,11 @@ msgstr "Pri Glade"
 
 #: gnome-manual-duplex.glade:538
 msgid "Copyright 2009-2012 Rick Richardson.  All Rights Reserved."
-msgstr "Kopirajto 2009-2012 Rick Richardson.  Ĉiuj Rajtoj Rezervitaj."
+msgstr "Kopirajto 2009-2012 Rick Richardson.  Ĉiuj rajtoj estas rezervitaj."
 
 #: gnome-manual-duplex.glade:540
 msgid "Home Page"
-msgstr "Hejm-Paĝo"
+msgstr "Hejm-paĝo"
 
 #: gnome-manual-duplex.glade:541
 msgid "GPL"
