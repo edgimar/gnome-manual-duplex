@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: gnome-manual-duplex 0.44\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-04-09 18:02-0500\n"
-"PO-Revision-Date: 2012-04-10 13:15+0200\n"
+"PO-Revision-Date: 2012-04-16 01:51+0200\n"
 "Last-Translator: Tomislav Krznar <tomislav.krznar@gmail.com>\n"
 "Language-Team: Croatian <lokalizacija@linux.hr>\n"
 "Language: \n"
@@ -28,11 +28,11 @@ msgstr "<b>Ime posla</b>"
 
 #: gnome-manual-duplex.glade:59
 msgid "Manual Long Edge"
-msgstr "Ručno dugački kraj"
+msgstr "Ručno, dugački kraj"
 
 #: gnome-manual-duplex.glade:70
 msgid "Manual Short Edge"
-msgstr "Ručno kratki kraj"
+msgstr "Ručno, kratki kraj"
 
 #: gnome-manual-duplex.glade:110
 msgid "<b>Output Format</b>"
@@ -74,8 +74,8 @@ msgid ""
 msgstr ""
 "<big><b>1.</b></big>\n"
 "\n"
-"Bez mijenjanja orijentacije,\n"
-"uklonite papire iz izlazne ladice\n"
+"Bez mijenjanja orijentacije\n"
+"uklonite papire iz izlazne ladice.\n"
 "Ne odbacujte prazne listove."
 
 #: gnome-manual-duplex.glade:277
@@ -88,7 +88,7 @@ msgid ""
 msgstr ""
 "<big><b>2.</b></big>\n"
 "\n"
-"Uz čuvanje iste orijentacije,\n"
+"Uz čuvanje iste orijentacije\n"
 "ubacite papire u ladicu 1 s\n"
 "ispisanom stranom prema dolje."
 
