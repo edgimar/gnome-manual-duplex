@@ -5,10 +5,10 @@
 # Мирослав Николић <miroslavnikolic@rocketmail.com>, 2012.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-manual-duplex-0.42\n"
+"Project-Id-Version: gnome-manual-duplex-0.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-12-19 08:35-0600\n"
-"PO-Revision-Date: 2012-01-04 00:50+0200\n"
+"POT-Creation-Date: 2012-04-09 18:02-0500\n"
+"PO-Revision-Date: 2012-05-02 09:50+0200\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <gnu@prevod.org>\n"
 "Language: sr\n"
