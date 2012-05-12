@@ -24,7 +24,7 @@ Then:
 	1b)	Add to Panel -> Gnome Manual Duplex applet -> Add
 	2)	Print -> GnomeManualDuplex (Virtual Printer) -> Print
 
-    Using the Gnome 3 Shell Gui:
+    Using the Gnome 3 Shell GUI:
 	1)	$ gnome-session-properties 
 		Startup Programs -> Add
 		Name:
