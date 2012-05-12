@@ -182,12 +182,23 @@ gnome-manual-duplex is a utility that adds manual duplex to the "Print" menu.
 It is a CUPS Virtual Printer as well as a standalone utility.
 It works with *.ps and *.pdf files.
 .PP
-Using the GNOME GUI:
-    1)  System Tools -> Gnome Manual Duplex
-        - OR -
-    2)  Add to Panel -> Gnome Manual Duplex applet -> Add
-        ...Do it at least once, then...
-        Print -> GnomeManualDuplex (Virtual Printer) -> Print
+.nf
+Using the Gnome 2 or Gnome-3 Classic (fallback) GUI:
+    1a)     System Tools -> Gnome Manual Duplex
+	    - OR -
+    1b)     Add to Panel -> Gnome Manual Duplex applet -> Add
+    2)      Print -> GnomeManualDuplex (Virtual Printer) -> Print
+
+Using the Gnome 3 Shell GUI:
+    1)      $ gnome-session-properties 
+	    Startup Programs -> Add
+	    Name:
+		GnomeManualDuplex
+	    Command:
+		/usr/share/gnome-manual-duplex/gmd-applet-3.py run-in-tray
+	    -> Add
+    2)      Print -> GnomeManualDuplex (Virtual Printer) -> Print
+.fi
 .SH COMMAND LINE OPTIONS
 These are the options that can appear on the command line.
 .TP
