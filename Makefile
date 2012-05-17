@@ -27,6 +27,7 @@ FILES=\
 	2pages.pdf \
 	COPYING \
 	debian.changelog \
+	debian.conffiles \
 	debian.control \
 	debian.rules \
 	gmd-applet.py.in \
