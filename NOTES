@@ -1,3 +1,6 @@
+%config(noreplace) /etc/xdg/autostart/gmd-applet-3.py.desktop
+debian.conffiles:
+/etc/xdg/autostart/gmd-applet-3.py.desktop
 
 $ gnome-session --version
 gnome-session 3.2.1

@@ -36,6 +36,7 @@ FILES=\
 	gmd.fig \
 	gmd.svg \
 	$(PROG).desktop \
+	gmd-applet-3.py.desktop \
 	$(PROG).dsc.in \
 	$(PROG).glade \
 	$(PROG).png \
