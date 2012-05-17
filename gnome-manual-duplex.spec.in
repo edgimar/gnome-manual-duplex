@@ -54,3 +54,4 @@ make DESTDIR=$RPM_BUILD_ROOT install
 /usr/share/locale/*
 /usr/share/dbus-1/services/org.gnome.panel.applet.GnomeManualDuplexAppletFactory.service
 /usr/share/gnome-panel/4.0/applets/org.gnome.panel.GnomeManualDuplex.panel-applet
+# %config(noreplace) /etc/xdg/autostart/gmd-applet-3.py.desktop
