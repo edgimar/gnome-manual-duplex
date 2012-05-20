@@ -14,6 +14,7 @@ LIBBONOBO=$(DESTDIR)/usr/lib/bonobo
 MANDIR=$(DESTDIR)/usr/share/man
 SERVICES=$(DESTDIR)/usr/share/dbus-1/services/
 APPLETS=$(DESTDIR)/usr/share/gnome-panel/4.0/applets/
+AUTOSTART=$(DESTDIR)/etc/xdg/autostart
 
 UNAME := $(shell uname)
 GSED=sed
@@ -257,6 +258,10 @@ install: all
 	$(INSTALL) -m644 \
 	    org.gnome.panel.GnomeManualDuplex.panel-applet \
 	    $(APPLETS)
+	if [ ! -f $(AUTOSTART)/gmd-applet-3.py.desktop ]; then \
+	    $(INSTALL) -d $(AUTOSTART); \
+	    $(INSTALL) -m644 gmd-applet-3.py.desktop $(AUTOSTART); \
+	fi
 	#
 	# Doc...
 	#
