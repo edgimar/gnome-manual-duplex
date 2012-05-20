@@ -227,7 +227,7 @@ install: all
 	$(INSTALL) -m755 gmd-applet.py $(SHARE)/$(PROG)
 	#
 	$(INSTALL) -d $(APPL)
-	$(INSTALL) -c -m 644 *.desktop $(APPL)
+	$(INSTALL) -c -m 644 gnome-manual-duplex.desktop $(APPL)
 	#
 	$(INSTALL) -d $(PIXMAPS)
 	$(INSTALL) -c -m644 $(PROG).png $(PIXMAPS)
