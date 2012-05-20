@@ -258,10 +258,10 @@ install: all
 	$(INSTALL) -m644 \
 	    org.gnome.panel.GnomeManualDuplex.panel-applet \
 	    $(APPLETS)
-	if [ ! -f $(AUTOSTART)/gmd-applet-3.py.desktop ]; then \
-	    $(INSTALL) -d $(AUTOSTART); \
-	    $(INSTALL) -m644 gmd-applet-3.py.desktop $(AUTOSTART); \
-	fi
+	#if [ ! -f $(AUTOSTART)/gmd-applet-3.py.desktop ]; then \
+	    #$(INSTALL) -d $(AUTOSTART); \
+	    #$(INSTALL) -m644 gmd-applet-3.py.desktop $(AUTOSTART); \
+	#fi
 	#
 	# Doc...
 	#
