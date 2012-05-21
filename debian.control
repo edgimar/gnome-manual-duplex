@@ -7,6 +7,6 @@ Build-Depends: debhelper (>= 4.1.16), libgtk2.0-dev
 Package: gnome-manual-duplex
 Architecture: all
 Depends: ${shlibs:Depends}, psutils, file, python-gamin,
-    python-gnome2-desktop | python-gnomeapplet
+    python-gnome2-desktop | python-gnomeapplet | gnome-shell
 Description: gnome-manual-duplex
  gnome-manual-duplex

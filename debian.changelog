@@ -1,3 +1,9 @@
+gnome-manual-duplex (0.45) stable; urgency=low
+
+  *  Autostart desktop file
+
+ -- Rick Richardson <rickrich@gmail.com>  Sun, 20 May 2012 08:21:03 -0500
+
 gnome-manual-duplex (0.44) stable; urgency=low
 
   *  Translations: hr (Croatia).
