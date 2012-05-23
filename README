@@ -3,6 +3,8 @@ Requires:
 	# yum install psutils	-OR-	$ sudo apt-get install psutils
     file
 	# yum install file	-OR-	$ sudo apt-get install file
+    gamin-python / python-gamin
+	# yum install gamin-python -OR-	$ sudo apt-get install python-gamin
 
 Download and unpack:
     https://sourceforge.net/projects/g-manual-duplex/files/
