@@ -2,6 +2,8 @@
 debian.conffiles:
 /etc/xdg/autostart/gmd-applet-3.py.desktop
 
+glade-3 gnome-manual-duplex.glade
+
 $ gnome-session --version
 gnome-session 3.2.1
 
