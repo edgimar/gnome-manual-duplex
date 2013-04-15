@@ -51,5 +51,10 @@ Translations:
 
 Subversion Access:
     svn co \
-	https://g-manual-duplex.svn.sourceforge.net/svnroot/g-manual-duplex \
-	gnome-manual-duplex 
+	svn://svn.code.sf.net/p/g-manual-duplex/code/ \
+	gnome-manual-duplex
+
+    svn co \
+	--username=USERNAME \
+	https://svn.code.sf.net/p/g-manual-duplex/code/ \
+	gnome-manual-duplex-code
