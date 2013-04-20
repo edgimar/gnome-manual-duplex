@@ -43,8 +43,8 @@ make DESTDIR=$RPM_BUILD_ROOT install
 /usr/share/cups/model/gnome-manual-duplex.ppd
 /usr/share/doc/gnome-manual-duplex/COPYING
 /usr/share/doc/gnome-manual-duplex/README
-/usr/share/gnome-manual-duplex/gmd-applet.py
-/usr/share/gnome-manual-duplex/gmd-applet-3.py
+/usr/share/gnome-manual-duplex/gmd-applet.py*
+/usr/share/gnome-manual-duplex/gmd-applet-3.py*
 /usr/share/gnome-manual-duplex/gnome-manual-duplex.xml
 /usr/share/gnome-manual-duplex/brochure.xpm
 /usr/share/gnome-manual-duplex/long_edge.xpm
