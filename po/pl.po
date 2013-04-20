@@ -35,9 +35,8 @@ msgid "Manual Short Edge"
 msgstr "Krótka strona ręcznie"
 
 #: gnome-manual-duplex.glade:86
-#, fuzzy
 msgid "Manual Brochure"
-msgstr "Krótka strona ręcznie"
+msgstr "Broszura ręcznie"
 
 #: gnome-manual-duplex.glade:139
 msgid "<b>Output Format</b>"

@@ -37,9 +37,8 @@ msgid "Manual Short Edge"
 msgstr "Ручная печать для короткой стороны"
 
 #: gnome-manual-duplex.glade:86
-#, fuzzy
 msgid "Manual Brochure"
-msgstr "Ручная печать для короткой стороны"
+msgstr "Ручная печать для брошюра"
 
 #: gnome-manual-duplex.glade:139
 msgid "<b>Output Format</b>"

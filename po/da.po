@@ -33,9 +33,8 @@ msgid "Manual Short Edge"
 msgstr "Manual - kort kant"
 
 #: gnome-manual-duplex.glade:86
-#, fuzzy
 msgid "Manual Brochure"
-msgstr "Manual - kort kant"
+msgstr "Manual - brochure"
 
 #: gnome-manual-duplex.glade:139
 msgid "<b>Output Format</b>"

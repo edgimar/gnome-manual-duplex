@@ -36,9 +36,8 @@ msgid "Manual Short Edge"
 msgstr "Ручна кратка ивица"
 
 #: gnome-manual-duplex.glade:86
-#, fuzzy
 msgid "Manual Brochure"
-msgstr "Ручна кратка ивица"
+msgstr "Ручна брошура"
 
 #: gnome-manual-duplex.glade:139
 msgid "<b>Output Format</b>"

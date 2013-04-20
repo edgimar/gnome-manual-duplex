@@ -34,9 +34,8 @@ msgid "Manual Short Edge"
 msgstr "שוליים ארוכים קצרים"
 
 #: gnome-manual-duplex.glade:86
-#, fuzzy
 msgid "Manual Brochure"
-msgstr "שוליים ארוכים קצרים"
+msgstr "שוליים חוברת"
 
 #: gnome-manual-duplex.glade:139
 msgid "<b>Output Format</b>"

@@ -36,7 +36,7 @@ msgstr "Manuel bord court"
 #: gnome-manual-duplex.glade:86
 #, fuzzy
 msgid "Manual Brochure"
-msgstr "Manuel bord court"
+msgstr "Manuel brochure"
 
 #: gnome-manual-duplex.glade:139
 msgid "<b>Output Format</b>"
