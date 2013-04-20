@@ -17,9 +17,16 @@ import cups
 import ConfigParser
 import locale, gettext
 
+PROGNAME="gnome-manual-duplex"
+
+# edge_config values:
 REVERSE = 2
 INVERT = 1
-PROGNAME="gnome-manual-duplex"
+
+# printMode values:
+LONGEDGE = 1
+SHORTEDGE = 2
+BROCHURE = 3
 
 #
 #	i18n
@@ -143,7 +150,7 @@ class App(object):
 
 	self.printdialog = builder.get_object("printdialog1")
 	self.evenok = builder.get_object("even-pages-ok")
-	self.LongEdge = 1;
+	self.printMode = LONGEDGE;
 	self.SkipOddPages = 0;
 	builder.connect_signals(self)
 	self.window.show()
@@ -220,7 +227,16 @@ class App(object):
 	print "clicked"
 
     def radiobutton1_toggled_cb(self, widget, data=None):
-	self.LongEdge = not self.LongEdge
+	if widget.get_active():
+	    self.printMode = LONGEDGE
+
+    def radiobutton2_toggled_cb(self, widget, data=None):
+	if widget.get_active():
+	    self.printMode = SHORTEDGE
+
+    def radiobutton3_toggled_cb(self, widget, data=None):
+	if widget.get_active():
+	    self.printMode = BROCHURE
 
     def checkbutton1_toggled_cb(self, widget, data=None):
 	self.SkipOddPages = not self.SkipOddPages
@@ -240,6 +256,25 @@ class App(object):
 	    gtk.main_quit()
 	if data == gtk.RESPONSE_OK:
 	    self.tempfile = tempfile.NamedTemporaryFile()
+	    if self.printMode == BROCHURE:
+		rc = os.system("file " + self.filename + " | grep -q PDF")
+		if rc == 256:
+		    self.is_pdf = 0
+		else:
+		    self.is_pdf = 1
+		self.tempfileBrochure = tempfile.NamedTemporaryFile()
+		# Convert into brochure
+		if self.is_pdf == 1:
+		    os.system("pdftops '" + self.filename
+			+ "' - | psbook "
+			+ " | psnup -2 > "
+			+ self.tempfileBrochure.name)
+		else:
+		    os.system("psbook '" + self.filename
+			+ "' | psnup -2 > "
+			+ self.tempfileBrochure.name)
+		self.filename = self.tempfileBrochure.name
+		self.is_pdf = 0 #now converted to ps (if it was not ps already)
 	    if not self.SkipOddPages:
 		# Print out odd pages
 		# print self.filename
@@ -277,7 +312,7 @@ class App(object):
 
     def even_ok_clicked_cb(self, widget, data=None):
 	printer = self.printdialog.get_selected_printer()
-	if self.LongEdge == 1:
+	if self.printMode == LONGEDGE:
 	    try:
 		config = int( Config.get(printer.get_name(),
 					    'long_edge_config', 0) )
