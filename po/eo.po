@@ -34,9 +34,8 @@ msgid "Manual Short Edge"
 msgstr "Permana mallonga bordo"
 
 #: gnome-manual-duplex.glade:86
-#, fuzzy
 msgid "Manual Brochure"
-msgstr "Permana mallonga bordo"
+msgstr "Permana broŝuro"
 
 #: gnome-manual-duplex.glade:139
 msgid "<b>Output Format</b>"

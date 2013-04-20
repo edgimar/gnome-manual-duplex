@@ -32,9 +32,8 @@ msgid "Manual Short Edge"
 msgstr "Kısa Kenar"
 
 #: gnome-manual-duplex.glade:86
-#, fuzzy
 msgid "Manual Brochure"
-msgstr "Kısa Kenar"
+msgstr "Broşür"
 
 #: gnome-manual-duplex.glade:139
 msgid "<b>Output Format</b>"

@@ -33,9 +33,8 @@ msgid "Manual Short Edge"
 msgstr "Manual de Borde Corto"
 
 #: gnome-manual-duplex.glade:86
-#, fuzzy
 msgid "Manual Brochure"
-msgstr "Manual de Borde Corto"
+msgstr "Manual de folleto"
 
 #: gnome-manual-duplex.glade:139
 msgid "<b>Output Format</b>"
