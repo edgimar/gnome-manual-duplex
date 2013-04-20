@@ -1,6 +1,6 @@
 
 PROG=gnome-manual-duplex
-VERSION=0.46
+VERSION=0.47
 
 INSTALL=install
 LPADMIN=/usr/sbin/lpadmin
@@ -26,6 +26,7 @@ NULL=
 FILES=\
 	2pages.ps \
 	2pages.pdf \
+	brochure.fig \
 	COPYING \
 	debian.changelog \
 	debian.conffiles \
@@ -104,7 +105,8 @@ FILES=\
 #	All
 #
 all: all-test $(PROG) $(PROG).xml $(PROG).spec $(PROG).dsc messages \
-	long_edge.xpm short_edge.xpm gmd-applet.py gmd-applet-3.py
+	brochure.xpm long_edge.xpm short_edge.xpm \
+	gmd-applet.py gmd-applet-3.py
 
 all-test:
 	#
@@ -284,7 +286,7 @@ install: all
 
 clean:
 	rm -f $(PROG) $(PROG).xml *.tar.gz *.spec *.dsc
-	rm -f long_edge.xpm short_edge.xpm
+	rm -f brochure.xpm long_edge.xpm short_edge.xpm
 	rm -f gmd-applet.py gmd-applet-3.py
 	rm -f messages.pot*
 	rm -rf locale

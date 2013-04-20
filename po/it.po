@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-manual-duplex 0.30\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-04 05:53-0500\n"
+"POT-Creation-Date: 2013-04-20 04:41-0500\n"
 "PO-Revision-Date: 2010-10-14 19:34+0200\n"
 "Last-Translator: Vincenzo Campanella <vinz65@gmail.com>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: gnome-manual-duplex.py:122
+#: gnome-manual-duplex.py:129
 msgid "(default)"
 msgstr "(predefinito)"
 
@@ -32,36 +32,41 @@ msgstr "Lato lungo manuale"
 msgid "Manual Short Edge"
 msgstr "Lato corto manuale"
 
-#: gnome-manual-duplex.glade:110
+#: gnome-manual-duplex.glade:86
+#, fuzzy
+msgid "Manual Brochure"
+msgstr "Lato corto manuale"
+
+#: gnome-manual-duplex.glade:139
 msgid "<b>Output Format</b>"
 msgstr "<b>Formato dell'output</b>"
 
-#: gnome-manual-duplex.glade:135
+#: gnome-manual-duplex.glade:164
 msgid "Skip Odd Pages"
 msgstr "Ometti le pagine dispari"
 
-#: gnome-manual-duplex.glade:146
+#: gnome-manual-duplex.glade:175
 msgid "<b>Print</b>"
 msgstr "<b>Stampa</b>"
 
-#: gnome-manual-duplex.glade:166
+#: gnome-manual-duplex.glade:195
 msgid "gtk-about"
 msgstr "gtk-about"
 
-#: gnome-manual-duplex.glade:177
+#: gnome-manual-duplex.glade:206
 msgid "gtk-preferences"
 msgstr "gtk-preferences"
 
-#: gnome-manual-duplex.glade:191 gnome-manual-duplex.glade:303
-#: gnome-manual-duplex.glade:501
+#: gnome-manual-duplex.glade:220 gnome-manual-duplex.glade:332
+#: gnome-manual-duplex.glade:530
 msgid "gtk-cancel"
 msgstr "gtk-cancel"
 
-#: gnome-manual-duplex.glade:205
+#: gnome-manual-duplex.glade:234
 msgid "gtk-print"
 msgstr "gtk-print"
 
-#: gnome-manual-duplex.glade:263
+#: gnome-manual-duplex.glade:292
 msgid ""
 "<big><b>1.</b></big>\n"
 "\n"
@@ -77,7 +82,7 @@ msgstr ""
 "l'orientamento. Non scartare\n"
 "le pagine bianche."
 
-#: gnome-manual-duplex.glade:277
+#: gnome-manual-duplex.glade:306
 msgid ""
 "<big><b>2.</b></big>\n"
 "\n"
@@ -91,15 +96,15 @@ msgstr ""
 "mantenendo il medesimo orientamento\n"
 "e con la parte stampata in basso."
 
-#: gnome-manual-duplex.glade:314
+#: gnome-manual-duplex.glade:343
 msgid "gtk-ok"
 msgstr "gtk-ok"
 
-#: gnome-manual-duplex.glade:356
+#: gnome-manual-duplex.glade:385
 msgid "<b>Printer</b>"
 msgstr "<b>Stampante</b>"
 
-#: gnome-manual-duplex.glade:381 gnome-manual-duplex.glade:445
+#: gnome-manual-duplex.glade:410 gnome-manual-duplex.glade:474
 msgid ""
 "HP LJ 1005/1018/1020: reverse pages\n"
 "HP LJ P1005/P1006/P1505: reverse pages\n"
@@ -115,11 +120,11 @@ msgstr ""
 "Minolta/QMS 2300 DL: ordine inverso delle pagine\n"
 "Altre: dipende"
 
-#: gnome-manual-duplex.glade:387 gnome-manual-duplex.glade:451
+#: gnome-manual-duplex.glade:416 gnome-manual-duplex.glade:480
 msgid "Reverse Pages"
 msgstr "Ordine inverso delle pagine"
 
-#: gnome-manual-duplex.glade:396
+#: gnome-manual-duplex.glade:425
 msgid ""
 "HP LJ 1005/1018/1020: invert pages\n"
 "HP LJ P1005/P1006/P1505: invert pages\n"
@@ -135,15 +140,15 @@ msgstr ""
 "Minolta/QMS 2300 DL: invertire le pagine (ruotarle di 180 gradi)\n"
 "Altre: dipende"
 
-#: gnome-manual-duplex.glade:402 gnome-manual-duplex.glade:466
+#: gnome-manual-duplex.glade:431 gnome-manual-duplex.glade:495
 msgid "Invert (rotate 180 degrees) Pages"
 msgstr "Invertire le pagine (ruotarle di 180 gradi)"
 
-#: gnome-manual-duplex.glade:417
+#: gnome-manual-duplex.glade:446
 msgid "<b>Even Long Edge</b>"
 msgstr "<b>Lato lungo accoppiato</b>"
 
-#: gnome-manual-duplex.glade:460
+#: gnome-manual-duplex.glade:489
 msgid ""
 "HP LJ 1005/1018/1020: no invert pages\n"
 "HP LJ P1005/P1006: no invert pages\n"
@@ -159,26 +164,26 @@ msgstr ""
 "Minolta/QMS 2300 DL: nessuna inversione delle pagine\n"
 "Altre: dipende"
 
-#: gnome-manual-duplex.glade:481
+#: gnome-manual-duplex.glade:510
 msgid "<b>Even Short Edge</b>"
 msgstr "<b>Lato corto accoppiato</b>"
 
-#: gnome-manual-duplex.glade:512
+#: gnome-manual-duplex.glade:541
 msgid "gtk-save"
 msgstr "gtk-save"
 
-#: gnome-manual-duplex.glade:531
+#: gnome-manual-duplex.glade:560
 msgid "About Glade"
 msgstr "Informazioni su Glade"
 
-#: gnome-manual-duplex.glade:538
+#: gnome-manual-duplex.glade:567
 msgid "Copyright 2009-2012 Rick Richardson.  All Rights Reserved."
 msgstr "Copyright 2009-2012 Rick Richardson. Tutti i diritti riservati."
 
-#: gnome-manual-duplex.glade:540
+#: gnome-manual-duplex.glade:569
 msgid "Home Page"
 msgstr "Pagina iniziale"
 
-#: gnome-manual-duplex.glade:541
+#: gnome-manual-duplex.glade:570
 msgid "GPL"
 msgstr "GPL"
