@@ -34,7 +34,7 @@ try:
 except :
     needed += "python-gamin\n"
 
-from gi.repository import GObject, Gtk, PanelApplet, GdkPixbuf, Gdk
+from gi.repository import GObject, Gtk, GdkPixbuf, Gdk
 
 def send_error(message):
     try:
@@ -324,6 +324,7 @@ elif (len(sys.argv) == 2) and (sys.argv[1] == "run-in-tray"):
     Gtk.main()
     sys.exit()
 elif True:
+    from gi.repository import PanelApplet
     PanelApplet.Applet.factory_main(
                 "GnomeManualDuplexAppletFactory",  # id
                 PanelApplet.Applet.__gtype__,   # gtype
