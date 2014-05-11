@@ -29,6 +29,7 @@ curl -F pofile=@input-po-filename \
 LANG=tr_TR.utf-8 ./gnome-manual-duplex
 LANG=da_DK.utf-8 ./gnome-manual-duplex
 LANG=sr_RS.utf-8 ./gnome-manual-duplex
+LANG=nb_NO.utf-8 ./gnome-manual-duplex
 
 # or with Esperanto
 LANGUAGE=eo:fi:en LC_ALL=fi_FI.UTF-8 ./gnome-manual-duplex
