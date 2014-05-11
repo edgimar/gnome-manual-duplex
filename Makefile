@@ -65,6 +65,7 @@ FILES=\
 	po/hr.po \
 	po/hu.po \
 	po/it.po \
+	po/nb_NO.po \
 	po/pl.po \
 	po/pt.po \
 	po/pt_BR.po \
