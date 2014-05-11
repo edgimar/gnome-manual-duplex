@@ -155,9 +155,8 @@ msgid "About Glade"
 msgstr "关于 Glade"
 
 #: gnome-manual-duplex.glade:567
-#, fuzzy
 msgid "Copyright 2009-2014 Rick Richardson.  All Rights Reserved."
-msgstr "版权所有 2009-2012 Rick Richardson. 保留所有权利。"
+msgstr "版权所有 2009-2014 Rick Richardson. 保留所有权利。"
 
 #: gnome-manual-duplex.glade:569
 msgid "Home Page"
