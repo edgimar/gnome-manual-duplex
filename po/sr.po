@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-manual-duplex-0.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-20 04:41-0500\n"
+"POT-Creation-Date: 2014-05-11 17:34-0500\n"
 "PO-Revision-Date: 2012-05-02 09:50+0200\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <gnu@prevod.org>\n"
@@ -178,7 +178,8 @@ msgid "About Glade"
 msgstr "О Глејду"
 
 #: gnome-manual-duplex.glade:567
-msgid "Copyright 2009-2012 Rick Richardson.  All Rights Reserved."
+#, fuzzy
+msgid "Copyright 2009-2014 Rick Richardson.  All Rights Reserved."
 msgstr "Ауторска права 2009-2012 Рик Ричардсон.  Сва прва су задржана."
 
 #: gnome-manual-duplex.glade:569
