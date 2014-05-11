@@ -36,9 +36,8 @@ msgid "Manual Short Edge"
 msgstr "Kézi rövidebbik oldal"
 
 #: gnome-manual-duplex.glade:86
-#, fuzzy
 msgid "Manual Brochure"
-msgstr "Kézi rövidebbik oldal"
+msgstr "Kézi prospektus"
 
 #: gnome-manual-duplex.glade:139
 msgid "<b>Output Format</b>"
