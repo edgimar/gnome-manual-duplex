@@ -1,0 +1,192 @@
+# Hungarian translation for gnome-manual-duplex.
+# This file is distributed under the same license as the gnome-manual-duplex package.
+# Copyright (C) 2012 Rick Richardson
+#
+# Rick Richardson <rickrich@gmail.com>, 2012.
+# Balázs Úr <urbalazs@gmail.com>, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-manual-duplex 0.44\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-11 12:27-0500\n"
+"PO-Revision-Date: 2014-05-11 18:22+0200\n"
+"Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
+"Language-Team: Hungarian <translation-team-hu@lists.sourceforge.net>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 1.5\n"
+
+#: gnome-manual-duplex.py:129
+msgid "(default)"
+msgstr "(alapértelmezett)"
+
+#: gnome-manual-duplex.glade:32
+msgid "<b>Job Name</b>"
+msgstr "<b>Feladatnév</b>"
+
+#: gnome-manual-duplex.glade:59
+msgid "Manual Long Edge"
+msgstr "Kézi hosszabbik oldal"
+
+#: gnome-manual-duplex.glade:70
+msgid "Manual Short Edge"
+msgstr "Kézi rövidebbik oldal"
+
+#: gnome-manual-duplex.glade:86
+#, fuzzy
+msgid "Manual Brochure"
+msgstr "Kézi rövidebbik oldal"
+
+#: gnome-manual-duplex.glade:139
+msgid "<b>Output Format</b>"
+msgstr "<b>Kimeneti formátum</b>"
+
+#: gnome-manual-duplex.glade:164
+msgid "Skip Odd Pages"
+msgstr "Páratlan oldalak kihagyása"
+
+#: gnome-manual-duplex.glade:175
+msgid "<b>Print</b>"
+msgstr "<b>Nyomtatás</b>"
+
+#: gnome-manual-duplex.glade:195
+msgid "gtk-about"
+msgstr "gtk-about"
+
+#: gnome-manual-duplex.glade:206
+msgid "gtk-preferences"
+msgstr "gtk-preferences"
+
+#: gnome-manual-duplex.glade:220 gnome-manual-duplex.glade:332
+#: gnome-manual-duplex.glade:530
+msgid "gtk-cancel"
+msgstr "gtk-cancel"
+
+#: gnome-manual-duplex.glade:234
+msgid "gtk-print"
+msgstr "gtk-print"
+
+#: gnome-manual-duplex.glade:292
+msgid ""
+"<big><b>1.</b></big>\n"
+"\n"
+"Without changing the orientation,\n"
+"remove the paper stack from the\n"
+"Output Bin.  Do not discard blank\n"
+"sheets."
+msgstr ""
+"<big><b>1.</b></big>\n"
+"\n"
+"A tájolás megváltoztatása\n"
+"nélkül távolítsa el a papírkupacot\n"
+"a kimeneti tálcáról. Ne tegye félre\n"
+"az üres lapokat."
+
+#: gnome-manual-duplex.glade:306
+msgid ""
+"<big><b>2.</b></big>\n"
+"\n"
+"Maintaining the same orientation,\n"
+"insert the paper stack into Tray 1\n"
+"printed side down."
+msgstr ""
+"<big><b>2.</b></big>\n"
+"\n"
+"Ugyanazt a tájolás megtartva helyezze\n"
+"be a papírkupacot az 1. tálcára a\n"
+"nyomtatott oldalával lefelé."
+
+#: gnome-manual-duplex.glade:343
+msgid "gtk-ok"
+msgstr "gtk-ok"
+
+#: gnome-manual-duplex.glade:385
+msgid "<b>Printer</b>"
+msgstr "<b>Nyomtató</b>"
+
+#: gnome-manual-duplex.glade:410 gnome-manual-duplex.glade:474
+msgid ""
+"HP LJ 1005/1018/1020: reverse pages\n"
+"HP LJ P1005/P1006/P1505: reverse pages\n"
+"HP LJ Pro P1102, P1566: reverse pages\n"
+"HP CLJ 1600/2600/CP1215: reverse pages\n"
+"Minolta/QMS 2300 DL: reverse pages\n"
+"Others: depends"
+msgstr ""
+"HP LJ 1005/1018/1020: oldalak megfordítása\n"
+"HP LJ P1005/P1006/P1505: oldalak megfordítása\n"
+"HP LJ Pro P1102, P1566: oldalak megfordítása\n"
+"HP CLJ 1600/2600/CP1215: oldalak megfordítása\n"
+"Minolta/QMS 2300 DL: oldalak megfordítása\n"
+"Egyebek: függő"
+
+#: gnome-manual-duplex.glade:416 gnome-manual-duplex.glade:480
+msgid "Reverse Pages"
+msgstr "Oldalak megfordítása"
+
+#: gnome-manual-duplex.glade:425
+msgid ""
+"HP LJ 1005/1018/1020: invert pages\n"
+"HP LJ P1005/P1006/P1505: invert pages\n"
+"HP LJ Pro P1102, P1566: invert pages\n"
+"HP CLJ 1600/2600/CP1215: invert pages\n"
+"Minolta/QMS 2300 DL: invert pages\n"
+"Others: depends"
+msgstr ""
+"HP LJ 1005/1018/1020: oldalak invertálása\n"
+"HP LJ P1005/P1006/P1505: oldalak invertálása\n"
+"HP LJ Pro P1102, P1566: oldalak invertálása\n"
+"HP CLJ 1600/2600/CP1215: oldalak invertálása\n"
+"Minolta/QMS 2300 DL: oldalak invertálása\n"
+"Egyebek: függő"
+
+#: gnome-manual-duplex.glade:431 gnome-manual-duplex.glade:495
+msgid "Invert (rotate 180 degrees) Pages"
+msgstr "Oldalak invertálása (180 fokkal forgatás)"
+
+#: gnome-manual-duplex.glade:446
+msgid "<b>Even Long Edge</b>"
+msgstr "<b>Páros hosszabbik oldal</b>"
+
+#: gnome-manual-duplex.glade:489
+msgid ""
+"HP LJ 1005/1018/1020: no invert pages\n"
+"HP LJ P1005/P1006: no invert pages\n"
+"HP LJ Pro P1102, P1566: no invert pages\n"
+"HP CLJ 1600/2600/CP1215: no invert pages\n"
+"Minolta/QMS 2300 DL: no invert pages\n"
+"Others: depends"
+msgstr ""
+"HP LJ 1005/1018/1020: ne invertálja az oldalakat\n"
+"HP LJ P1005/P1006: ne invertálja az oldalakat\n"
+"HP LJ Pro P1102, P1566: ne invertálja az oldalakat\n"
+"HP CLJ 1600/2600/CP1215: ne invertálja az oldalakat\n"
+"Minolta/QMS 2300 DL: ne invertálja az oldalakat\n"
+"Egyebek: függő"
+
+#: gnome-manual-duplex.glade:510
+msgid "<b>Even Short Edge</b>"
+msgstr "<b>Páros rövidebbik oldal</b>"
+
+#: gnome-manual-duplex.glade:541
+msgid "gtk-save"
+msgstr "gtk-save"
+
+#: gnome-manual-duplex.glade:560
+msgid "About Glade"
+msgstr "A Glade névjegye"
+
+#: gnome-manual-duplex.glade:567
+msgid "Copyright 2009-2012 Rick Richardson.  All Rights Reserved."
+msgstr "Copyright Rick Richardson, 2009-2012. Minden jog fenntartva."
+
+#: gnome-manual-duplex.glade:569
+msgid "Home Page"
+msgstr "Honlap"
+
+#: gnome-manual-duplex.glade:570
+msgid "GPL"
+msgstr "GPL"

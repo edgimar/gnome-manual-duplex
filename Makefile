@@ -63,6 +63,7 @@ FILES=\
 	po/fr.po \
 	po/he.po \
 	po/hr.po \
+	po/hu.po \
 	po/it.po \
 	po/pl.po \
 	po/pt.po \
