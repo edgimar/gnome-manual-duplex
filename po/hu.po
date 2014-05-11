@@ -179,9 +179,8 @@ msgid "About Glade"
 msgstr "A Glade névjegye"
 
 #: gnome-manual-duplex.glade:567
-#, fuzzy
 msgid "Copyright 2009-2014 Rick Richardson.  All Rights Reserved."
-msgstr "Copyright Rick Richardson, 2009-2012. Minden jog fenntartva."
+msgstr "Copyright Rick Richardson, 2009-2014. Minden jog fenntartva."
 
 #: gnome-manual-duplex.glade:569
 msgid "Home Page"
