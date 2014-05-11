@@ -564,7 +564,7 @@ Others: depends</property>
     <property name="has_separator">False</property>
     <property name="program_name">Gnome Manual Duplex</property>
     <property name="version">v${VERSION}</property>
-    <property name="copyright" translatable="yes">Copyright 2009-2012 Rick Richardson.  All Rights Reserved.</property>
+    <property name="copyright" translatable="yes">Copyright 2009-2014 Rick Richardson.  All Rights Reserved.</property>
     <property name="website">https://sourceforge.net/projects/g-manual-duplex/</property>
     <property name="website_label" translatable="yes">Home Page</property>
     <property name="license" translatable="yes">GPL</property>
