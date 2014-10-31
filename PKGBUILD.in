@@ -7,7 +7,7 @@ url="http://sourceforge.net/projects/g-manual-duplex/"
 license=('GPL')
 depends=('python2' 'python2-pycups' 'file' 'transfig' 'netpbm' 'psutils')
 makedepends=()
-source=("${_pkgname}_${pkgver}.tar.gz")
+source=("${pkgname}-${pkgver}.tar.gz")
 md5sums=('${MD5SUM}')
 
 build() {
