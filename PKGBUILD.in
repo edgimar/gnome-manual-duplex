@@ -1,0 +1,23 @@
+pkgname=gnome-manual-duplex
+pkgver=${VERSION}
+pkgrel=1
+pkgdesc="Utility allowing manual duplex printing"
+arch=('any')
+url="http://sourceforge.net/projects/g-manual-duplex/"
+license=('GPL')
+depends=('python2' 'python2-pycups' 'file' 'transfig' 'netpbm' 'psutils')
+makedepends=()
+source=("${_pkgname}_${pkgver}.tar.gz")
+md5sums=('${MD5SUM}')
+
+build() {
+  cd "$srcdir/$pkgname-$pkgver"
+  make || return 1
+  patch -i "$srcdir/set_python_version.patch"
+  patch -i "$srcdir/fix_paths_with_spaces.patch"
+}
+
+package () {
+  cd "$srcdir/$pkgname-$pkgver"
+  make DESTDIR="$pkgdir/" install
+}
