@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 
 global Debug
 Debug = 0
@@ -278,17 +278,17 @@ class App(object):
 	    if not self.SkipOddPages:
 		# Print out odd pages
 		# print self.filename
-		rc = os.system("file " + self.filename + " | grep -q PDF")
+		rc = os.system("file \"" + self.filename + "\" | grep -q PDF")
 		print "{ps,pdf}tops '2:0' '" + self.filename + \
 		    "' " + self.tempfile.name
 		if rc == 256:
 		    self.is_pdf = 0
-		    os.system("pstops 2:0 '"
-			+ self.filename + "' " + self.tempfile.name)
+		    os.system("pstops 2:0 \""
+			+ self.filename + "\" " + self.tempfile.name)
 		else:
 		    self.is_pdf = 1
-		    os.system("pdftops '" + self.filename
-			+ "' - | pstops 2:0 > "
+		    os.system("pdftops \"" + self.filename
+			+ "\" - | pstops 2:0 > "
 			+ self.tempfile.name)
 		# print "is_pdf ", self.is_pdf
 		
