@@ -13,8 +13,6 @@ md5sums=('${MD5SUM}')
 build() {
   cd "$srcdir/$pkgname-$pkgver"
   make || return 1
-  patch -i "$srcdir/set_python_version.patch"
-  patch -i "$srcdir/fix_paths_with_spaces.patch"
 }
 
 package () {
