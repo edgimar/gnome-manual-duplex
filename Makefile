@@ -1,6 +1,6 @@
 
 PROG=gnome-manual-duplex
-VERSION=0.50
+VERSION=0.51
 
 INSTALL=install
 LPADMIN=/usr/sbin/lpadmin
@@ -75,6 +75,7 @@ FILES=\
 	po/tr.po \
 	po/uk.po \
 	po/zh_CN.po \
+	PKGBUILD.in \
 	$(NULL)
 
 .SUFFIXES: .glade .xml .fig .xpm .py.in .py .mo .po .pot .svg
@@ -189,6 +190,15 @@ $(PROG).dsc: $(PROG).dsc.in Makefile
             || (rm -f $@ && exit 1)
 	chmod 444 $@
 
+PKGBUILD: PKGBUILD.in Makefile tarver
+	rm -f $@
+	md5sum=`md5sum $(PROG)-$(VERSION).tar.gz | sed 's/ .*//' `; \
+	sed < $@.in > $@ \
+            -e "s@\$${VERSION}@$(VERSION)@" \
+            -e "s@\$${MD5SUM}@$$md5sum@" \
+            || (rm -f $@ && exit 1)
+	chmod 444 $@
+
 #
 #	i18n
 #
@@ -293,7 +303,7 @@ clean:
 	rm -f messages.pot*
 	rm -rf locale
 
-tar:	tarver
+tar:	tarver PKGBUILD
 	HERE=`basename $$PWD`; \
         /bin/ls $(FILES) | \
         sed -e "s?^?$$HERE/?" | \
