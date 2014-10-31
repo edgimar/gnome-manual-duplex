@@ -6,7 +6,7 @@ arch=('any')
 url="http://sourceforge.net/projects/g-manual-duplex/"
 license=('GPL')
 depends=('python2' 'python2-pycups' 'file' 'transfig' 'netpbm' 'psutils')
-makedepends=('gtk2' 'gettext')
+makedepends=('gtk2' 'gettext' 'gamin')
 source=("${pkgname}-${pkgver}.tar.gz")
 md5sums=('${MD5SUM}')
 
