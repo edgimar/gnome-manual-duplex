@@ -31,6 +31,13 @@ Then:
 		Startup Programs -> GnomeManualDuplex -> Enable
 		[logout][login]
 	2)	Print -> GnomeManualDuplex (Virtual Printer) -> Print
+    
+	If gnome-session-properties does not exist (Gnome 3.12+), you can
+	manually install it with:
+
+	$ sed -e "s/\(.*Autostart.*\)=.*/\1=true/" \
+	    < /etc/xdg/autostart/gmd-applet-3.py.desktop \
+	    > ~/.config/autostart/gmd-applet-3.py.desktop
 
     Works with *.ps and *.pdf files.
     Works with Gnome-2 or Gnome-3.
