@@ -1,8 +1,14 @@
+gnome-manual-duplex (0.52) stable; urgency=low
+
+  *  Fix spaces in filename. Add PKGBUILD for arch.
+
+ -- Rick Richardson <rickrich@gmail.com>  Mon, 03 November 2014 08:21:03 -0500
+
 gnome-manual-duplex (0.51) stable; urgency=low
 
   *  Fix spaces in filename. Add PKGBUILD for arch.
 
- -- Rick Richardson <rickrich@gmail.com>  Sun, 11 May 2014 08:21:03 -0500
+ -- Rick Richardson <rickrich@gmail.com>  Fri, 31 October 2014 08:21:03 -0500
 
 gnome-manual-duplex (0.50) stable; urgency=low
 
