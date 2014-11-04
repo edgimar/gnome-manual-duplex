@@ -1,6 +1,12 @@
+gnome-manual-duplex (0.53) stable; urgency=low
+
+  *  Make gmd work with python 2 or 3
+
+ -- Rick Richardson <rickrich@gmail.com>  Tue, 04 November 2014 08:21:03 -0500
+
 gnome-manual-duplex (0.52) stable; urgency=low
 
-  *  Fix spaces in filename. Add PKGBUILD for arch.
+  *  Default to python2
 
  -- Rick Richardson <rickrich@gmail.com>  Mon, 03 November 2014 08:21:03 -0500
 
