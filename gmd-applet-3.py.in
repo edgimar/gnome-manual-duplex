@@ -1,11 +1,13 @@
 #!/usr/bin/python2
+# vim: expandtab
+
 # -*- coding: UTF-8 -*-
 
 # Copyright 2006-2007 (C) Raster Software Vigo (Sergio Costas)
 # Copyright 2009-2014 (C) Rick Richardson
 #
 # gmd-applet-3:
-#	This file is part of Gnome Manual Duplex (GMD).  It is for gnome-3.
+#       This file is part of Gnome Manual Duplex (GMD).  It is for gnome-3.
 #
 # GMD is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -38,16 +40,16 @@ from gi.repository import GObject, Gtk, GdkPixbuf, Gdk
 
 def send_error(message):
     try:
-	fp = open("/var/tmp/gmd/error.log", "a")
+        fp = open("/var/tmp/gmd/error.log", "a")
     except:
-	return
+        return
     fp.write(str(pwd.getpwuid(os.getuid())[0]) + ": " + message + "\n")
     fp.close()
 
 def read_line(fp):
     line = fp.readline()
     if line[-1] == '\n':
-	line = line[:-1]
+        line = line[:-1]
     return line
 
 def launch_gmd(filename):
@@ -55,58 +57,58 @@ def launch_gmd(filename):
 
     time.sleep(1) # wait one second to ensure that the file is fully wrote
     try:
-	fp = open(directory + "/list/" + filename, "r");
+        fp = open(directory + "/list/" + filename, "r");
     except IOError:
-	send_error("Error de E/S")
-	return
+        send_error("Error de E/S")
+        return
     newfile = read_line(fp)
     if (-1 != newfile.find("/")):
-	# don't allow the '/' in the filename to avoid security issues
-	send_error( "Has /: " + newfile)
-	return
-    print directory + "/" + newfile
+        # don't allow the '/' in the filename to avoid security issues
+        send_error( "Has /: " + newfile)
+        return
+    print(directory + "/" + newfile)
     title2 = read_line(fp)
     
     title = ""
     for letter in title2:
-	if letter == '"':
-	    title += "'"
-	elif letter == '\\':
-	    title += '/'
-	else:
-	    title += letter
-    print title
+        if letter == '"':
+            title += "'"
+        elif letter == '\\':
+            title += '/'
+        else:
+            title += letter
+    print(title)
     copies = read_line(fp)
     fp.close()
-    print copies
+    print(copies)
     
     #command = '/usr/bin/gnome-manual-duplex -T "' + title + '" -# ' + copies \
-    #	+ ' "' + directory + "/" + newfile + '"'
+    #   + ' "' + directory + "/" + newfile + '"'
     command = '/usr/bin/gnome-manual-duplex "' + directory + "/" + newfile + '"'
     send_error(command)
     p = subprocess.Popen(command, shell=True, bufsize=32768)
     p.wait()
     
     command='rm -f "' + directory + "/" + newfile + '" "' + directory \
-		+ "/list/" + filename + '"'
+                + "/list/" + filename + '"'
     p = subprocess.Popen(command, shell=True, bufsize=32768)
     p.wait()
 
 def read_event2(path, event):
-    print "path: " + str(path) + " event: " + str(event)
+    print("path: " + str(path) + " event: " + str(event))
     if (event == 5): # new file created
-	launch_gmd(path)
+        launch_gmd(path)
     return True
 
 def read_event(path, event):
     global fc
     
-    print "path: " + str(path) + " event: " + str(event)
+    print("path: " + str(path) + " event: " + str(event))
 
     ret = fc.event_pending()
     if ret > 0:
-	fc.handle_one_event()
-	fc.handle_events()
+        fc.handle_one_event()
+        fc.handle_events()
     return True
 
 def init_scan():
@@ -116,50 +118,50 @@ def init_scan():
     global request
 
     try:
-	directory = "/var/tmp/gmd/" + str(pwd.getpwuid(os.getuid())[0])
+        directory = "/var/tmp/gmd/" + str(pwd.getpwuid(os.getuid())[0])
     except :
-	send_error("Failed to get the UID")
-	return Gtk.FALSE
+        send_error("Failed to get the UID")
+        return Gtk.FALSE
 
     # erase the directory to ensure that there are no spare works
     p = subprocess.Popen("rm -rf " + directory, shell=True, bufsize=32768)
     p.wait()
 
     try:
-	os.makedirs(directory + "/list")
+        os.makedirs(directory + "/list")
     except OSError:
-	pass
-	    
+        pass
+            
     # set priviliges to RWX-WX-WX, to allow everybody to write into it, but
     # only the user to read, to preserve privacy
     p = subprocess.Popen("chmod 733 " + directory, shell=True, bufsize=32768)
     p.wait()
     p = subprocess.Popen("chmod 733 " + directory + "/list",
-			    shell=True, bufsize=32768)
+                            shell=True, bufsize=32768)
     p.wait()
     
     fc = gamin.WatchMonitor()
     
     if (fc == None):
-	send_error("Failed to create a GAMIN session. "
-		    + "Check that the GAMIN daemon is running\n")
+        send_error("Failed to create a GAMIN session. "
+                    + "Check that the GAMIN daemon is running\n")
     
     request = fc.watch_directory(directory + "/list", read_event2)
-	    
+            
     if (request == None):
-	send_error("Failed to create a GAMIN request. "
-		    + "Check that the GAMIN daemon is running\n")
+        send_error("Failed to create a GAMIN request. "
+                    + "Check that the GAMIN daemon is running\n")
 
     event0 = GObject.io_add_watch(fc.get_fd(), GObject.IO_IN, read_event)
     
     if (event0 == None):
-	send_error("Failed to create a FAM event. "
-		    + "Check that the FAM daemon is running\n")
+        send_error("Failed to create a FAM event. "
+                    + "Check that the FAM daemon is running\n")
 
 
 def wdelete_event(widget, event, data=None):
     return False
-	
+        
 def wdestroy(widget, data=None):
     sys.exit(0)
 
@@ -170,7 +172,7 @@ def factory(applet, iid):
 
     image = Gtk.Image()
     pixbuf = GdkPixbuf.Pixbuf.new_from_file(
-	"/usr/share/pixmaps/gnome-manual-duplex.png")
+        "/usr/share/pixmaps/gnome-manual-duplex.png")
     #w,h = Gtk.icon_size_lookup(Gtk.IconSize.BUTTON)
     w = 28; h = 28
     scaled = pixbuf.scale_simple(w, h, GdkPixbuf.InterpType.BILINEAR)
@@ -239,8 +241,8 @@ def create_menu (applet):
     actiongroup = Gtk.ActionGroup.new("GMDAppletActions")
     actiongroup.add_actions(actions, None)
     xml = """
-	    <menuitem name="About" action="About" />
-	    """
+            <menuitem name="About" action="About" />
+            """
     applet.setup_menu(xml, actiongroup)
 
 def showAboutDialog(self, *arguments, **keywords):
@@ -249,7 +251,7 @@ def showAboutDialog(self, *arguments, **keywords):
     about.set_program_name("gmd-applet.py")
     about.set_version("v${VERSION}")
     about.set_copyright(
-	"Copyright 2009-2014 Rick Richardson. All Rights Reserved.")
+        "Copyright 2009-2014 Rick Richardson. All Rights Reserved.")
     about.set_license("GPL v2")
     about.set_website("http://sourceforge.net/projects/g-manual-duplex")
     about.set_authors( ["Rick Richardson", "Sergio Costas"] )
@@ -260,36 +262,36 @@ def showAboutDialog(self, *arguments, **keywords):
 
 def show_menu(widget, event, applet):
     if event.type == Gdk.EventType.BUTTON_PRESS and event.button == 3:
-	widget.emit_stop_by_name("button_press_event")
-	create_menu(applet)
+        widget.emit_stop_by_name("button_press_event")
+        create_menu(applet)
     if event.type == Gdk.EventType.BUTTON_PRESS and event.button == 1:
-	os.system("gnome-manual-duplex")
+        os.system("gnome-manual-duplex")
 
 def check_needed():
     global needed
 
     os.system(
-	'lpadmin -p GnomeManualDuplex -m gnome-manual-duplex.ppd -E -v gmd:/ -L "Virtual Printer"')
+        'lpadmin -p GnomeManualDuplex -m gnome-manual-duplex.ppd -E -v gmd:/ -L "Virtual Printer"')
 
     if needed == "":
-	init_scan()
+        init_scan()
     else:
-	window = Gtk.Window(type=Gtk.WindowType.TOPLEVEL)
-	window.set_title("Error, module not found")
-	window.connect("delete_event", wdelete_event)
-	window.connect("destroy", wdestroy)
-	window.set_border_width(10)
-	button = Gtk.Button("Ok")
-	button.connect("clicked", wdestroy, None)
-	label = Gtk.Label(label="You need to install the following python modules in order to use GMD:\n\n" + needed)
-	box = Gtk.VBox()
-	window.add(box)
-	box.add(label)
-	box.add(button)
-	button.show()
-	label.show()
-	box.show()
-	window.show()
+        window = Gtk.Window(type=Gtk.WindowType.TOPLEVEL)
+        window.set_title("Error, module not found")
+        window.connect("delete_event", wdelete_event)
+        window.connect("destroy", wdestroy)
+        window.set_border_width(10)
+        button = Gtk.Button("Ok")
+        button.connect("clicked", wdestroy, None)
+        label = Gtk.Label(label="You need to install the following python modules in order to use GMD:\n\n" + needed)
+        box = Gtk.VBox()
+        window.add(box)
+        box.add(label)
+        box.add(button)
+        button.show()
+        label.show()
+        box.show()
+        window.show()
     
     return True
 
@@ -332,4 +334,4 @@ elif True:
                 None)                           # factory data pointer
 else:
     gnomeapplet.bonobo_factory("OAFIID:GNOME_GMD_applet_Factory",
-	gnomeapplet.Applet.__gtype__, "GMD", "3", factory)
+        gnomeapplet.Applet.__gtype__, "GMD", "3", factory)
