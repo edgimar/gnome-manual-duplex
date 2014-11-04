@@ -1,11 +1,23 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python
+# vim: expandtab
+
+import sys
+import getopt
+import os
+
+if sys.version > '3':
+    python2 = os.popen('which python2 2> /dev/null').read().rstrip()
+    if python2:
+        args = sys.argv[:]
+        args.insert(0,python2)
+        os.execv(python2,args)
+    else:
+        sys.exit("%s requires Python Version 2 (python2 not in PATH)" \
+            % os.path.basename(__file__))
 
 global Debug
 Debug = 0
  
-import sys
-import getopt
-import os
 import tempfile
 
 import pygtk
@@ -29,11 +41,11 @@ SHORTEDGE = 2
 BROCHURE = 3
 
 #
-#	i18n
+#       i18n
 #
 #locale.setlocale(locale.LC_ALL, '')
 #locale.bindtextdomain(PROGNAME, DIR)
-locale_dir = gettext.bindtextdomain(PROGNAME)	# /usr/share/locale/...
+locale_dir = gettext.bindtextdomain(PROGNAME)   # /usr/share/locale/...
 gettext.bindtextdomain(PROGNAME, locale_dir)
 gettext.textdomain(PROGNAME)
 lang = gettext.translation(PROGNAME, locale_dir, fallback=True)
@@ -42,15 +54,15 @@ gettext.install(PROGNAME, locale_dir)
 
 def usage():
     global Debug
-    print "Usage:"
-    print "    %s [options] [ps/pdf-file]" % sys.argv[0]
-    print
-    print "gnome-manual-duplex is a utility that adds manual duplex to the"
-    print "'Print' menu.  It is a CUPS Virtual Printer as well as  a"
-    print " standalone  utility.  It works with *.ps and *.pdf files."
-    print
-    print "Options:"
-    print "    -D lvl	Set Debug level [%s]" % Debug
+    print("Usage:")
+    print("    %s [options] [ps/pdf-file]" % sys.argv[0])
+    print("")
+    print("gnome-manual-duplex is a utility that adds manual duplex to the")
+    print("'Print' menu.  It is a CUPS Virtual Printer as well as  a")
+    print(" standalone  utility.  It works with *.ps and *.pdf files.")
+    print("")
+    print("Options:")
+    print("    -D lvl   Set Debug level [%s]" % Debug)
     sys.exit(1)
 
 def load_config(self):
@@ -59,85 +71,85 @@ def load_config(self):
     Config = ConfigParser.ConfigParser()
     self.config_path = os.path.expanduser('~/.config/gnome-manual-duplex.cfg')
     try:
-	Config.read([self.config_path])
-	#print Config.get('hp1020', 'long_edge_config', 0)
+        Config.read([self.config_path])
+        #print(Config.get('hp1020', 'long_edge_config', 0))
     except:
-	return
+        return
  
 class App(object):       
     def __init__(self):
-	global Debug
+        global Debug
 
-	try:                                
-	    opts, args = getopt.getopt(sys.argv[1:], "D:", ["debug="])
-	except getopt.GetoptError:
-	    usage()
-	for opt, arg in opts:
-	    if opt == '-D':
-		Debug = int(arg)
+        try:                                
+            opts, args = getopt.getopt(sys.argv[1:], "D:", ["debug="])
+        except getopt.GetoptError:
+            usage()
+        for opt, arg in opts:
+            if opt == '-D':
+                Debug = int(arg)
 
-	builder = gtk.Builder()
-	builder.set_translation_domain(PROGNAME)
-	ui_file = "gnome-manual-duplex.xml"
-	ui_folders = [ '.', '/usr/share/gnome-manual-duplex']
-	for ui_folder in ui_folders:
+        builder = gtk.Builder()
+        builder.set_translation_domain(PROGNAME)
+        ui_file = "gnome-manual-duplex.xml"
+        ui_folders = [ '.', '/usr/share/gnome-manual-duplex']
+        for ui_folder in ui_folders:
             filename = os.path.join(ui_folder, ui_file)
             if os.path.exists(filename):
                 builder.add_from_file(filename)
                 break
 
-	#builder.add_from_file("manfeed.xml")
-	self.window = builder.get_object("window1")
-	self.about = builder.get_object("aboutdialog1")
-	self.JobName = builder.get_object("filechooserbutton1")
+        #builder.add_from_file("manfeed.xml")
+        self.window = builder.get_object("window1")
+        self.about = builder.get_object("aboutdialog1")
+        self.JobName = builder.get_object("filechooserbutton1")
 
-	if len(args) >= 2:
-	    usage()
-	elif len(args) == 1:
-	    self.filename = args[0]
-	    self.JobName.set_filename(args[0])
-	else:
-	    self.filename = ''
+        if len(args) >= 2:
+            usage()
+        elif len(args) == 1:
+            self.filename = args[0]
+            self.JobName.set_filename(args[0])
+        else:
+            self.filename = ''
 
-	filter = gtk.FileFilter()
-	filter.set_name('PS/PDF files')
-	filter.add_pattern('*.ps')
-	filter.add_pattern('*.pdf')
-	filter.add_pattern('application/postscript')
-	filter.add_pattern('application/pdf')
-	self.JobName.add_filter(filter)
-	self.JobName.set_filter(filter)
+        filter = gtk.FileFilter()
+        filter.set_name('PS/PDF files')
+        filter.add_pattern('*.ps')
+        filter.add_pattern('*.pdf')
+        filter.add_pattern('application/postscript')
+        filter.add_pattern('application/pdf')
+        self.JobName.add_filter(filter)
+        self.JobName.set_filter(filter)
 
-	filter = gtk.FileFilter()
-	filter.set_name('All files')
-	filter.add_pattern('*')
-	self.JobName.add_filter(filter)
+        filter = gtk.FileFilter()
+        filter.set_name('All files')
+        filter.add_pattern('*')
+        self.JobName.add_filter(filter)
 
-	self.pref = builder.get_object("pref")
+        self.pref = builder.get_object("pref")
 
-	# populate combo_printers
+        # populate combo_printers
         self.combo_printers = builder.get_object("combo_printers")
-	connection = cups.Connection()
-	dests = connection.getDests()
-	default_printer = connection.getDefault()
+        connection = cups.Connection()
+        dests = connection.getDests()
+        default_printer = connection.getDefault()
 
         liststore = gtk.ListStore(gobject.TYPE_STRING)
-	self.default_index = i = 0
-	for (printer, instance) in sorted( dests.keys () ):
-	    if default_printer == printer:
-		self.default_index = i
-		extra = " " + _("(default)")
-		self.real_default_printer = printer
-	    else:
-		extra = ""
-	    if printer == "GnomeManualDuplex":
-		continue
-	    if printer == None:
-		continue
-	    if instance != None:
-		continue
-	    liststore.append([printer + extra])
-	    i = i + 1
+        self.default_index = i = 0
+        for (printer, instance) in sorted( dests.keys () ):
+            if default_printer == printer:
+                self.default_index = i
+                extra = " " + _("(default)")
+                self.real_default_printer = printer
+            else:
+                extra = ""
+            if printer == "GnomeManualDuplex":
+                continue
+            if printer == None:
+                continue
+            if instance != None:
+                continue
+            liststore.append([printer + extra])
+            i = i + 1
         self.combo_printers.set_model(liststore)
         cell = gtk.CellRendererText()
         self.combo_printers.pack_start(cell, True)
@@ -148,215 +160,215 @@ class App(object):
         self.short_edge_reverse = builder.get_object("short_edge_reverse")
         self.short_edge_invert = builder.get_object("short_edge_invert")
 
-	self.printdialog = builder.get_object("printdialog1")
-	self.evenok = builder.get_object("even-pages-ok")
-	self.printMode = LONGEDGE;
-	self.SkipOddPages = 0;
-	builder.connect_signals(self)
-	self.window.show()
+        self.printdialog = builder.get_object("printdialog1")
+        self.evenok = builder.get_object("even-pages-ok")
+        self.printMode = LONGEDGE;
+        self.SkipOddPages = 0;
+        builder.connect_signals(self)
+        self.window.show()
 
-	load_config(self)
-	self.long_edge_config = REVERSE | INVERT
-	self.short_edge_config = REVERSE
+        load_config(self)
+        self.long_edge_config = REVERSE | INVERT
+        self.short_edge_config = REVERSE
 
     def about_button_clicked_cb(self, widget, data=None):
-	response = self.about.run()
-	self.about.hide()
+        response = self.about.run()
+        self.about.hide()
 
     def filechooserbutton1_file_set_cb(self, widget, data=None):
-	self.filename = widget.get_filename()
+        self.filename = widget.get_filename()
 
     def gtk_main_quit(self, widget, data=None):
-	gtk.main_quit()
+        gtk.main_quit()
 
     def delete_event(self, widget, data=None):
-	gtk.main_quit()
-	return False
+        gtk.main_quit()
+        return False
 
     def destroy_event(self, widget, data=None):
         gtk.main_quit()
 
     def pref_cancel_clicked_cb(self, widget, data=None):
-	self.pref.hide()
+        self.pref.hide()
 
     def pref_cb(self, widget, data=None):
         self.pref.show()
-	if self.default_index == self.combo_printers.get_active():
-	    printer = self.real_default_printer
-	else:
-	    printer = self.combo_printers.get_active_text()	#hp1020
-	#print printer, self.default_index
-	try:
-	    #print Config.get(printer, 'long_edge_config')
-	    long_edge_config = Config.get(printer, 'long_edge_config')
-	    short_edge_config = Config.get(printer, 'short_edge_config')
-	except:
-	    long_edge_config = self.long_edge_config
-	    short_edge_config = self.short_edge_config
-	    #print 'asd'
-	self.long_edge_reverse.set_active( (int(long_edge_config) >> 1) & 1)
-	self.long_edge_invert.set_active( (int(long_edge_config) >> 0) & 1)
-	self.short_edge_reverse.set_active( (int(short_edge_config) >> 1) & 1)
-	self.short_edge_invert.set_active( (int(short_edge_config) >> 0) & 1)
+        if self.default_index == self.combo_printers.get_active():
+            printer = self.real_default_printer
+        else:
+            printer = self.combo_printers.get_active_text()     #hp1020
+        #print(printer, self.default_index)
+        try:
+            #print(Config.get(printer, 'long_edge_config'))
+            long_edge_config = Config.get(printer, 'long_edge_config')
+            short_edge_config = Config.get(printer, 'short_edge_config')
+        except:
+            long_edge_config = self.long_edge_config
+            short_edge_config = self.short_edge_config
+            #print('asd')
+        self.long_edge_reverse.set_active( (int(long_edge_config) >> 1) & 1)
+        self.long_edge_invert.set_active( (int(long_edge_config) >> 0) & 1)
+        self.short_edge_reverse.set_active( (int(short_edge_config) >> 1) & 1)
+        self.short_edge_invert.set_active( (int(short_edge_config) >> 0) & 1)
 
     def combo_printers_changed_cb(self, widget, data=None):
-	#print 'changed'
-	self.pref_cb(self, widget)
+        #print('changed')
+        self.pref_cb(self, widget)
 
     def pref_save_clicked_cb(self, widget, data=None):
-	#print self.combo_printers.get_active()		#18
-	if self.default_index == self.combo_printers.get_active():
-	    printer = self.real_default_printer
-	else:
-	    printer = self.combo_printers.get_active_text()	#hp1020
-	#print printer
-	Config.remove_section(printer)
-	Config.add_section(printer)
-	long_edge_config = (int(self.long_edge_reverse.get_active() ) << 1) \
-			    + int(self.long_edge_invert.get_active() )
-	short_edge_config = (int(self.short_edge_reverse.get_active() ) << 1) \
-			    + int(self.short_edge_invert.get_active() )
-	Config.set(printer, 'long_edge_config', str(long_edge_config))
-	Config.set(printer, 'short_edge_config', str(short_edge_config))
-	configfp = open(self.config_path, 'w')
-	Config.write(configfp)
-	#print self.config_path, self.long_edge_reverse.get_active()
-	self.pref.hide()
+        #print(self.combo_printers.get_active())        #18
+        if self.default_index == self.combo_printers.get_active():
+            printer = self.real_default_printer
+        else:
+            printer = self.combo_printers.get_active_text()     #hp1020
+        #print(printer)
+        Config.remove_section(printer)
+        Config.add_section(printer)
+        long_edge_config = (int(self.long_edge_reverse.get_active() ) << 1) \
+                            + int(self.long_edge_invert.get_active() )
+        short_edge_config = (int(self.short_edge_reverse.get_active() ) << 1) \
+                            + int(self.short_edge_invert.get_active() )
+        Config.set(printer, 'long_edge_config', str(long_edge_config))
+        Config.set(printer, 'short_edge_config', str(short_edge_config))
+        configfp = open(self.config_path, 'w')
+        Config.write(configfp)
+        #print(self.config_path, self.long_edge_reverse.get_active())
+        self.pref.hide()
 
     def button1_clicked_cb(self, widget, data=None):
-	print "clicked"
+        print("clicked")
 
     def radiobutton1_toggled_cb(self, widget, data=None):
-	if widget.get_active():
-	    self.printMode = LONGEDGE
+        if widget.get_active():
+            self.printMode = LONGEDGE
 
     def radiobutton2_toggled_cb(self, widget, data=None):
-	if widget.get_active():
-	    self.printMode = SHORTEDGE
+        if widget.get_active():
+            self.printMode = SHORTEDGE
 
     def radiobutton3_toggled_cb(self, widget, data=None):
-	if widget.get_active():
-	    self.printMode = BROCHURE
+        if widget.get_active():
+            self.printMode = BROCHURE
 
     def checkbutton1_toggled_cb(self, widget, data=None):
-	self.SkipOddPages = not self.SkipOddPages
+        self.SkipOddPages = not self.SkipOddPages
 
     def print_cb(self, widget, data=None):
-	self.window.hide()
+        self.window.hide()
         self.printdialog.show()
 
     def odd_pages_send_cb(self, widget, data, errormsg):
-	return
+        return
 
     def printdialog1_response_cb(self, widget, data=None):
-	# print "pclicked" , data
-	if data == gtk.RESPONSE_DELETE_EVENT:
-	    gtk.main_quit()
-	if data == gtk.RESPONSE_CANCEL:
-	    gtk.main_quit()
-	if data == gtk.RESPONSE_OK:
-	    self.tempfile = tempfile.NamedTemporaryFile()
-	    if self.printMode == BROCHURE:
-		rc = os.system("file " + self.filename + " | grep -q PDF")
-		if rc == 256:
-		    self.is_pdf = 0
-		else:
-		    self.is_pdf = 1
-		self.tempfileBrochure = tempfile.NamedTemporaryFile()
-		# Convert into brochure
-		if self.is_pdf == 1:
-		    os.system("pdftops '" + self.filename
-			+ "' - | psbook "
-			+ " | psnup -2 > "
-			+ self.tempfileBrochure.name)
-		else:
-		    os.system("psbook '" + self.filename
-			+ "' | psnup -2 > "
-			+ self.tempfileBrochure.name)
-		self.filename = self.tempfileBrochure.name
-		self.is_pdf = 0 #now converted to ps (if it was not ps already)
-	    if not self.SkipOddPages:
-		# Print out odd pages
-		# print self.filename
-		rc = os.system("file \"" + self.filename + "\" | grep -q PDF")
-		print "{ps,pdf}tops '2:0' '" + self.filename + \
-		    "' " + self.tempfile.name
-		if rc == 256:
-		    self.is_pdf = 0
-		    os.system("pstops 2:0 \""
-			+ self.filename + "\" " + self.tempfile.name)
-		else:
-		    self.is_pdf = 1
-		    os.system("pdftops \"" + self.filename
-			+ "\" - | pstops 2:0 > "
-			+ self.tempfile.name)
-		# print "is_pdf ", self.is_pdf
-		
-		self.printdialog.PrintJob = gtkunixprint.PrintJob(
-		    "title",
-		    self.printdialog.get_selected_printer(),
-		    self.printdialog.get_settings(),
-		    self.printdialog.get_page_setup())
-		self.printdialog.PrintJob.set_source_file(self.tempfile.name)
-		# self.printdialog.set_manual_capabilities(
-		#     gtkunixprint.PRINT_CAPABILITY_GENERATE_PS)
-		if Debug == 0:
-		    self.printdialog.PrintJob.send(self.odd_pages_send_cb)
-		# print "print"
+        # print("pclicked" , data)
+        if data == gtk.RESPONSE_DELETE_EVENT:
+            gtk.main_quit()
+        if data == gtk.RESPONSE_CANCEL:
+            gtk.main_quit()
+        if data == gtk.RESPONSE_OK:
+            self.tempfile = tempfile.NamedTemporaryFile()
+            if self.printMode == BROCHURE:
+                rc = os.system("file " + self.filename + " | grep -q PDF")
+                if rc == 256:
+                    self.is_pdf = 0
+                else:
+                    self.is_pdf = 1
+                self.tempfileBrochure = tempfile.NamedTemporaryFile()
+                # Convert into brochure
+                if self.is_pdf == 1:
+                    os.system("pdftops '" + self.filename
+                        + "' - | psbook "
+                        + " | psnup -2 > "
+                        + self.tempfileBrochure.name)
+                else:
+                    os.system("psbook '" + self.filename
+                        + "' | psnup -2 > "
+                        + self.tempfileBrochure.name)
+                self.filename = self.tempfileBrochure.name
+                self.is_pdf = 0 #now converted to ps (if it was not ps already)
+            if not self.SkipOddPages:
+                # Print out odd pages
+                # print(self.filename)
+                rc = os.system("file \"" + self.filename + "\" | grep -q PDF")
+                print("{ps,pdf}tops '2:0' '" + self.filename + \
+                    "' " + self.tempfile.name)
+                if rc == 256:
+                    self.is_pdf = 0
+                    os.system("pstops 2:0 \""
+                        + self.filename + "\" " + self.tempfile.name)
+                else:
+                    self.is_pdf = 1
+                    os.system("pdftops \"" + self.filename
+                        + "\" - | pstops 2:0 > "
+                        + self.tempfile.name)
+                # print("is_pdf ", self.is_pdf)
+                
+                self.printdialog.PrintJob = gtkunixprint.PrintJob(
+                    "title",
+                    self.printdialog.get_selected_printer(),
+                    self.printdialog.get_settings(),
+                    self.printdialog.get_page_setup())
+                self.printdialog.PrintJob.set_source_file(self.tempfile.name)
+                # self.printdialog.set_manual_capabilities(
+                #     gtkunixprint.PRINT_CAPABILITY_GENERATE_PS)
+                if Debug == 0:
+                    self.printdialog.PrintJob.send(self.odd_pages_send_cb)
+                # print("print")
         self.evenok.show()
-	self.printdialog.hide()
-	self.evenok_clicked = -1;
+        self.printdialog.hide()
+        self.evenok_clicked = -1;
 
     def even_cancel_clicked_cb(self, widget, data=None):
-	gtk.main_quit()
+        gtk.main_quit()
 
     def even_ok_clicked_cb(self, widget, data=None):
-	printer = self.printdialog.get_selected_printer()
-	if self.printMode == LONGEDGE:
-	    try:
-		config = int( Config.get(printer.get_name(),
-					    'long_edge_config', 0) )
-		#print printer.get_name(), config
-	    except:
-		config = self.long_edge_config
-	else:
-	    try:
-		config = int( Config.get(printer.get_name(),
-					    'short_edge_config', 0) )
-	    except:
-		config = self.short_edge_config
-	reverse = [ '1', '-1' ]
-	invert = [ '', 'U(1w,1h)' ]
-	print "{ps,pdf}tops '2:" + \
-	    reverse[(config>>1) & 1] + invert[config&1] + "' '" + \
-	    self.filename + "' " + self.tempfile.name
-	if self.is_pdf == 0:
-	    os.system("pstops '2:" 
-		+ reverse[(config>>1) & 1] + invert[config&1] + "' '"
-		+ self.filename + "' " + self.tempfile.name)
-	else:
-	    os.system("pdftops '" + self.filename + "' - | pstops '2:" 
-		+ reverse[(config>>1) & 1] + invert[config&1] + "' "
-		+ " > " + self.tempfile.name)
-	# os.system("cp " + self.tempfile.name + " /tmp/2")
-	self.printdialog.PrintJob = gtkunixprint.PrintJob(
-	    "title",
-	    self.printdialog.get_selected_printer(),
-	    self.printdialog.get_settings(),
-	    self.printdialog.get_page_setup())
-	self.printdialog.PrintJob.set_source_file(self.tempfile.name)
-	# self.printdialog.set_manual_capabilities(
-	# 	    gtkunixprint.PRINT_CAPABILITY_GENERATE_PS)
-	if Debug == 0:
-	    self.printdialog.PrintJob.send(self.even_pages_send_cb)
-	self.evenok.hide()
-	self.tempfile.close()
+        printer = self.printdialog.get_selected_printer()
+        if self.printMode == LONGEDGE:
+            try:
+                config = int( Config.get(printer.get_name(),
+                                            'long_edge_config', 0) )
+                #print(printer.get_name(), config)
+            except:
+                config = self.long_edge_config
+        else:
+            try:
+                config = int( Config.get(printer.get_name(),
+                                            'short_edge_config', 0) )
+            except:
+                config = self.short_edge_config
+        reverse = [ '1', '-1' ]
+        invert = [ '', 'U(1w,1h)' ]
+        print("{ps,pdf}tops '2:" + \
+            reverse[(config>>1) & 1] + invert[config&1] + "' '" + \
+            self.filename + "' " + self.tempfile.name)
+        if self.is_pdf == 0:
+            os.system("pstops '2:" 
+                + reverse[(config>>1) & 1] + invert[config&1] + "' '"
+                + self.filename + "' " + self.tempfile.name)
+        else:
+            os.system("pdftops '" + self.filename + "' - | pstops '2:" 
+                + reverse[(config>>1) & 1] + invert[config&1] + "' "
+                + " > " + self.tempfile.name)
+        # os.system("cp " + self.tempfile.name + " /tmp/2")
+        self.printdialog.PrintJob = gtkunixprint.PrintJob(
+            "title",
+            self.printdialog.get_selected_printer(),
+            self.printdialog.get_settings(),
+            self.printdialog.get_page_setup())
+        self.printdialog.PrintJob.set_source_file(self.tempfile.name)
+        # self.printdialog.set_manual_capabilities(
+        #           gtkunixprint.PRINT_CAPABILITY_GENERATE_PS)
+        if Debug == 0:
+            self.printdialog.PrintJob.send(self.even_pages_send_cb)
+        self.evenok.hide()
+        self.tempfile.close()
 
     def even_pages_send_cb(self, widget, data, errormsg):
-	gtk.main_quit()
-	return
+        gtk.main_quit()
+        return
 
 if __name__ == "__main__":
-    # print _('i18n test')
+    # print(_('i18n test'))
     app = App()
     gtk.main()

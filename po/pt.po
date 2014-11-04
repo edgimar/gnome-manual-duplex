@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-manual-duplex 0.26\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-11 17:34-0500\n"
+"POT-Creation-Date: 2014-11-04 16:06-0600\n"
 "PO-Revision-Date: 2010-08-15 02:33-0300\n"
 "Last-Translator: Fabrício Godoy <skarllot@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <ldp-br@bazar.conectiva.com.br>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: gnome-manual-duplex.py:129
+#: gnome-manual-duplex.py:141
 msgid "(default)"
 msgstr "(predefinido)"
 

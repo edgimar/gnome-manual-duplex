@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-manual-duplex\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-11 17:34-0500\n"
+"POT-Creation-Date: 2014-11-04 16:06-0600\n"
 "PO-Revision-Date: 2014-05-11 17:54-0400\n"
 "Last-Translator: rickrich <rickrich@gmail.com>\n"
 "Language-Team: Norwegian\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: crowdin.net\n"
 
-#: gnome-manual-duplex.py:129
+#: gnome-manual-duplex.py:141
 msgid "(default)"
 msgstr "(standard)"
 
