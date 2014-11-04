@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-manual-duplex 0.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-11 17:34-0500\n"
+"POT-Creation-Date: 2014-11-04 16:06-0600\n"
 "PO-Revision-Date: 2012-04-10 10:14+0100\n"
 "Last-Translator: Michał Trzebiatowski <hippie_1968@hotmail.com>\n"
 "Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "X-Poedit-Language: Polish\n"
 "X-Poedit-Country: POLAND\n"
 
-#: gnome-manual-duplex.py:129
+#: gnome-manual-duplex.py:141
 msgid "(default)"
 msgstr "(domyślnie)"
 
