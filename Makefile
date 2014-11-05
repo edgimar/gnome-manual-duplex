@@ -1,6 +1,6 @@
 
 PROG=gnome-manual-duplex
-VERSION=0.53
+VERSION=0.54
 
 INSTALL=install
 LPADMIN=/usr/sbin/lpadmin
@@ -302,6 +302,7 @@ clean:
 	rm -f gmd-applet.py gmd-applet-3.py
 	rm -f messages.pot*
 	rm -rf locale
+	rm -rf PKGBUILD
 
 tar:	tarver PKGBUILD
 	HERE=`basename $$PWD`; \
