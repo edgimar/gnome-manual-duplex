@@ -1,3 +1,9 @@
+gnome-manual-duplex (0.54) stable; urgency=low
+
+  *  Add pygtk to PKGBUILD for Arch Linux.
+
+ -- Rick Richardson <rickrich@gmail.com>  Fri, 07 November 2014 08:21:03 -0500
+
 gnome-manual-duplex (0.53) stable; urgency=low
 
   *  Make gmd work with python 2 or 3
@@ -12,7 +18,7 @@ gnome-manual-duplex (0.52) stable; urgency=low
 
 gnome-manual-duplex (0.51) stable; urgency=low
 
-  *  Fix spaces in filename. Add PKGBUILD for arch.
+  *  Fix spaces in filename. Add PKGBUILD for Arch Linux.
 
  -- Rick Richardson <rickrich@gmail.com>  Fri, 31 October 2014 08:21:03 -0500
 

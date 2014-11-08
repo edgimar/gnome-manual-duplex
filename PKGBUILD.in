@@ -5,7 +5,8 @@ pkgdesc="Utility allowing manual duplex printing"
 arch=('any')
 url="http://sourceforge.net/projects/g-manual-duplex/"
 license=('GPL')
-depends=('python2' 'python2-pycups' 'file' 'transfig' 'netpbm' 'psutils' 'gamin')
+depends=('python2' 'python2-pycups' 'file' 'transfig' 'netpbm'
+	'psutils' 'gamin' 'pygtk')
 makedepends=('gtk2' 'gettext')
 source=("${pkgname}-${pkgver}.tar.gz")
 md5sums=('${MD5SUM}')
