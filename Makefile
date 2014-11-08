@@ -277,6 +277,7 @@ install: all
 	    $(INSTALL) -d $(AUTOSTART); \
 	    $(INSTALL) -m644 gmd-applet-3.py.desktop $(AUTOSTART); \
 	fi
+	$(INSTALL) gmd-autostart-3 $(BIN)
 	#
 	# Doc...
 	#
