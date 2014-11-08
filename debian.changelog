@@ -1,3 +1,9 @@
+gnome-manual-duplex (0.55) stable; urgency=low
+
+  *  Add gmd-autostart-3 for Gnome Shell 3.12 and greater
+
+ -- Rick Richardson <rickrich@gmail.com>  Sat, 08 November 2014 08:21:03 -0500
+
 gnome-manual-duplex (0.54) stable; urgency=low
 
   *  Add pygtk to PKGBUILD for Arch Linux.
