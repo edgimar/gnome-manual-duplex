@@ -1,0 +1,65 @@
+#!/bin/sh
+
+PROGNAME="$0"
+
+usage() {
+	cat <<EOF
+NAME
+    `basename $PROGNAME` - Autostart the Gnome Manual Duplex daemon for Gnome 3
+
+SYNOPSIS
+    `basename $PROGNAME` [options]
+
+DESCRIPTION
+    Autostart the Gnome Manual Duplex daemon for Gnome 3.
+
+OPTIONS
+    -D lvl	Debug level
+EOF
+
+	exit 1
+}
+
+#
+#       Report an error and exit
+#
+error() {
+	echo "`basename $PROGNAME`: $1" >&2
+	exit 1
+}
+
+debug() {
+	if [ $DEBUG -ge $1 ]; then
+	    echo "`basename $PROGNAME`: $2" >&2
+	fi
+}
+
+#
+#       Process the options
+#
+DEBUG=0
+#unset OPTIND
+while getopts "D:h?" opt
+do
+	case $opt in
+	D)	DEBUG="$OPTARG";;
+	h|\?)	usage;;
+	esac
+done
+shift `expr $OPTIND - 1`
+
+#
+#	Main Program
+#
+ver=`gnome-shell --version 2>/dev/null | sed "s/.* //" `
+case "$ver" in
+3.*)	;;
+*)	error "Gnome shell doesn't exist; use Gnome 2 instructions!";;
+esac
+# echo $ver
+[ -d $HOME/.config ] || mkdir $HOME/.config
+[ -d $HOME/.config/autostart ] || mkdir $HOME/.config/autostart
+
+sed -e "s/\(.*Autostart.*\)=.*/\1=true/" \
+    < /etc/xdg/autostart/gmd-applet-3.py.desktop \
+    > ~/.config/autostart/gmd-applet-3.py.desktop

@@ -1,6 +1,6 @@
 
 PROG=gnome-manual-duplex
-VERSION=0.54
+VERSION=0.55
 
 INSTALL=install
 LPADMIN=/usr/sbin/lpadmin
@@ -34,6 +34,7 @@ FILES=\
 	debian.rules \
 	gmd-applet.py.in \
 	gmd-applet-3.py.in \
+	gmd-autostart-3 \
 	gmd-backend.sh \
 	gmd.server \
 	gmd.fig \
