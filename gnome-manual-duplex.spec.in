@@ -36,6 +36,7 @@ make
 make DESTDIR=$RPM_BUILD_ROOT install
 
 %files
+/usr/bin/gmd-autostart-3
 /usr/bin/gnome-manual-duplex
 /usr/lib/bonobo/servers/gmd.server
 /usr/lib/cups/backend/gmd
