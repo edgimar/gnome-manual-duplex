@@ -35,6 +35,7 @@ Then:
 	If gnome-session-properties does not exist (Gnome 3.12+), you can
 	install it with:
 		$ gmd-autostart-3
+		[logout][login]
 
     Works with *.ps and *.pdf files.
     Works with Gnome-2 or Gnome-3.
