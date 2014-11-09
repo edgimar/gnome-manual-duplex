@@ -1,6 +1,6 @@
 
 PROG=gnome-manual-duplex
-VERSION=0.55
+VERSION=0.56
 
 INSTALL=install
 LPADMIN=/usr/sbin/lpadmin
