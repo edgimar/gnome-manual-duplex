@@ -45,16 +45,22 @@ DEBUG=0
 infile=
 while getopts "D:h?" opt
 do
-	case $opt in
-	D)	DEBUG="$OPTARG";;
-	h|\?)	usage;;
-	esac
+    case $opt in
+    D)		DEBUG="$OPTARG";;
+    h|\?)	usage;;
+    esac
 done
 shift `expr $OPTIND - 1`
 
 #
 #	Main Program
 #
+if [ $# = 0 ]; then
+    # CUPS stuff ...
+    echo 'direct gmd "Unknown" "Gnome Manual Duplex"'
+    exit
+fi
+
 if [ $# -lt 5 -o $# -gt 6 ]; then
     usage
 fi
