@@ -7,7 +7,7 @@ Release:        1
 License:        GPL v2 or later
 Source:         gnome-manual-duplex-%{version}.tar.gz
 Group:          Productivity/Other
-Summary:        test
+Summary:        Utility allowing manual duplex printing
 
 BuildArch:	noarch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
