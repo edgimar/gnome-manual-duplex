@@ -13,7 +13,9 @@ BuildArch:	noarch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
 %description
-test
+gnome-manual-duplex is a utility that adds manual duplex to the "Print"
+menu.  It is a CUPS Virtual Printer as well as  a  standalone  utility.
+It works with *.ps and *.pdf files.
 
 
 %prep
