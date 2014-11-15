@@ -1,4 +1,4 @@
-#!/usr/bin/python2
+#!/usr/bin/python
 # vim: expandtab
 
 # -*- coding: UTF-8 -*-
@@ -25,6 +25,17 @@
 import os
 import time
 import sys
+
+if sys.version > '3':
+    python2 = os.popen('which python2 2> /dev/null').read().rstrip()
+    if python2:
+        args = sys.argv[:]
+        args.insert(0,python2)
+        os.execv(python2,args)
+    else:
+        sys.exit("%s requires Python Version 2 (python2 not in PATH)" \
+            % os.path.basename(__file__))
+
 import select
 import subprocess
 import pwd
