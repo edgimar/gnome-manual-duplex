@@ -1,3 +1,10 @@
+gnome-manual-duplex (0.57) stable; urgency=low
+
+  *  gmd-backend: If $#=0, print direct gmd "Unknown" "Gnome Manual Duplex"
+  *  Make gmd work with python 2 or 3
+
+ -- Rick Richardson <rickrich@gmail.com>  Sat, 15 November 2014 08:21:03 -0500
+
 gnome-manual-duplex (0.55) stable; urgency=low
 
   *  Add gmd-autostart-3 for Gnome Shell 3.12 and greater
