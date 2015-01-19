@@ -39,6 +39,7 @@ if sys.version > '3':
 import select
 import subprocess
 import pwd
+import shutil
 
 needed = ""
 
@@ -49,11 +50,26 @@ except :
 
 from gi.repository import GObject, Gtk, GdkPixbuf, Gdk
 
-def send_error(message):
+def create_dir(directory, mode):
+    orig_umask = os.umask(0)
     try:
-        fp = open("/var/tmp/gmd/error.log", "a")
+        os.mkdir(directory, mode)
+    except OSError:
+        return
+    finally:
+       os.umask(orig_umask)
+
+def send_error(message):
+    orig_umask = os.umask(0)
+    try:
+        if not os.path.exists("/var/tmp/gmd"):
+            os.mkdir("/var/tmp/gmd", 0o1777)
+        # try to create the file with write permissions for everyone
+        fp = os.fdopen(os.open("/var/tmp/gmd/error.log", os.O_WRONLY | os.O_APPEND | os.O_CREAT, 0o666), "w")
     except:
         return
+    finally:
+        os.umask(orig_umask)
     fp.write(str(pwd.getpwuid(os.getuid())[0]) + ": " + message + "\n")
     fp.close()
 
@@ -124,33 +140,28 @@ def read_event(path, event):
 
 def init_scan():
     global fc
+    global basedir
     global directory
     global event0
     global request
 
+    basedir = "/var/tmp/gmd"
     try:
-        directory = "/var/tmp/gmd/" + str(pwd.getpwuid(os.getuid())[0])
+        directory = basedir + "/" + str(pwd.getpwuid(os.getuid())[0])
     except :
         send_error("Failed to get the UID")
         return Gtk.FALSE
 
     # erase the directory to ensure that there are no spare works
-    p = subprocess.Popen("rm -rf " + directory, shell=True, bufsize=32768)
-    p.wait()
+    shutil.rmtree(directory, True)
 
-    try:
-        os.makedirs(directory + "/list")
-    except OSError:
-        pass
-            
+    # create base directory, if required, with write permissions for all and "sticky" bit like /tmp
+    create_dir(basedir, 0o1777)
     # set priviliges to RWX-WX-WX, to allow everybody to write into it, but
     # only the user to read, to preserve privacy
-    p = subprocess.Popen("chmod 733 " + directory, shell=True, bufsize=32768)
-    p.wait()
-    p = subprocess.Popen("chmod 733 " + directory + "/list",
-                            shell=True, bufsize=32768)
-    p.wait()
-    
+    create_dir(directory, 0o733)
+    create_dir(directory + "/list", 0o733)
+
     fc = gamin.WatchMonitor()
     
     if (fc == None):
