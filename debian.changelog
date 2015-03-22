@@ -1,3 +1,9 @@
+gnome-manual-duplex (0.59) stable; urgency=low
+
+  *  Translations: fr (France)
+
+ -- Rick Richardson <rickrich@gmail.com>  Sun, 22 Mar 2015 08:21:03 -0500
+
 gnome-manual-duplex (0.58) stable; urgency=low
 
   * gmd-applet-3.py.in: Now it will create /var/tmp/gmd in 1777 mode.
