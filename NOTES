@@ -35,6 +35,12 @@ LANG=nb_NO.utf-8 ./gnome-manual-duplex
 # or with Esperanto
 LANGUAGE=eo:fi:en LC_ALL=fi_FI.UTF-8 ./gnome-manual-duplex
 
+# Paper...
+$ LC_PAPER="en_UK.utf8" pstops -q '2:-1U(1w,1h)' ~/2-a4.ps | grep "00000 translate"
+595.000000 842.000000 translate
+$ LC_PAPER="en_US.utf8" pstops -q '2:-1U(1w,1h)' ~/2-a4.ps | grep "00000 translate"
+612.000000 792.000000 translate
+
 # Notify robot...
 put-rkkda  foo2zjs/tmp gnome-manual-duplex.tar.gz 
 mutt -s  "gnome-manual-duplex 0.59 pot file" coordinator@translationproject.org -a messages.pot </dev/null
