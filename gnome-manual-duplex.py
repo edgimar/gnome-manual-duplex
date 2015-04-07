@@ -286,7 +286,9 @@ class App(object):
         if data == gtk.RESPONSE_CANCEL:
             gtk.main_quit()
         if data == gtk.RESPONSE_OK:
+            global title
             self.tempfile = tempfile.NamedTemporaryFile()
+            title = os.path.basename(self.filename)
             if self.printMode == BROCHURE:
                 rc = os.system("file " + self.filename + " | grep -q PDF")
                 if rc == 256:
@@ -324,7 +326,7 @@ class App(object):
                 # print("is_pdf ", self.is_pdf)
                 
                 self.printdialog.PrintJob = gtkunixprint.PrintJob(
-                    "title",
+                    'gmd: odd: ' + title,
                     self.printdialog.get_selected_printer(),
                     self.printdialog.get_settings(),
                     self.printdialog.get_page_setup())
@@ -342,6 +344,7 @@ class App(object):
         gtk.main_quit()
 
     def even_ok_clicked_cb(self, widget, data=None):
+        global title
         printer = self.printdialog.get_selected_printer()
         if self.printMode == LONGEDGE:
             try:
@@ -381,7 +384,7 @@ class App(object):
                 + " > " + self.tempfile.name)
         # os.system("cp " + self.tempfile.name + " /tmp/2")
         self.printdialog.PrintJob = gtkunixprint.PrintJob(
-            "title",
+            'gmd: even: ' + title,
             self.printdialog.get_selected_printer(),
             self.printdialog.get_settings(),
             self.printdialog.get_page_setup())
