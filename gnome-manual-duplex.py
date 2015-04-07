@@ -347,7 +347,7 @@ class App(object):
             try:
                 config = int( Config.get(printer.get_name(),
                                             'long_edge_config', 0) )
-                print(printer.get_name(), config)
+                #print(printer.get_name(), config)
             except:
                 config = self.long_edge_config
         else:
