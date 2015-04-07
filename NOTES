@@ -43,4 +43,4 @@ $ LC_PAPER="en_US.utf8" pstops -q '2:-1U(1w,1h)' ~/2-a4.ps | grep "00000 transla
 
 # Notify robot...
 put-rkkda  foo2zjs/tmp gnome-manual-duplex.tar.gz 
-mutt -s  "gnome-manual-duplex 0.59 pot file" coordinator@translationproject.org -a messages.pot </dev/null
+mutt -s  "gnome-manual-duplex 0.60 pot file" coordinator@translationproject.org -a messages.pot </dev/null
