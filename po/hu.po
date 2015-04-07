@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-manual-duplex 0.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-04 16:06-0600\n"
+"POT-Creation-Date: 2015-04-07 07:15-0500\n"
 "PO-Revision-Date: 2014-05-11 18:22+0200\n"
 "Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
 "Language-Team: Hungarian <translation-team-hu@lists.sourceforge.net>\n"
@@ -19,56 +19,27 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: gnome-manual-duplex.py:141
+#: gnome-manual-duplex.py:145
 msgid "(default)"
 msgstr "(alapértelmezett)"
 
-#: gnome-manual-duplex.glade:32
-msgid "<b>Job Name</b>"
-msgstr "<b>Feladatnév</b>"
+#: gnome-manual-duplex.glade:10
+msgid "About Glade"
+msgstr "A Glade névjegye"
 
-#: gnome-manual-duplex.glade:59
-msgid "Manual Long Edge"
-msgstr "Kézi hosszabbik oldal"
+#: gnome-manual-duplex.glade:16
+msgid "Copyright 2009-2015 Rick Richardson.  All Rights Reserved."
+msgstr "Copyright Rick Richardson, 2009-2015. Minden jog fenntartva."
 
-#: gnome-manual-duplex.glade:70
-msgid "Manual Short Edge"
-msgstr "Kézi rövidebbik oldal"
+#: gnome-manual-duplex.glade:18
+msgid "Home Page"
+msgstr "Honlap"
 
-#: gnome-manual-duplex.glade:86
-msgid "Manual Brochure"
-msgstr "Kézi prospektus"
+#: gnome-manual-duplex.glade:19
+msgid "GPL"
+msgstr "GPL"
 
-#: gnome-manual-duplex.glade:139
-msgid "<b>Output Format</b>"
-msgstr "<b>Kimeneti formátum</b>"
-
-#: gnome-manual-duplex.glade:164
-msgid "Skip Odd Pages"
-msgstr "Páratlan oldalak kihagyása"
-
-#: gnome-manual-duplex.glade:175
-msgid "<b>Print</b>"
-msgstr "<b>Nyomtatás</b>"
-
-#: gnome-manual-duplex.glade:195
-msgid "gtk-about"
-msgstr "gtk-about"
-
-#: gnome-manual-duplex.glade:206
-msgid "gtk-preferences"
-msgstr "gtk-preferences"
-
-#: gnome-manual-duplex.glade:220 gnome-manual-duplex.glade:332
-#: gnome-manual-duplex.glade:530
-msgid "gtk-cancel"
-msgstr "gtk-cancel"
-
-#: gnome-manual-duplex.glade:234
-msgid "gtk-print"
-msgstr "gtk-print"
-
-#: gnome-manual-duplex.glade:292
+#: gnome-manual-duplex.glade:109
 msgid ""
 "<big><b>1.</b></big>\n"
 "\n"
@@ -84,7 +55,7 @@ msgstr ""
 "a kimeneti tálcáról. Ne tegye félre\n"
 "az üres lapokat."
 
-#: gnome-manual-duplex.glade:306
+#: gnome-manual-duplex.glade:129
 msgid ""
 "<big><b>2.</b></big>\n"
 "\n"
@@ -98,15 +69,15 @@ msgstr ""
 "be a papírkupacot az 1. tálcára a\n"
 "nyomtatott oldalával lefelé."
 
-#: gnome-manual-duplex.glade:343
-msgid "gtk-ok"
-msgstr "gtk-ok"
-
-#: gnome-manual-duplex.glade:385
+#: gnome-manual-duplex.glade:183
 msgid "<b>Printer</b>"
 msgstr "<b>Nyomtató</b>"
 
-#: gnome-manual-duplex.glade:410 gnome-manual-duplex.glade:474
+#: gnome-manual-duplex.glade:214 gnome-manual-duplex.glade:291
+msgid "Reverse Pages"
+msgstr "Oldalak megfordítása"
+
+#: gnome-manual-duplex.glade:218 gnome-manual-duplex.glade:295
 msgid ""
 "HP LJ 1005/1018/1020: reverse pages\n"
 "HP LJ P1005/P1006/P1505: reverse pages\n"
@@ -122,11 +93,11 @@ msgstr ""
 "Minolta/QMS 2300 DL: oldalak megfordítása\n"
 "Egyebek: függő"
 
-#: gnome-manual-duplex.glade:416 gnome-manual-duplex.glade:480
-msgid "Reverse Pages"
-msgstr "Oldalak megfordítása"
+#: gnome-manual-duplex.glade:234 gnome-manual-duplex.glade:311
+msgid "Invert (rotate 180 degrees) Pages"
+msgstr "Oldalak invertálása (180 fokkal forgatás)"
 
-#: gnome-manual-duplex.glade:425
+#: gnome-manual-duplex.glade:238
 msgid ""
 "HP LJ 1005/1018/1020: invert pages\n"
 "HP LJ P1005/P1006/P1505: invert pages\n"
@@ -142,15 +113,11 @@ msgstr ""
 "Minolta/QMS 2300 DL: oldalak invertálása\n"
 "Egyebek: függő"
 
-#: gnome-manual-duplex.glade:431 gnome-manual-duplex.glade:495
-msgid "Invert (rotate 180 degrees) Pages"
-msgstr "Oldalak invertálása (180 fokkal forgatás)"
-
-#: gnome-manual-duplex.glade:446
+#: gnome-manual-duplex.glade:260
 msgid "<b>Even Long Edge</b>"
 msgstr "<b>Páros hosszabbik oldal</b>"
 
-#: gnome-manual-duplex.glade:489
+#: gnome-manual-duplex.glade:315
 msgid ""
 "HP LJ 1005/1018/1020: no invert pages\n"
 "HP LJ P1005/P1006: no invert pages\n"
@@ -166,26 +133,86 @@ msgstr ""
 "Minolta/QMS 2300 DL: ne invertálja az oldalakat\n"
 "Egyebek: függő"
 
-#: gnome-manual-duplex.glade:510
+#: gnome-manual-duplex.glade:337
 msgid "<b>Even Short Edge</b>"
 msgstr "<b>Páros rövidebbik oldal</b>"
 
-#: gnome-manual-duplex.glade:541
-msgid "gtk-save"
-msgstr "gtk-save"
+#: gnome-manual-duplex.glade:454
+msgid "<b>Job Name</b>"
+msgstr "<b>Feladatnév</b>"
 
-#: gnome-manual-duplex.glade:560
-msgid "About Glade"
-msgstr "A Glade névjegye"
+#: gnome-manual-duplex.glade:487
+msgid "Manual Long Edge"
+msgstr "Kézi hosszabbik oldal"
 
-#: gnome-manual-duplex.glade:567
-msgid "Copyright 2009-2014 Rick Richardson.  All Rights Reserved."
-msgstr "Copyright Rick Richardson, 2009-2014. Minden jog fenntartva."
+#: gnome-manual-duplex.glade:498
+msgid "Manual Short Edge"
+msgstr "Kézi rövidebbik oldal"
 
-#: gnome-manual-duplex.glade:569
-msgid "Home Page"
-msgstr "Honlap"
+#: gnome-manual-duplex.glade:514
+msgid "Manual Brochure"
+msgstr "Kézi prospektus"
 
-#: gnome-manual-duplex.glade:570
-msgid "GPL"
-msgstr "GPL"
+#: gnome-manual-duplex.glade:573
+msgid "<b>Output Format</b>"
+msgstr "<b>Kimeneti formátum</b>"
+
+#: gnome-manual-duplex.glade:600
+msgid "Skip Odd Pages"
+msgstr "Páratlan oldalak kihagyása"
+
+#: gnome-manual-duplex.glade:614
+msgid "<b>Print</b>"
+msgstr "<b>Nyomtatás</b>"
+
+#: gnome-manual-duplex.glade:644
+msgid ""
+"Default (Use Locale)\n"
+"A3\n"
+"A4\n"
+"A5\n"
+"B5\n"
+"Letter\n"
+"Legal\n"
+"Tabloid\n"
+"Statement\n"
+"Executive\n"
+"Folio\n"
+"Quarto\n"
+"10x14"
+msgstr ""
+"Alapértelmezett (használata Locale)\n"
+"A3\n"
+"A4\n"
+"A5\n"
+"B5\n"
+"Letter\n"
+"Legal\n"
+"Tabloid\n"
+"Statement\n"
+"Executive\n"
+"Folio\n"
+"Quarto\n"
+"10x14"
+
+#: gnome-manual-duplex.glade:666
+msgid "<b>Page Size</b>"
+msgstr "<b>Lapméret</b>"
+
+#~ msgid "gtk-about"
+#~ msgstr "gtk-about"
+
+#~ msgid "gtk-preferences"
+#~ msgstr "gtk-preferences"
+
+#~ msgid "gtk-cancel"
+#~ msgstr "gtk-cancel"
+
+#~ msgid "gtk-print"
+#~ msgstr "gtk-print"
+
+#~ msgid "gtk-ok"
+#~ msgstr "gtk-ok"
+
+#~ msgid "gtk-save"
+#~ msgstr "gtk-save"

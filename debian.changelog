@@ -1,3 +1,9 @@
+gnome-manual-duplex (0.60) stable; urgency=low
+
+  *  gmd: add page size parameter for psutils
+
+ -- Rick Richardson <rickrich@gmail.com>  Sun, 22 Mar 2015 08:21:03 -0500
+
 gnome-manual-duplex (0.59) stable; urgency=low
 
   *  Translations: fr (France)

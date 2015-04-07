@@ -40,6 +40,9 @@ LONGEDGE = 1
 SHORTEDGE = 2
 BROCHURE = 3
 
+PageSize = [ '', 'a3', 'a4', 'a5', 'b5', 'letter', 'legal', 'tabloid',
+             'statement', 'executive', 'folio', 'quarto', '10x14' ]
+
 #
 #       i18n
 #
@@ -79,6 +82,7 @@ def load_config(self):
 class App(object):       
     def __init__(self):
         global Debug
+        global Config
 
         try:                                
             opts, args = getopt.getopt(sys.argv[1:], "D:", ["debug="])
@@ -171,6 +175,14 @@ class App(object):
         self.long_edge_config = REVERSE | INVERT
         self.short_edge_config = REVERSE
 
+        # pagesize
+        self.pagesize = builder.get_object("pagesize")
+        try:
+            pagesize = Config.getint('_gmd_', 'pagesize')
+        except:
+            pagesize = 0
+        self.pagesize.set_active(pagesize)
+
     def about_button_clicked_cb(self, widget, data=None):
         response = self.about.run()
         self.about.hide()
@@ -210,6 +222,13 @@ class App(object):
         self.long_edge_invert.set_active( (int(long_edge_config) >> 0) & 1)
         self.short_edge_reverse.set_active( (int(short_edge_config) >> 1) & 1)
         self.short_edge_invert.set_active( (int(short_edge_config) >> 0) & 1)
+
+    def pagesize_changed_cb(self, widget, data=None):
+        Config.remove_section('_gmd_')
+        Config.add_section('_gmd_')
+        Config.set('_gmd_', 'pagesize', str(self.pagesize.get_active()) )
+        configfp = open(self.config_path, 'w')
+        Config.write(configfp)
 
     def combo_printers_changed_cb(self, widget, data=None):
         #print('changed')
@@ -328,7 +347,7 @@ class App(object):
             try:
                 config = int( Config.get(printer.get_name(),
                                             'long_edge_config', 0) )
-                #print(printer.get_name(), config)
+                print(printer.get_name(), config)
             except:
                 config = self.long_edge_config
         else:
@@ -339,15 +358,25 @@ class App(object):
                 config = self.short_edge_config
         reverse = [ '1', '-1' ]
         invert = [ '', 'U(1w,1h)' ]
-        print("{ps,pdf}tops '2:" + \
+        try:
+            pagesize = Config.getint('_gmd_', 'pagesize')
+        except:
+            pagesize = 0
+        if pagesize != 0:
+            pagesize = '-p' + PageSize[pagesize]
+        else:
+            pagesize = ''
+        
+        print("{ps,pdf}tops " + pagesize + " '2:" + \
             reverse[(config>>1) & 1] + invert[config&1] + "' '" + \
             self.filename + "' " + self.tempfile.name)
         if self.is_pdf == 0:
-            os.system("pstops '2:" 
+            os.system("pstops " + pagesize + " '2:" 
                 + reverse[(config>>1) & 1] + invert[config&1] + "' '"
                 + self.filename + "' " + self.tempfile.name)
         else:
-            os.system("pdftops '" + self.filename + "' - | pstops '2:" 
+            os.system("pdftops '" + self.filename + "' - | pstops " \
+                + pagesize + " '2:" 
                 + reverse[(config>>1) & 1] + invert[config&1] + "' "
                 + " > " + self.tempfile.name)
         # os.system("cp " + self.tempfile.name + " /tmp/2")
