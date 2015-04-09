@@ -1,8 +1,14 @@
+gnome-manual-duplex (0.61) stable; urgency=low
+
+  *  gmd: skip odd pages bug
+
+ -- Rick Richardson <rickrich@gmail.com>  Thu, 09 Apr 2015 08:21:03 -0500
+
 gnome-manual-duplex (0.60) stable; urgency=low
 
   *  gmd: add page size parameter for psutils
 
- -- Rick Richardson <rickrich@gmail.com>  Sun, 22 Mar 2015 08:21:03 -0500
+ -- Rick Richardson <rickrich@gmail.com>  Tue, 07 Apr 2015 08:21:03 -0500
 
 gnome-manual-duplex (0.59) stable; urgency=low
 
