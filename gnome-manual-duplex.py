@@ -289,12 +289,12 @@ class App(object):
             global title
             self.tempfile = tempfile.NamedTemporaryFile()
             title = os.path.basename(self.filename)
+            rc = os.system("file \"" + self.filename + "\" | grep -q PDF")
+            if rc == 256:
+                self.is_pdf = 0
+            else:
+                self.is_pdf = 1
             if self.printMode == BROCHURE:
-                rc = os.system("file " + self.filename + " | grep -q PDF")
-                if rc == 256:
-                    self.is_pdf = 0
-                else:
-                    self.is_pdf = 1
                 self.tempfileBrochure = tempfile.NamedTemporaryFile()
                 # Convert into brochure
                 if self.is_pdf == 1:
@@ -314,15 +314,13 @@ class App(object):
                 rc = os.system("file \"" + self.filename + "\" | grep -q PDF")
                 print("{ps,pdf}tops '2:0' '" + self.filename + \
                     "' " + self.tempfile.name)
-                if rc == 256:
-                    self.is_pdf = 0
-                    os.system("pstops 2:0 \""
-                        + self.filename + "\" " + self.tempfile.name)
-                else:
-                    self.is_pdf = 1
+                if self.is_pdf == 1:
                     os.system("pdftops \"" + self.filename
                         + "\" - | pstops 2:0 > "
                         + self.tempfile.name)
+                else:
+                    os.system("pstops 2:0 \""
+                        + self.filename + "\" " + self.tempfile.name)
                 # print("is_pdf ", self.is_pdf)
                 
                 self.printdialog.PrintJob = gtkunixprint.PrintJob(
