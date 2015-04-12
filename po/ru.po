@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-manual-duplex 0.35\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-07 07:15-0500\n"
+"POT-Creation-Date: 2015-04-11 18:50-0500\n"
 "PO-Revision-Date: 2011-04-27 22:51+0200\n"
 "Last-Translator: Pavel Maryanov <acid@jack.kiev.ua>\n"
 "Language-Team: Russian <gnu@mx.ru>\n"
@@ -23,6 +23,54 @@ msgstr ""
 #: gnome-manual-duplex.py:145
 msgid "(default)"
 msgstr "(по умолчанию)"
+
+#: gnome-manual-duplex.py:187
+msgid "Default (Use Locale)"
+msgstr "По умолчанию (использование языка)"
+
+#: gnome-manual-duplex.py:187
+msgid "A3"
+msgstr ""
+
+#: gnome-manual-duplex.py:187
+msgid "A4"
+msgstr ""
+
+#: gnome-manual-duplex.py:187
+msgid "A5"
+msgstr ""
+
+#: gnome-manual-duplex.py:188
+msgid "B5"
+msgstr ""
+
+#: gnome-manual-duplex.py:188
+msgid "Letter"
+msgstr ""
+
+#: gnome-manual-duplex.py:188
+msgid "Legal"
+msgstr ""
+
+#: gnome-manual-duplex.py:188
+msgid "Tabloid"
+msgstr ""
+
+#: gnome-manual-duplex.py:188
+msgid "Statement"
+msgstr ""
+
+#: gnome-manual-duplex.py:189
+msgid "Executive"
+msgstr ""
+
+#: gnome-manual-duplex.py:189
+msgid "Folio"
+msgstr ""
+
+#: gnome-manual-duplex.py:189
+msgid "Quarto"
+msgstr ""
 
 #: gnome-manual-duplex.glade:10
 msgid "About Glade"
@@ -199,21 +247,3 @@ msgstr ""
 #: gnome-manual-duplex.glade:666
 msgid "<b>Page Size</b>"
 msgstr "<b>Размер страницы</b>"
-
-#~ msgid "gtk-about"
-#~ msgstr "gtk-about"
-
-#~ msgid "gtk-preferences"
-#~ msgstr "gtk-preferences"
-
-#~ msgid "gtk-cancel"
-#~ msgstr "gtk-cancel"
-
-#~ msgid "gtk-print"
-#~ msgstr "gtk-print"
-
-#~ msgid "gtk-ok"
-#~ msgstr "gtk-ok"
-
-#~ msgid "gtk-save"
-#~ msgstr "gtk-save"

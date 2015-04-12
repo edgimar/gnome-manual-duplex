@@ -41,7 +41,7 @@ SHORTEDGE = 2
 BROCHURE = 3
 
 PageSize = [ '', 'a3', 'a4', 'a5', 'b5', 'letter', 'legal', 'tabloid',
-             'statement', 'executive', 'folio', 'quarto', '10x14' ]
+             'statement', 'executive', 'folio', 'quarto' ]
 
 #
 #       i18n
@@ -181,6 +181,13 @@ class App(object):
             pagesize = Config.getint('_gmd_', 'pagesize')
         except:
             pagesize = 0
+        # Bug? translatable in glade file doesn't work for ComboBox...
+        for x in range(20, -1, -1):
+            self.pagesize.remove_text(x)
+        for t in _('Default (Use Locale)'), _('A3'), _('A4'), _('A5'), \
+            _('B5'), _('Letter'), _('Legal'), _('Tabloid'), _('Statement'), \
+            _('Executive'), _('Folio'), _('Quarto'):
+            self.pagesize.append_text(t)
         self.pagesize.set_active(pagesize)
 
     def about_button_clicked_cb(self, widget, data=None):
