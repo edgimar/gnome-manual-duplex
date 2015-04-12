@@ -652,8 +652,7 @@ Tabloid
 Statement
 Executive
 Folio
-Quarto
-10x14</property>
+Quarto</property>
                     <signal name="changed" handler="pagesize_changed_cb" swapped="no"/>
                   </widget>
                 </child>
