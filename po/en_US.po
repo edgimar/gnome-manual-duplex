@@ -27,47 +27,47 @@ msgstr "Default (Use Locale)"
 
 #: gnome-manual-duplex.py:187
 msgid "A3"
-msgstr ""
+msgstr "A3"
 
 #: gnome-manual-duplex.py:187
 msgid "A4"
-msgstr ""
+msgstr "A4"
 
 #: gnome-manual-duplex.py:187
 msgid "A5"
-msgstr ""
+msgstr "A5"
 
 #: gnome-manual-duplex.py:188
 msgid "B5"
-msgstr ""
+msgstr "B5"
 
 #: gnome-manual-duplex.py:188
 msgid "Letter"
-msgstr ""
+msgstr "Letter"
 
 #: gnome-manual-duplex.py:188
 msgid "Legal"
-msgstr ""
+msgstr "Legal"
 
 #: gnome-manual-duplex.py:188
 msgid "Tabloid"
-msgstr ""
+msgstr "Tabloid"
 
 #: gnome-manual-duplex.py:188
 msgid "Statement"
-msgstr ""
+msgstr "Statement"
 
 #: gnome-manual-duplex.py:189
 msgid "Executive"
-msgstr ""
+msgstr "Executive"
 
 #: gnome-manual-duplex.py:189
 msgid "Folio"
-msgstr ""
+msgstr "Folio"
 
 #: gnome-manual-duplex.py:189
 msgid "Quarto"
-msgstr ""
+msgstr "Quarto"
 
 #: gnome-manual-duplex.glade:10
 msgid "About Glade"
