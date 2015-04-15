@@ -1,8 +1,14 @@
+gnome-manual-duplex (0.63) stable; urgency=low
+
+  *  Translations: es, pl
+
+ -- Rick Richardson <rickrich@gmail.com>  Wed, 15 Apr 2015 08:21:03 -0500
+
 gnome-manual-duplex (0.62) stable; urgency=low
 
   *  Bug with translations in a ComboBox
 
- -- Rick Richardson <rickrich@gmail.com>  Sun, 22 Mar 2015 08:21:03 -0500
+ -- Rick Richardson <rickrich@gmail.com>  Sun, 12 Apr 2015 08:21:03 -0500
 
 gnome-manual-duplex (0.61) stable; urgency=low
 
