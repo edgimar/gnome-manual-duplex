@@ -1,20 +1,23 @@
 # gmd translation template.
-# Copyright (C) 2012 Rick Richardson
+# Copyright (C) 2014 Rick Richardson
 # This file is distributed under the same license as the gnome-manual-duplex package.
-# Rick Richardson <rickrich@gmail.com>, 2012.
-#
+# 
+# Translators:
+# Alejandro Puchades <alex94puchades@gmail.com>, 2015
+# rickrich <rickrich@gmail.com>, 2010,2012
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-manual-duplex 0.22\n"
+"Project-Id-Version: Gnome Manual Duplex\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-12 03:18-0500\n"
-"PO-Revision-Date: 2010-07-12 15:13-0500\n"
-"Last-Translator: http://pepipopum.dixo.net/\n"
-"Language-Team: Spanish\n"
-"Language: \n"
+"POT-Creation-Date: 2015-04-12 03:41-0500\n"
+"PO-Revision-Date: 2015-04-15 13:23+0000\n"
+"Last-Translator: Alejandro Puchades <alex94puchades@gmail.com>\n"
+"Language-Team: Spanish (http://www.transifex.com/projects/p/gnome-manual-duplex/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: gnome-manual-duplex.py:145
 msgid "(default)"
@@ -22,51 +25,51 @@ msgstr "(Por defecto)"
 
 #: gnome-manual-duplex.py:187
 msgid "Default (Use Locale)"
-msgstr "Por Defecto (Uso Local)"
+msgstr "Por defecto (Uso regional)"
 
 #: gnome-manual-duplex.py:187
 msgid "A3"
-msgstr ""
+msgstr "A3"
 
 #: gnome-manual-duplex.py:187
 msgid "A4"
-msgstr ""
+msgstr "A4"
 
 #: gnome-manual-duplex.py:187
 msgid "A5"
-msgstr ""
+msgstr "A5"
 
 #: gnome-manual-duplex.py:188
 msgid "B5"
-msgstr ""
+msgstr "B5"
 
 #: gnome-manual-duplex.py:188
 msgid "Letter"
-msgstr ""
+msgstr "Carta"
 
 #: gnome-manual-duplex.py:188
 msgid "Legal"
-msgstr ""
+msgstr "Contrato"
 
 #: gnome-manual-duplex.py:188
 msgid "Tabloid"
-msgstr ""
+msgstr "Revista"
 
 #: gnome-manual-duplex.py:188
 msgid "Statement"
-msgstr ""
+msgstr "Comunicado"
 
 #: gnome-manual-duplex.py:189
 msgid "Executive"
-msgstr ""
+msgstr "Informe"
 
 #: gnome-manual-duplex.py:189
 msgid "Folio"
-msgstr ""
+msgstr "Folio"
 
 #: gnome-manual-duplex.py:189
 msgid "Quarto"
-msgstr ""
+msgstr "Cuartilla"
 
 #: gnome-manual-duplex.glade:10
 msgid "About Glade"
@@ -78,7 +81,7 @@ msgstr "Copyright 2009-2015 Rick Richardson. Todos los derechos reservados."
 
 #: gnome-manual-duplex.glade:18
 msgid "Home Page"
-msgstr "Home Page"
+msgstr "Página web"
 
 #: gnome-manual-duplex.glade:19
 msgid "GPL"
@@ -92,13 +95,7 @@ msgid ""
 "remove the paper stack from the\n"
 "Output Bin.  Do not discard blank\n"
 "sheets."
-msgstr ""
-"<b><big>1.</big></b>\n"
-"\n"
-"Sin cambiar la orientación,\n"
-"retire la pila de papel de la\n"
-"Bandeja de Salida. No deseche las hojas\n"
-"en blanco."
+msgstr "<b><big>1.</big></b>\n\nSin cambiar la orientación,\nretire la pila de papel de la\nbandeja de salida. No deseche\nlas hojas en blanco."
 
 #: gnome-manual-duplex.glade:129
 msgid ""
@@ -107,12 +104,7 @@ msgid ""
 "Maintaining the same orientation,\n"
 "insert the paper stack into Tray 1\n"
 "printed side down."
-msgstr ""
-"<b><big>2.</big></b>\n"
-"\n"
-"Mantener la misma orientación,\n"
-"inserte la pila de papel en la bandeja 1\n"
-"cara impresa hacia abajo."
+msgstr "<b><big>2.</big></b>\n\nManteneniendo la misma orientación,\ninserte la pila de papel en la bandeja 1\ncon la cara impresa hacia abajo."
 
 #: gnome-manual-duplex.glade:183
 msgid "<b>Printer</b>"
@@ -120,7 +112,7 @@ msgstr "<b>Impresora</b>"
 
 #: gnome-manual-duplex.glade:214 gnome-manual-duplex.glade:291
 msgid "Reverse Pages"
-msgstr "Páginas Atrás"
+msgstr "Invertir páginas"
 
 #: gnome-manual-duplex.glade:218 gnome-manual-duplex.glade:295
 msgid ""
@@ -130,17 +122,11 @@ msgid ""
 "HP CLJ 1600/2600/CP1215: reverse pages\n"
 "Minolta/QMS 2300 DL: reverse pages\n"
 "Others: depends"
-msgstr ""
-"HP LJ 1005/1018/1020: páginas inversa\n"
-"HP LJ P1005/P1006/P1505: páginas inversa\n"
-"HP LJ P1102 Pro, P1566: páginas inversa\n"
-"HP CLJ 1600/2600/CP1215: páginas inversa\n"
-"Minolta / QMS 2300 DL: páginas inversa\n"
-"Otros: depende"
+msgstr "HP LJ 1005/1018/1020: invertir páginas\nHP LJ P1005/P1006/P1505: invertir páginas\nHP LJ P1102 Pro, P1566: invertir páginas\nHP CLJ 1600/2600/CP1215: invertir páginas\nMinolta / QMS 2300 DL: invertir páginas\nOtros: depende"
 
 #: gnome-manual-duplex.glade:234 gnome-manual-duplex.glade:311
 msgid "Invert (rotate 180 degrees) Pages"
-msgstr "Invertir (girar 180 grados) Páginas"
+msgstr "Invertir (girar 180 grados) las páginas"
 
 #: gnome-manual-duplex.glade:238
 msgid ""
@@ -150,13 +136,7 @@ msgid ""
 "HP CLJ 1600/2600/CP1215: invert pages\n"
 "Minolta/QMS 2300 DL: invert pages\n"
 "Others: depends"
-msgstr ""
-"HP LJ 1005/1018/1020: páginas invertido\n"
-"P1005/P1006/P1505 HP LJ: páginas invertido\n"
-"HP LJ P1102 Pro, P1566: páginas invertido\n"
-"HP CLJ 1600/2600/CP1215: páginas invertido\n"
-"Minolta / QMS 2300 DL: páginas invertido\n"
-"Otros: depende"
+msgstr "HP LJ 1005/1018/1020: invertir páginas\nP1005/P1006/P1505 HP LJ: invertir páginas\nHP LJ P1102 Pro, P1566: invertir páginas\nHP CLJ 1600/2600/CP1215: invertir páginas\nMinolta / QMS 2300 DL: invertir páginas\nOtros: variable"
 
 #: gnome-manual-duplex.glade:260
 msgid "<b>Even Long Edge</b>"
@@ -170,17 +150,11 @@ msgid ""
 "HP CLJ 1600/2600/CP1215: no invert pages\n"
 "Minolta/QMS 2300 DL: no invert pages\n"
 "Others: depends"
-msgstr ""
-"HP LJ 1005/1018/1020: no invertir páginas\n"
-"HP LJ P1005/P1006: no invertir páginas\n"
-"HP LJ P1102 Pro, P1566: no invertir páginas\n"
-"HP CLJ 1600/2600/CP1215: no hay páginas invertido\n"
-"Minolta/QMS 2300 DL: no hay páginas invertido\n"
-"Otros: depende"
+msgstr "HP LJ 1005/1018/1020: no invertir páginas\nHP LJ P1005/P1006: no invertir páginas\nHP LJ P1102 Pro, P1566: no invertir páginas\nHP CLJ 1600/2600/CP1215: no invertir páginas\nMinolta/QMS 2300 DL: no invertir páginas\nOtros: variable"
 
 #: gnome-manual-duplex.glade:337
 msgid "<b>Even Short Edge</b>"
-msgstr "<b>Incluso Borde corto</b>"
+msgstr "<b>Incluso borde corto</b>"
 
 #: gnome-manual-duplex.glade:454
 msgid "<b>Job Name</b>"
@@ -188,15 +162,15 @@ msgstr "<b>Nombre del trabajo</b>"
 
 #: gnome-manual-duplex.glade:487
 msgid "Manual Long Edge"
-msgstr "Manual de Borde Largo"
+msgstr "Girar en borde largo"
 
 #: gnome-manual-duplex.glade:498
 msgid "Manual Short Edge"
-msgstr "Manual de Borde Corto"
+msgstr "Girar en borde corto"
 
 #: gnome-manual-duplex.glade:514
 msgid "Manual Brochure"
-msgstr "Manual de folleto"
+msgstr "Girar en folleto"
 
 #: gnome-manual-duplex.glade:573
 msgid "<b>Output Format</b>"
@@ -204,7 +178,7 @@ msgstr "<b>Formato de salida</b>"
 
 #: gnome-manual-duplex.glade:600
 msgid "Skip Odd Pages"
-msgstr "Pasar las páginas impares"
+msgstr "Saltar hojas impares"
 
 #: gnome-manual-duplex.glade:614
 msgid "<b>Print</b>"
@@ -224,20 +198,8 @@ msgid ""
 "Executive\n"
 "Folio\n"
 "Quarto"
-msgstr ""
-"Por defecto (uso local)\n"
-"A3\n"
-"A4\n"
-"A5\n"
-"B5\n"
-"Letter\n"
-"Legal\n"
-"Tabloid\n"
-"Statement\n"
-"Executive\n"
-"Folio\n"
-"Quarto"
+msgstr "Por defecto (uso local)\nA3\nA4\nA5\nB5\nCarta\nContrato\nRevista\nComunicado\nInforme\nFolio\nCuartilla"
 
 #: gnome-manual-duplex.glade:665
 msgid "<b>Page Size</b>"
-msgstr "<b>Tamaño De Página</b>"
+msgstr "<b>Tamaño de página</b>"
