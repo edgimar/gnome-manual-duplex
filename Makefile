@@ -55,6 +55,7 @@ FILES=\
 	org.gnome.panel.applet.GnomeManualDuplexAppletFactory.service \
 	org.gnome.panel.GnomeManualDuplex.panel-applet \
 	messages.pot \
+	po/ca.po \
 	po/da.po \
 	po/de.po \
 	po/eo.po \
