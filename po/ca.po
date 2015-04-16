@@ -1,0 +1,235 @@
+# gmd translation template.
+# Copyright (C) 2014 Rick Richardson
+# This file is distributed under the same license as the gnome-manual-duplex package.
+#
+# Translators:
+# Alejandro Puchades <alex94puchades@gmail.com>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: Gnome Manual Duplex\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-04-16 18:23-0500\n"
+"PO-Revision-Date: 2015-04-16 19:43+0000\n"
+"Last-Translator: Alejandro Puchades <alex94puchades@gmail.com>\n"
+"Language-Team: Catalan (http://www.transifex.com/projects/p/gnome-manual-"
+"duplex/language/ca/)\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: gnome-manual-duplex.py:145
+msgid "(default)"
+msgstr "(predeterminat)"
+
+#: gnome-manual-duplex.py:187
+msgid "Default (Use Locale)"
+msgstr "Predeterminat (ús regional)"
+
+#: gnome-manual-duplex.py:187
+msgid "A3"
+msgstr "A3"
+
+#: gnome-manual-duplex.py:187
+msgid "A4"
+msgstr "A4"
+
+#: gnome-manual-duplex.py:187
+msgid "A5"
+msgstr "A5"
+
+#: gnome-manual-duplex.py:188
+msgid "B5"
+msgstr "B5"
+
+#: gnome-manual-duplex.py:188
+msgid "Letter"
+msgstr "Carta"
+
+#: gnome-manual-duplex.py:188
+msgid "Legal"
+msgstr "Contracte"
+
+#: gnome-manual-duplex.py:188
+msgid "Tabloid"
+msgstr "Revista"
+
+#: gnome-manual-duplex.py:188
+msgid "Statement"
+msgstr "Comunicat"
+
+#: gnome-manual-duplex.py:189
+msgid "Executive"
+msgstr "Informe"
+
+#: gnome-manual-duplex.py:189
+msgid "Folio"
+msgstr "Full"
+
+#: gnome-manual-duplex.py:189
+msgid "Quarto"
+msgstr "Quarteta"
+
+#: gnome-manual-duplex.glade:10
+msgid "About Glade"
+msgstr "Sobre Glade"
+
+#: gnome-manual-duplex.glade:16
+msgid "Copyright 2009-2015 Rick Richardson.  All Rights Reserved."
+msgstr "Copyright 2009-2015 Rick Richardson. Tots els drets reservats"
+
+#: gnome-manual-duplex.glade:18
+msgid "Home Page"
+msgstr "Pàgina web"
+
+#: gnome-manual-duplex.glade:19
+msgid "GPL"
+msgstr "GPL"
+
+#: gnome-manual-duplex.glade:109
+msgid ""
+"<big><b>1.</b></big>\n"
+"\n"
+"Without changing the orientation,\n"
+"remove the paper stack from the\n"
+"Output Bin.  Do not discard blank\n"
+"sheets."
+msgstr ""
+"<big><b>1.</b></big>\n"
+"\n"
+"Sense canviar la orientació,\n"
+"retire la pila de papers de la\n"
+"safata d'eixida. No lleve els\n"
+"fulls en blanc."
+
+#: gnome-manual-duplex.glade:129
+msgid ""
+"<big><b>2.</b></big>\n"
+"\n"
+"Maintaining the same orientation,\n"
+"insert the paper stack into Tray 1\n"
+"printed side down."
+msgstr ""
+"<big><b>2.</b></big>\n"
+"\n"
+"Mantenint la mateixa orientació,\n"
+"introduïsca la pila de papers en la\n"
+"safata 1 amb la cara impresa cap\n"
+"a baix."
+
+#: gnome-manual-duplex.glade:183
+msgid "<b>Printer</b>"
+msgstr "<b>Impresora</b>"
+
+#: gnome-manual-duplex.glade:214 gnome-manual-duplex.glade:291
+msgid "Reverse Pages"
+msgstr "Invertir pàgines"
+
+#: gnome-manual-duplex.glade:218 gnome-manual-duplex.glade:295
+msgid ""
+"HP LJ 1005/1018/1020: reverse pages\n"
+"HP LJ P1005/P1006/P1505: reverse pages\n"
+"HP LJ Pro P1102, P1566: reverse pages\n"
+"HP CLJ 1600/2600/CP1215: reverse pages\n"
+"Minolta/QMS 2300 DL: reverse pages\n"
+"Others: depends"
+msgstr ""
+"HP LJ 1005/1018/1020: invertir pàgines\n"
+"HP LJ P1005/P1006/P1505: invertir pàgines\n"
+"HP LJ Pro P1102, P1566: invertir pàgines\n"
+"HP CLJ 1600/2600/CP1215: invertir pàgines\n"
+"Minolta/QMS 2300 DL: invertir pàgines\n"
+"Altres: variable"
+
+#: gnome-manual-duplex.glade:234 gnome-manual-duplex.glade:311
+msgid "Invert (rotate 180 degrees) Pages"
+msgstr "Invertir (rotar 180 graus) les pàgines"
+
+#: gnome-manual-duplex.glade:238
+msgid ""
+"HP LJ 1005/1018/1020: invert pages\n"
+"HP LJ P1005/P1006/P1505: invert pages\n"
+"HP LJ Pro P1102, P1566: invert pages\n"
+"HP CLJ 1600/2600/CP1215: invert pages\n"
+"Minolta/QMS 2300 DL: invert pages\n"
+"Others: depends"
+msgstr ""
+
+#: gnome-manual-duplex.glade:260
+msgid "<b>Even Long Edge</b>"
+msgstr ""
+
+#: gnome-manual-duplex.glade:315
+msgid ""
+"HP LJ 1005/1018/1020: no invert pages\n"
+"HP LJ P1005/P1006: no invert pages\n"
+"HP LJ Pro P1102, P1566: no invert pages\n"
+"HP CLJ 1600/2600/CP1215: no invert pages\n"
+"Minolta/QMS 2300 DL: no invert pages\n"
+"Others: depends"
+msgstr ""
+
+#: gnome-manual-duplex.glade:337
+msgid "<b>Even Short Edge</b>"
+msgstr ""
+
+#: gnome-manual-duplex.glade:454
+msgid "<b>Job Name</b>"
+msgstr "Nom del treball"
+
+#: gnome-manual-duplex.glade:487
+msgid "Manual Long Edge"
+msgstr ""
+
+#: gnome-manual-duplex.glade:498
+msgid "Manual Short Edge"
+msgstr ""
+
+#: gnome-manual-duplex.glade:514
+msgid "Manual Brochure"
+msgstr ""
+
+#: gnome-manual-duplex.glade:573
+msgid "<b>Output Format</b>"
+msgstr "<b>Format d'eixida</b>"
+
+#: gnome-manual-duplex.glade:600
+msgid "Skip Odd Pages"
+msgstr "Saltar pàgines impars"
+
+#: gnome-manual-duplex.glade:614
+msgid "<b>Print</b>"
+msgstr "<b>Imprimir</b>"
+
+#: gnome-manual-duplex.glade:644
+msgid ""
+"Default (Use Locale)\n"
+"A3\n"
+"A4\n"
+"A5\n"
+"B5\n"
+"Letter\n"
+"Legal\n"
+"Tabloid\n"
+"Statement\n"
+"Executive\n"
+"Folio\n"
+"Quarto"
+msgstr ""
+"Predeterminar (ús regional)\n"
+"A3\n"
+"A4\n"
+"A5\n"
+"B5\n"
+"Carta\n"
+"Contracte\n"
+"Revista\n"
+"Comunicat\n"
+"Informe\n"
+"Fulla\n"
+"Quarteta"
+
+#: gnome-manual-duplex.glade:665
+msgid "<b>Page Size</b>"
+msgstr "<b>Mida de pàgina</b>"
