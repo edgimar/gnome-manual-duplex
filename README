@@ -52,8 +52,8 @@ Howto (video):
 
 Translations:
     http://www.transifex.net/projects/p/gnome-manual-duplex/resource/messagespot
-    http://translationproject.org/domain/gnome-manual-duplex.html
     http://crowdin.net/project/gnome-manual-duplex
+    http://translationproject.org/domain/gnome-manual-duplex.html
 
 Subversion Access:
     svn co \
