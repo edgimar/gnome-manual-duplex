@@ -1,3 +1,9 @@
+gnome-manual-duplex (0.65) stable; urgency=low
+
+  * gmd-applet-3.py.in: Change #!/usr/bin/python to #!/usr/bin/python3
+
+ -- Rick Richardson <rickrich@gmail.com>  Fri, 18 Mar 2016 08:21:03 -0500
+
 gnome-manual-duplex (0.64) stable; urgency=low
 
   *  Translations: ca, es
